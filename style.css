@@ -88,6 +88,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* LTR Multi-Language Support */
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
 body {
   font-family: var(--font-urdu-body);
   background-color: var(--bg-main);
@@ -97,6 +103,57 @@ body {
   position: relative;
   min-height: 100vh;
 }
+
+html[dir="ltr"] body {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+html[dir="ltr"] .section-title,
+html[dir="ltr"] .hero-title,
+html[dir="ltr"] .cta-headline,
+html[dir="ltr"] .emotional-title-1,
+html[dir="ltr"] .emotional-title-2 {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+html[dir="ltr"] .card-sound-badge {
+  left: auto;
+  right: 14px;
+}
+
+html[dir="ltr"] .modal-close-btn {
+  left: auto;
+  right: 18px;
+}
+
+html[dir="ltr"] .status-chip-live,
+html[dir="ltr"] .c-quick-action {
+  margin-inline-start: 0;
+  margin-left: auto;
+}
+
+html[dir="ltr"] .ticker-track {
+  animation: marquee-ltr 28s linear infinite;
+}
+
+@keyframes marquee-ltr {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+html[dir="ltr"] .khata-table {
+  text-align: left;
+}
+
+html[dir="ltr"] .visual-avatar,
+html[dir="ltr"] .visual-details-box,
+html[dir="ltr"] .ui-customer-profile-card,
+html[dir="ltr"] .faq-question {
+  text-align: left;
+}
+
 
 a {
   color: inherit;
@@ -161,7 +218,7 @@ ul {
 
 /* --- LAYOUT UTILITIES --- */
 .container {
-  max-width: 1260px;
+  max-width: 1420px;
   margin: 0 auto;
   padding: 0 24px;
   position: relative;
@@ -189,18 +246,17 @@ ul {
 .navbar-pill {
   pointer-events: auto;
   width: 100%;
-  max-width: 1260px;
-  height: 58px;
+  max-width: 1536px;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: var(--radius-full);
+  border: 1px solid #f3a6ff;
+  border-radius: 28px;
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px 0 12px;
+  padding: 16px 32px;
   transition: all var(--transition-normal);
 }
 
@@ -323,7 +379,7 @@ ul {
 /* --- BADGES & COMMON SECTION HEADERS --- */
 .section-head-center {
   text-align: center;
-  max-width: 780px;
+  /* max-width: 780px; */
   margin: 0 auto 50px;
 }
 
@@ -481,7 +537,7 @@ ul {
 /* 5-Card Vertical Product Showcase (HeyGen Replicating Component) */
 .hero-showcase-wrapper {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1408px;
   margin: 0 auto 50px;
 }
 
