@@ -1,6 +1,7 @@
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -43,13 +44,35 @@ const server = http.createServer((req, res) => {
     } else {
       res.writeHead(200, {
         'Content-Type': contentType,
-        'Cache-Control': 'no-cache'
+        'Cache-Control': 'no-cache',
+        'Access-Control-Allow-Origin': '*'
       });
       res.end(content);
     }
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+// Helper to get local network IPv4 addresses
+function getNetworkAddresses() {
+  const interfaces = os.networkInterfaces();
+  const addresses = [];
+  for (const name of Object.keys(interfaces)) {
+    for (const iface of interfaces[name]) {
+      if (iface.family === 'IPv4' && !iface.internal) {
+        addresses.push(iface.address);
+      }
+    }
+  }
+  return addresses;
+}
+
+server.listen(PORT, '0.0.0.0', () => {
+  const ips = getNetworkAddresses();
+  console.log('==================================================');
+  console.log(`🚀 KhataPro Dev Server is Live (LAN & Mobile enabled)`);
+  console.log(`Local:   http://localhost:${PORT}/index-en.html`);
+  ips.forEach(ip => {
+    console.log(`Network (Mobile): http://${ip}:${PORT}/index-en.html`);
+  });
+  console.log('==================================================');
 });
