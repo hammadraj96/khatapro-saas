@@ -105,23 +105,66 @@ body {
 }
 
 html[dir="ltr"] body {
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
   letter-spacing: -0.01em;
 }
 
+html[dir="ltr"] h1,
+html[dir="ltr"] .hero-title {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 68px;
+  font-weight: 800;
+  line-height: 76px;
+  letter-spacing: -0.03em;
+}
+
+html[dir="ltr"] h2,
 html[dir="ltr"] .section-title,
-html[dir="ltr"] .hero-title,
 html[dir="ltr"] .cta-headline,
 html[dir="ltr"] .emotional-title-1,
-html[dir="ltr"] .emotional-title-2,
-html[dir="ltr"] h1,
-html[dir="ltr"] h2,
-html[dir="ltr"] h3,
-html[dir="ltr"] h4,
-html[dir="ltr"] .brand-title {
-  font-family: 'ABC Solar Display', 'ABC Solar', 'Cabinet Grotesk', 'Clash Display', 'Plus Jakarta Sans', 'Inter', sans-serif;
-  letter-spacing: -0.025em;
+html[dir="ltr"] .emotional-title-2 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 56px;
   font-weight: 800;
+  line-height: 64px;
+  letter-spacing: -0.025em;
+}
+
+html[dir="ltr"] h3,
+html[dir="ltr"] .studio-bottom-card h3,
+html[dir="ltr"] .pricing-card-header h3,
+html[dir="ltr"] .modal-header h3,
+html[dir="ltr"] .sec-pillar-card h3 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: -0.02em;
+}
+
+html[dir="ltr"] h4,
+html[dir="ltr"] .tri-card h4,
+html[dir="ltr"] .ind-card h4,
+html[dir="ltr"] .footer-col h4,
+html[dir="ltr"] .timeline-head h4,
+html[dir="ltr"] .table-header-row h4 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: -0.015em;
+}
+
+html[dir="ltr"] p,
+html[dir="ltr"] .section-desc,
+html[dir="ltr"] .hero-subtitle,
+html[dir="ltr"] .cta-sub,
+html[dir="ltr"] .emotional-subtitle {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 html[dir="ltr"] .card-sound-badge {
