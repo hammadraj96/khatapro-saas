@@ -113,9 +113,15 @@ html[dir="ltr"] .section-title,
 html[dir="ltr"] .hero-title,
 html[dir="ltr"] .cta-headline,
 html[dir="ltr"] .emotional-title-1,
-html[dir="ltr"] .emotional-title-2 {
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  letter-spacing: -0.03em;
+html[dir="ltr"] .emotional-title-2,
+html[dir="ltr"] h1,
+html[dir="ltr"] h2,
+html[dir="ltr"] h3,
+html[dir="ltr"] h4,
+html[dir="ltr"] .brand-title {
+  font-family: 'Cabinet Grotesk', 'Clash Display', 'Plus Jakarta Sans', 'Inter', sans-serif;
+  letter-spacing: -0.025em;
+  font-weight: 800;
 }
 
 html[dir="ltr"] .card-sound-badge {
