@@ -3657,7 +3657,7 @@ input:checked+.slider:before {
   .themed-container-card,
   .final-cta-card,
   .finance-dashboard-box {
-    padding: 24px 16px;
+    padding: 24px 12px;
     border-radius: var(--radius-lg);
   }
 
@@ -3752,6 +3752,43 @@ input:checked+.slider:before {
     flex-direction: column;
     text-align: center;
     gap: 12px;
+  }
+
+  .studio-tab-content {
+    padding: 12px;
+  }
+
+  .ui-ledger-table-box {
+    padding: 12px;
+  }
+
+  .ui-ledger-table-box .table-header-row h4 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .customer-hub-ui {
+    padding: 12px;
+  }
+
+  .timeline-visual-card,
+  .recovery-action-card {
+    padding: 12px;
+  }
+
+  html[dir="ltr"] h1,
+  html[dir="ltr"] .hero-title {
+    font-size: 56px;
+    line-height: 62px;
+  }
+
+  html[dir="ltr"] h2,
+  html[dir="ltr"] .section-title,
+  html[dir="ltr"] .cta-headline,
+  html[dir="ltr"] .emotional-title-1,
+  html[dir="ltr"] .emotional-title-2 {
+    font-size: 44px;
+    line-height: 52px;
   }
 }
 
