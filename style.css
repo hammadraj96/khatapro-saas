@@ -114,10 +114,11 @@ html[dir="ltr"] body {
 html[dir="ltr"] h1,
 html[dir="ltr"] .hero-title {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 68px;
+  font-size: 80px;
   font-weight: 800;
-  line-height: 76px;
+  line-height: 88px;
   letter-spacing: -0.03em;
+  text-transform: capitalize;
 }
 
 html[dir="ltr"] h2,
@@ -130,6 +131,7 @@ html[dir="ltr"] .emotional-title-2 {
   font-weight: 800;
   line-height: 64px;
   letter-spacing: -0.025em;
+  text-transform: capitalize;
 }
 
 html[dir="ltr"] h3,
@@ -138,10 +140,11 @@ html[dir="ltr"] .pricing-card-header h3,
 html[dir="ltr"] .modal-header h3,
 html[dir="ltr"] .sec-pillar-card h3 {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 40px;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 46px;
+  line-height: 30px;
   letter-spacing: -0.02em;
+  text-transform: capitalize;
 }
 
 html[dir="ltr"] h4,
@@ -151,10 +154,11 @@ html[dir="ltr"] .footer-col h4,
 html[dir="ltr"] .timeline-head h4,
 html[dir="ltr"] .table-header-row h4 {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: -0.015em;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
 }
 
 html[dir="ltr"] p,
@@ -163,8 +167,8 @@ html[dir="ltr"] .hero-subtitle,
 html[dir="ltr"] .cta-sub,
 html[dir="ltr"] .emotional-subtitle {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 html[dir="ltr"] .card-sound-badge {
@@ -188,8 +192,13 @@ html[dir="ltr"] .ticker-track {
 }
 
 @keyframes marquee-ltr {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 html[dir="ltr"] .khata-table {
@@ -268,10 +277,19 @@ ul {
 /* --- LAYOUT UTILITIES --- */
 .container {
   max-width: 1420px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 24px;
   position: relative;
   z-index: 1;
+}
+
+.hero-container,
+.emotional-container,
+.faq-container,
+.footer-container {
+  max-width: 1420px;
+  width: 100%;
 }
 
 .section-padded {
@@ -295,7 +313,7 @@ ul {
 .navbar-pill {
   pointer-events: auto;
   width: 100%;
-  max-width: 1536px;
+  max-width: 1420px;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -520,7 +538,8 @@ ul {
   line-height: 1.4;
   color: var(--text-main);
   margin-bottom: 20px;
-  max-width: 900px;
+  max-width: 1200px;
+
 }
 
 .hero-title-line-1,
@@ -586,7 +605,7 @@ ul {
 /* 5-Card Vertical Product Showcase (HeyGen Replicating Component) */
 .hero-showcase-wrapper {
   width: 100%;
-  max-width: 1408px;
+  max-width: 1420px;
   margin: 0 auto 50px;
 }
 
@@ -2769,7 +2788,7 @@ ul {
 }
 
 .emotional-container {
-  max-width: 860px;
+  max-width: 1420px;
 }
 
 .emotional-pre-badge {
@@ -3147,10 +3166,12 @@ input:checked+.slider:before {
 
 /* --- SECTION 15 — FAQ ACCORDION --- */
 .faq-container {
-  max-width: 820px;
+  max-width: 1420px;
 }
 
 .faq-accordion-list {
+  max-width: 1080px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -3469,14 +3490,32 @@ input:checked+.slider:before {
   margin-top: 10px;
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 1100px) {
+/* --- RESPONSIVE MEDIA QUERIES (FULL MULTI-DEVICE SUPPORT) --- */
+
+/* Laptops & Medium Desktops (1025px - 1360px) */
+@media (max-width: 1360px) {
   .hero-cards-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
   .hero-cards-grid .hero-card:nth-child(4),
   .hero-cards-grid .hero-card:nth-child(5) {
+    display: none;
+  }
+
+  .pricing-cards-grid {
+    gap: 16px;
+  }
+}
+
+/* Tablets Landscape & Small Laptops (769px - 1024px) */
+@media (max-width: 1024px) {
+  .navbar-pill {
+    padding: 12px 24px;
+  }
+
+  .nav-menu {
     display: none;
   }
 
@@ -3486,22 +3525,41 @@ input:checked+.slider:before {
   .split-comparison-grid,
   .khata-agreement-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .studio-features-bottom,
   .theme-tri-cards,
-  .pricing-cards-grid,
-  .industry-cards-grid,
   .security-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .pricing-cards-grid {
     grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 40px auto 0;
   }
 
   .pricing-card.popular {
     transform: none;
   }
 
-  .c-metrics-grid {
+  .industry-cards-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .fin-breakdown-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .net-profit-card {
+    grid-column: 1 / -1;
+  }
+
+  .c-metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .calc-fields-row {
@@ -3510,17 +3568,68 @@ input:checked+.slider:before {
 
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 40px;
   }
 }
 
+/* Tablets Portrait & Mobile Handsets (<= 768px) */
 @media (max-width: 768px) {
-  .nav-menu {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-padded {
+    padding: 60px 0;
+  }
+
+  .navbar-wrapper {
+    top: 10px;
+    padding: 0 10px;
+  }
+
+  .navbar-pill {
+    padding: 10px 16px;
+    border-radius: 20px;
+  }
+
+  .btn-nav-secondary {
     display: none;
+  }
+
+  .btn-nav-primary {
+    padding: 8px 16px;
+    font-size: 0.88rem;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .hero-section {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .hero-title {
+    max-width: 100%;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero-cards-grid {
     grid-template-columns: 1fr;
-    max-width: 320px;
+    max-width: 340px;
     margin: 0 auto;
   }
 
@@ -3544,6 +3653,62 @@ input:checked+.slider:before {
     display: none;
   }
 
+  .studio-container-card,
+  .themed-container-card,
+  .final-cta-card,
+  .finance-dashboard-box {
+    padding: 24px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .studio-nav-tabs {
+    gap: 6px;
+  }
+
+  .studio-tab-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .ui-ledger-table-box {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .khata-table {
+    min-width: 580px;
+  }
+
+  .c-profile-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .c-quick-action {
+    width: 100%;
+    margin: 0;
+  }
+
+  .btn-wa-direct {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .c-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-steps-horizontal {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+
   .rec-split-grid {
     grid-template-columns: 1fr;
   }
@@ -3554,10 +3719,19 @@ input:checked+.slider:before {
 
   .finance-pipeline-bar {
     border-radius: var(--radius-lg);
+    padding: 16px;
+    gap: 14px;
   }
 
   .p-connector {
     display: none;
+  }
+
+  .studio-features-bottom,
+  .theme-tri-cards,
+  .security-pillars-grid,
+  .industry-cards-grid {
+    grid-template-columns: 1fr;
   }
 
   .emotional-stats-row {
@@ -3571,6 +3745,33 @@ input:checked+.slider:before {
 
   .footer-top-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+/* Small Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-cards-grid {
+    max-width: 100%;
+  }
+
+  .calc-fields-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stamp-signatures {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .modal-card {
+    padding: 24px 18px;
   }
 }
 
