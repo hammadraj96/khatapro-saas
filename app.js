@@ -14,6 +14,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // 1B. MOBILE MENU DRAWER CONTROLLER
+  const btnMobileToggle = document.getElementById('btn-mobile-toggle');
+  const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link, .btn-mobile-demo, .btn-mobile-signin');
+
+  if (btnMobileToggle && mobileMenuDrawer) {
+    btnMobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = mobileMenuDrawer.classList.toggle('active');
+      btnMobileToggle.classList.toggle('active', isActive);
+      btnMobileToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    });
+
+    // Close when clicking any menu link
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuDrawer.classList.remove('active');
+        btnMobileToggle.classList.remove('active');
+        btnMobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuDrawer.contains(e.target) && !btnMobileToggle.contains(e.target)) {
+        mobileMenuDrawer.classList.remove('active');
+        btnMobileToggle.classList.remove('active');
+        btnMobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   // 2. HERO 5-CARD SHOWCASE CYCLER & SELECTOR
   const heroCards = document.querySelectorAll('.hero-card');
   let currentCardIndex = 0;

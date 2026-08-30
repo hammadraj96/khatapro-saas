@@ -74,25 +74,63 @@
 
       <!-- Nav Actions -->
       <div class="nav-actions">
-        <div class="lang-pill" title="Urdu - Pakistan">
+        <a href="index-en.html" class="lang-pill" title="Switch to English">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
           </svg>
-          <span>UR</span>
-        </div>
-        <a href="#demo-modal" class="btn-nav-secondary" id="btn-open-demo">
+          <span>EN</span>
+        </a>
+        <a href="#demo-modal" class="btn-nav-secondary btn-desktop-only" id="btn-open-demo">
           <span>نظام دیکھیں</span>
         </a>
-        <a href="#pricing-section" class="btn-nav-primary">
+        <a href="#pricing-section" class="btn-nav-primary btn-desktop-only">
           <span>سائن ان</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
         </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+        </button>
       </div>
     </nav>
+
+    <!-- Mobile Drawer Menu Dropdown -->
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+      <div class="mobile-menu-links">
+        <a href="#digital-studio" class="mobile-menu-link">
+          <span>ڈیجیٹل اسٹوڈیو و فیچرز</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </a>
+        <a href="#customers-section" class="mobile-menu-link">
+          <span>گاہک کھاتہ (360° ہب)</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </a>
+        <a href="#installments-section" class="mobile-menu-link">
+          <span>قسطوں کا حساب و ریکوری</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </a>
+        <a href="#finance-section" class="mobile-menu-link">
+          <span>کاروباری حساب و منافع</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </a>
+        <a href="#pricing-section" class="mobile-menu-link">
+          <span>قیمتیں و پیکجز</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </a>
+        <a href="#faq-section" class="mobile-menu-link">
+          <span>عام سوالات (FAQ)</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </a>
+      </div>
+      <div class="mobile-menu-actions">
+        <a href="#demo-modal" class="btn-mobile-demo" id="btn-mobile-open-demo">مفت ڈیمو حاصل کریں</a>
+        <a href="#pricing-section" class="btn-mobile-signin">سائن ان کریں &larr;</a>
+      </div>
+    </div>
   </header>
 
   <!-- MAIN CONTENT CONTAINER -->
