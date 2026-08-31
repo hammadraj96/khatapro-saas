@@ -3755,116 +3755,25 @@ html[dir="rtl"] .p-arrow {
   line-height: 1.65;
 }
 
-/* --- SECTION 11 — EMOTIONAL BRAND & ROI MANIFESTO (THEME-MATCHED LIGHT LUXURY) --- */
+/* --- SECTION 11 — EMOTIONAL BRAND & ROI PHILOSOPHY (ULTRA-PROFESSIONAL LIGHT LUXURY) --- */
 .emotional-brand-section {
   padding: 90px 0;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 50%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 50%, #F8FAFC 100%);
   position: relative;
 }
 
-.emotional-container {
-  max-width: 1420px;
-}
-
-.emotional-manifesto-card {
-  background: #FFFFFF;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: var(--radius-xl);
-  padding: 56px 48px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.06);
-}
-
-.emotional-glow-decor {
-  position: absolute;
-  top: -120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 550px;
-  height: 280px;
-  background: radial-gradient(circle, rgba(13, 153, 255, 0.12) 0%, rgba(16, 185, 129, 0.06) 50%, transparent 75%);
-  filter: blur(40px);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.emotional-card-content {
-  position: relative;
-  z-index: 2;
-  /* max-width: 1080px; */
-  margin: 0 auto;
-}
-
-.manifesto-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #EFF6FF;
-  border: 1px solid #DBEAFE;
-  padding: 6px 18px;
-  border-radius: var(--radius-full);
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-  margin-bottom: 24px;
-}
-
-.manifesto-badge-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #0D99FF;
-  box-shadow: 0 0 8px rgba(13, 153, 255, 0.6);
-}
-
-.manifesto-headline {
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.22;
-  margin-bottom: 18px;
-  letter-spacing: -0.02em;
-  color: var(--text-main);
-}
-
-.manifesto-line-sub {
-  color: var(--text-muted);
-  display: block;
-  font-weight: 600;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  margin-bottom: 6px;
-}
-
-.manifesto-line-main {
-  color: var(--text-main);
-  display: block;
-  background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #0284C7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.manifesto-desc {
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  max-width: 780px;
-  margin: 0 auto 44px;
-  line-height: 1.7;
-}
-
-/* 3 Stat Cards in Light Theme */
 .manifesto-stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 44px;
+  gap: 28px;
+  margin-bottom: 32px;
 }
 
 .manifesto-stat-card {
-  background: #F8FAFC;
+  background: #FFFFFF;
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: var(--radius-xl);
-  padding: 30px 24px;
+  padding: 34px 28px;
   text-align: left;
   transition: all var(--transition-normal);
   display: flex;
@@ -3872,6 +3781,7 @@ html[dir="rtl"] .p-arrow {
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04);
 }
 
 html[dir="rtl"] .manifesto-stat-card {
@@ -3889,66 +3799,68 @@ html[dir="rtl"] .manifesto-stat-card {
   transition: all var(--transition-fast);
 }
 
-.m-stat-card-1::before {
-  background: #0D99FF;
-}
-
-.m-stat-card-2::before {
-  background: #10B981;
-}
-
-.m-stat-card-3::before {
-  background: #8B5CF6;
-}
+.m-stat-card-1::before { background: #0D99FF; }
+.m-stat-card-2::before { background: #10B981; }
+.m-stat-card-3::before { background: #8B5CF6; }
 
 .manifesto-stat-card:hover {
-  background: #FFFFFF;
+  transform: translateY(-6px);
   border-color: rgba(13, 153, 255, 0.25);
-  transform: translateY(-4px);
-  box-shadow: 0 14px 35px -5px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.09);
 }
 
 .m-stat-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .m-stat-icon {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
-  background: #FFFFFF;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
 }
 
+.m-stat-card-1 .m-stat-icon { background: #EFF6FF; border: 1px solid #DBEAFE; }
+.m-stat-card-2 .m-stat-icon { background: #ECFDF5; border: 1px solid #D1FAE5; }
+.m-stat-card-3 .m-stat-icon { background: #F5F3FF; border: 1px solid #EDE9FE; }
+
+.m-stat-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.m-stat-card-1 .m-stat-tag { background: #EFF6FF; color: #0284C7; }
+.m-stat-card-2 .m-stat-tag { background: #ECFDF5; color: #059669; }
+.m-stat-card-3 .m-stat-tag { background: #F5F3FF; color: #7C3AED; }
+
+.m-stat-num-box {
+  margin-bottom: 12px;
+}
+
 .m-stat-num {
   font-family: var(--font-numeric);
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 900;
   line-height: 1;
+  margin-bottom: 4px;
 }
 
-.m-stat-card-1 .m-stat-num {
-  color: #0D99FF;
-}
-
-.m-stat-card-2 .m-stat-num {
-  color: #059669;
-}
-
-.m-stat-card-3 .m-stat-num {
-  color: #7C3AED;
-}
+.m-stat-card-1 .m-stat-num { color: #0D99FF; }
+.m-stat-card-2 .m-stat-num { color: #059669; }
+.m-stat-card-3 .m-stat-num { color: #7C3AED; }
 
 .m-stat-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--text-main);
   margin-bottom: 8px;
@@ -3958,15 +3870,51 @@ html[dir="rtl"] .manifesto-stat-card {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
+  margin-bottom: 18px;
 }
 
-/* Trust Bar & Bottom Actions */
-.manifesto-footer-row {
+/* Feature Checkpoints inside Card */
+.m-stat-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(15, 23, 42, 0.08);
+}
+
+.m-stat-check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.m-stat-check-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ECFDF5;
+  color: #059669;
+  font-size: 0.65rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Bottom Action Bar */
+.manifesto-action-bar {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 22px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 28px;
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--shadow-sm);
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -4000,7 +3948,7 @@ html[dir="rtl"] .manifesto-stat-card {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(13, 153, 255, 0.35);
+  box-shadow: 0 8px 22px rgba(13, 153, 255, 0.35);
   transition: all var(--transition-fast);
   display: inline-flex;
   align-items: center;
