@@ -531,6 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const demoLeadForm = document.getElementById('demo-lead-form');
 
   const btnOpenDemoManifesto = document.getElementById('btn-open-demo-manifesto');
+  const btnOpenDemoConcierge = document.getElementById('btn-open-demo-concierge');
 
   if (btnOpenDemo && demoModal) {
     btnOpenDemo.addEventListener('click', (e) => {
@@ -541,6 +542,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnOpenDemoManifesto && demoModal) {
     btnOpenDemoManifesto.addEventListener('click', (e) => {
+      e.preventDefault();
+      demoModal.classList.add('active');
+    });
+  }
+
+  if (btnOpenDemoConcierge && demoModal) {
+    btnOpenDemoConcierge.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
     });
