@@ -3724,12 +3724,11 @@ html[dir="rtl"] .p-arrow {
   line-height: 1.65;
 }
 
-/* --- SECTION 11 — EMOTIONAL BRAND & ROI MANIFESTO (PREMIUM STAGE) --- */
+/* --- SECTION 11 — EMOTIONAL BRAND & ROI MANIFESTO (THEME-MATCHED LIGHT LUXURY) --- */
 .emotional-brand-section {
-  padding: 80px 0;
-  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 50%, #F8FAFC 100%);
+  padding: 90px 0;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 50%, #FFFFFF 100%);
   position: relative;
-  overflow: hidden;
 }
 
 .emotional-container {
@@ -3737,26 +3736,25 @@ html[dir="rtl"] .p-arrow {
 }
 
 .emotional-manifesto-card {
-  background: radial-gradient(ellipse at 50% -20%, #1E293B 0%, #0F172A 100%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-2xl);
-  padding: 64px 48px;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 56px 48px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.06);
 }
 
 .emotional-glow-decor {
   position: absolute;
-  top: -140px;
+  top: -120px;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(13, 153, 255, 0.3) 0%, rgba(16, 185, 129, 0.15) 50%, transparent 75%);
-  filter: blur(50px);
+  width: 550px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(13, 153, 255, 0.12) 0%, rgba(16, 185, 129, 0.06) 50%, transparent 75%);
+  filter: blur(40px);
   pointer-events: none;
   z-index: 1;
 }
@@ -3764,7 +3762,7 @@ html[dir="rtl"] .p-arrow {
 .emotional-card-content {
   position: relative;
   z-index: 2;
-  max-width: 1060px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -3772,14 +3770,13 @@ html[dir="rtl"] .p-arrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(10px);
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
   padding: 6px 18px;
   border-radius: var(--radius-full);
   font-size: 0.84rem;
   font-weight: 700;
-  color: #93C5FD;
+  color: var(--accent-cyan);
   margin-bottom: 24px;
 }
 
@@ -3787,84 +3784,113 @@ html[dir="rtl"] .p-arrow {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #38BDF8;
-  box-shadow: 0 0 10px #38BDF8;
+  background: #0D99FF;
+  box-shadow: 0 0 8px rgba(13, 153, 255, 0.6);
 }
 
 .manifesto-headline {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.22;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
+  color: var(--text-main);
 }
 
 .manifesto-line-sub {
-  color: #94A3B8;
+  color: var(--text-muted);
   display: block;
   font-weight: 600;
-  margin-bottom: 4px;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  margin-bottom: 6px;
 }
 
 .manifesto-line-main {
-  background: linear-gradient(135deg, #FFFFFF 0%, #BAE6FD 50%, #38BDF8 100%);
+  color: var(--text-main);
+  display: block;
+  background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #0284C7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: block;
 }
 
 .manifesto-desc {
   font-size: 1.15rem;
-  color: #94A3B8;
-  max-width: 760px;
+  color: var(--text-muted);
+  max-width: 780px;
   margin: 0 auto 44px;
   line-height: 1.7;
 }
 
-/* 3 Interactive Stat Cards */
+/* 3 Stat Cards in Light Theme */
 .manifesto-stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
   margin-bottom: 44px;
 }
 
 .manifesto-stat-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
+  background: #F8FAFC;
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: var(--radius-xl);
-  padding: 28px 24px;
+  padding: 30px 24px;
   text-align: left;
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
 }
 
 html[dir="rtl"] .manifesto-stat-card {
   text-align: right;
 }
 
+.manifesto-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.m-stat-card-1::before {
+  background: #0D99FF;
+}
+
+.m-stat-card-2::before {
+  background: #10B981;
+}
+
+.m-stat-card-3::before {
+  background: #8B5CF6;
+}
+
 .manifesto-stat-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(13, 153, 255, 0.4);
+  background: #FFFFFF;
+  border-color: rgba(13, 153, 255, 0.25);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 14px 35px -5px rgba(15, 23, 42, 0.08);
 }
 
 .m-stat-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .m-stat-icon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3873,34 +3899,34 @@ html[dir="rtl"] .manifesto-stat-card {
 
 .m-stat-num {
   font-family: var(--font-numeric);
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 900;
   line-height: 1;
 }
 
 .m-stat-card-1 .m-stat-num {
-  color: #38BDF8;
+  color: #0D99FF;
 }
 
 .m-stat-card-2 .m-stat-num {
-  color: #34D399;
+  color: #059669;
 }
 
 .m-stat-card-3 .m-stat-num {
-  color: #C084FC;
+  color: #7C3AED;
 }
 
 .m-stat-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
   margin-bottom: 8px;
 }
 
 .m-stat-p {
-  font-size: 0.86rem;
-  color: #94A3B8;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 /* Trust Bar & Bottom Actions */
@@ -3909,7 +3935,7 @@ html[dir="rtl"] .manifesto-stat-card {
   justify-content: space-between;
   align-items: center;
   padding-top: 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -3918,8 +3944,9 @@ html[dir="rtl"] .manifesto-stat-card {
   display: flex;
   align-items: center;
   gap: 24px;
-  font-size: 0.85rem;
-  color: #94A3B8;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 600;
   flex-wrap: wrap;
 }
 
@@ -3930,7 +3957,7 @@ html[dir="rtl"] .manifesto-stat-card {
 }
 
 .m-trust-item span:first-child {
-  color: #34D399;
+  color: #059669;
   font-weight: 800;
 }
 
@@ -3942,7 +3969,7 @@ html[dir="rtl"] .manifesto-stat-card {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(13, 153, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(13, 153, 255, 0.35);
   transition: all var(--transition-fast);
   display: inline-flex;
   align-items: center;
@@ -3951,7 +3978,8 @@ html[dir="rtl"] .manifesto-stat-card {
 
 .btn-manifesto-action:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(13, 153, 255, 0.55);
+  box-shadow: 0 12px 28px rgba(13, 153, 255, 0.5);
+  background: linear-gradient(135deg, #0080DF 0%, #0265B8 100%);
 }
 
 /* --- SECTION 12 — TARGET INDUSTRIES --- */
