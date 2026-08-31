@@ -2707,75 +2707,403 @@ html[dir="rtl"] .mobile-menu-link:active {
   margin-top: 10px;
 }
 
-/* --- SECTION 07 — DIGITAL KHATA & AGREEMENTS --- */
+/* --- SECTION 07 — DIGITAL KHATA & AGREEMENTS (ENHANCED PREMIUM DESIGN) --- */
+.digital-khata-section {
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 50%, #FFFFFF 100%);
+}
+
 .khata-agreement-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 32px;
+  align-items: stretch;
 }
 
-.old-khata-transfer-box,
-.agreement-sheet-card {
+.khata-col-card,
+.agreement-col-card {
   background: #FFFFFF;
   border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  box-shadow: var(--shadow-sm);
-  margin-top: 20px;
-}
-
-.mock-field {
-  margin-bottom: 14px;
-}
-
-.mock-field label {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--text-light);
-  margin-bottom: 4px;
-}
-
-.mock-field input {
-  width: 100%;
-  background: var(--bg-subtle);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  padding: 10px 14px;
-  border-radius: var(--radius-sm);
-  font-size: 0.9rem;
-}
-
-.live-active-tag {
-  background: #ECFDF5;
-  color: var(--accent-green);
-  padding: 10px 14px;
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-.sheet-top-banner {
-  background: #1E3A8A;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 8px;
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  font-size: 0.85rem;
-  margin-bottom: 16px;
-}
-
-.sheet-fields-list {
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.khata-col-card:hover,
+.agreement-col-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(13, 153, 255, 0.12);
+  border-color: rgba(13, 153, 255, 0.25);
+}
+
+.khata-card-header {
+  margin-bottom: 24px;
+}
+
+.khata-card-header .section-title {
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 12px 0 10px;
+  color: var(--text-main);
+}
+
+.khata-card-header .section-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Studio UI Frames inside Cards */
+.migration-studio-frame,
+.deed-studio-frame {
+  background: #F8FAFC;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.studio-frame-topbar {
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.studio-top-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.studio-top-chip {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.chip-green {
+  background: #ECFDF5;
+  color: #059669;
+}
+
+.chip-blue {
+  background: #EFF6FF;
+  color: #2563EB;
+}
+
+.chip-purple {
+  background: #FAF5FF;
+  color: #7E22CE;
+}
+
+/* Migration Steps Progress Bar */
+.migration-steps-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 10px 16px;
   gap: 8px;
 }
 
-.s-field-row {
+.mig-step {
+  font-size: 0.76rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.mig-step.done {
+  color: #059669;
+  font-weight: 700;
+}
+
+.mig-step.active {
+  color: var(--accent-cyan);
+  font-weight: 800;
+}
+
+.mig-step-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+.mig-step.done .mig-step-dot {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.mig-step.active .mig-step-dot {
+  background: var(--accent-cyan);
+  color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(13, 153, 255, 0.2);
+}
+
+/* Migration Body Form */
+.migration-frame-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.customer-lead-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+}
+
+.cust-avatar-pill {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0D99FF, #0080DF);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cust-info-block {
+  flex: 1;
+}
+
+.cust-info-block strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.cust-info-block span {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-family: var(--font-numeric);
+}
+
+.cust-verified-badge {
+  background: #ECFDF5;
+  color: #059669;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.migration-fields-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 12px;
+}
+
+.mig-field-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.mig-field-card label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.mig-field-card .val-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mig-field-card .val-amount {
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-family: var(--font-numeric);
+  color: #DC2626;
+}
+
+.mig-field-card .val-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.mig-field-card .val-terms {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.mig-sync-banner {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #065F46;
+  font-weight: 600;
+}
+
+.mig-sync-icon {
+  font-size: 1.1rem;
+}
+
+/* Deed Studio UI Mockup */
+.deed-frame-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deed-paper-simulation {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.deed-official-header {
+  border-bottom: 2px solid #1E3A8A;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
-  font-size: 0.85rem;
-  padding: 6px 0;
+  align-items: center;
+}
+
+.deed-official-emblem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deed-seal-icon {
+  font-size: 1.4rem;
+}
+
+.deed-official-emblem strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #1E3A8A;
+  font-weight: 800;
+}
+
+.deed-official-emblem small {
+  font-size: 0.68rem;
+  color: var(--text-light);
+  font-family: var(--font-numeric);
+}
+
+.deed-ref-stamp {
+  font-family: var(--font-numeric);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px dashed #93C5FD;
+}
+
+.deed-table-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.deed-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  padding: 5px 0;
   border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.deed-spec-row .d-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.deed-spec-row .d-value {
+  color: var(--text-main);
+  font-weight: 700;
+  font-family: var(--font-numeric);
+  text-align: right;
+}
+
+.verified-seal-tag {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Studio Bottom Action Bars */
+.studio-frame-footer {
+  background: #FFFFFF;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.studio-footer-note {
+  font-size: 0.76rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* --- SECTION 08 — BUSINESS FINANCE & P&L --- */
@@ -4120,6 +4448,35 @@ input:checked+.slider:before {
     padding: 12px;
   }
 
+  .khata-col-card,
+  .agreement-col-card {
+    padding: 24px 16px;
+  }
+
+  .migration-frame-body,
+  .deed-frame-body {
+    padding: 14px 12px;
+  }
+
+  .migration-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .migration-steps-track {
+    padding: 8px 10px;
+    gap: 4px;
+  }
+
+  .mig-step span:nth-child(2) {
+    font-size: 0.7rem;
+  }
+
+  .deed-official-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
   html[dir="ltr"] h1,
   html[dir="ltr"] .hero-title {
     font-size: 50px;
@@ -4153,6 +4510,17 @@ input:checked+.slider:before {
 
   .modal-card {
     padding: 24px 18px;
+  }
+
+  .studio-frame-footer {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .studio-frame-footer .btn-sm-primary {
+    width: 100%;
   }
 }
 
