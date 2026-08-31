@@ -533,6 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnOpenDemoManifesto = document.getElementById('btn-open-demo-manifesto');
   const btnOpenDemoConcierge = document.getElementById('btn-open-demo-concierge');
   const btnOpenDemoFinal = document.getElementById('btn-open-demo-final');
+  const btnOpenDemoFinalSec = document.getElementById('btn-open-demo-final-sec');
 
   if (btnOpenDemo && demoModal) {
     btnOpenDemo.addEventListener('click', (e) => {
@@ -557,6 +558,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnOpenDemoFinal && demoModal) {
     btnOpenDemoFinal.addEventListener('click', (e) => {
+      e.preventDefault();
+      demoModal.classList.add('active');
+    });
+  }
+
+  if (btnOpenDemoFinalSec && demoModal) {
+    btnOpenDemoFinalSec.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
     });
