@@ -1640,6 +1640,9 @@
     <!-- ========================================== -->
     <!-- SECTION 09 — COMPLETE CONNECTED SYSTEM     -->
     <!-- ========================================== -->
+    <!-- ========================================== -->
+    <!-- SECTION 09 — COMPLETE CONNECTED SYSTEM     -->
+    <!-- ========================================== -->
     <section class="section-padded complete-system-section" id="complete-system">
       <div class="container">
 
@@ -1651,33 +1654,134 @@
             Every record connected.<br>Everything in one place.
           </h2>
           <p class="section-desc">
-            No need for multiple fragmented spreadsheets or separate apps. All 11 operational modules work in perfect
-            harmony.
+            No need for multiple fragmented spreadsheets or separate apps. All 11 operational modules work in perfect harmony.
           </p>
         </div>
 
-        <!-- Interactive Connected Modules Web -->
-        <div class="system-modules-web">
-          <div class="module-chip active" data-mod="cust">👥 Customers</div>
-          <div class="module-chip" data-mod="prod">📦 Products</div>
-          <div class="module-chip" data-mod="inv">🏬 Inventory</div>
-          <div class="module-chip" data-mod="pos">💵 Cash Sales</div>
-          <div class="module-chip" data-mod="inst">📅 Installments</div>
-          <div class="module-chip" data-mod="pay">💳 Payments</div>
-          <div class="module-chip" data-mod="rec">🚨 Recovery</div>
-          <div class="module-chip" data-mod="khata">📖 Digital Khata</div>
-          <div class="module-chip" data-mod="agr">📑 Agreements</div>
-          <div class="module-chip" data-mod="exp">🧾 Expenses</div>
-          <div class="module-chip" data-mod="pnl">📈 Profit & Loss</div>
+        <!-- Interactive 11-Module Pill Selector -->
+        <div class="system-modules-web" id="system-modules-web">
+          <button class="module-chip active" data-mod="cust" type="button">👥 Customers</button>
+          <button class="module-chip" data-mod="prod" type="button">📦 Products</button>
+          <button class="module-chip" data-mod="inv" type="button">🏬 Inventory</button>
+          <button class="module-chip" data-mod="pos" type="button">💵 Cash Sales</button>
+          <button class="module-chip" data-mod="inst" type="button">📅 Installments</button>
+          <button class="module-chip" data-mod="pay" type="button">💳 Payments</button>
+          <button class="module-chip" data-mod="rec" type="button">🚨 Recovery</button>
+          <button class="module-chip" data-mod="khata" type="button">📖 Digital Khata</button>
+          <button class="module-chip" data-mod="agr" type="button">📑 Agreements</button>
+          <button class="module-chip" data-mod="exp" type="button">🧾 Expenses</button>
+          <button class="module-chip" data-mod="pnl" type="button">📈 Profit & Loss</button>
         </div>
 
-        <!-- Center Connecting Hub Graphic -->
-        <div class="system-hub-graphic">
-          <div class="hub-center-core">
-            <div class="core-logo">KP</div>
-            <strong>KhataPro</strong>
-            <span>Central Business Database Engine</span>
+        <!-- Interactive Architecture Live Stage -->
+        <div class="architecture-interactive-stage" id="architecture-stage">
+          
+          <!-- Left: Central Database & Synced Satellites Graphic -->
+          <div class="architecture-engine-canvas">
+            <div class="canvas-header-bar">
+              <span class="live-status-dot"></span>
+              <span class="live-status-text">KhataPro Unified Engine • 2-Way Realtime Sync</span>
+              <span class="live-latency-chip">12ms Latency</span>
+            </div>
+
+            <div class="engine-nodes-orbit">
+              <!-- Animated SVG Data Beams -->
+              <svg class="engine-data-beams-svg" viewBox="0 0 400 320" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0D99FF" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#34D399" stop-opacity="0.8"/>
+                  </linearGradient>
+                </defs>
+                <line x1="200" y1="160" x2="80" y2="50" class="beam-line active" id="beam-1" />
+                <line x1="200" y1="160" x2="320" y2="50" class="beam-line" id="beam-2" />
+                <line x1="200" y1="160" x2="80" y2="270" class="beam-line" id="beam-3" />
+                <line x1="200" y1="160" x2="320" y2="270" class="beam-line" id="beam-4" />
+              </svg>
+
+              <!-- Central Database Core -->
+              <div class="hub-center-core" id="hub-center-core">
+                <div class="core-pulse-ring"></div>
+                <div class="core-logo">KP</div>
+                <strong>KhataPro Cloud</strong>
+                <span id="active-core-status">Single Source of Truth</span>
+              </div>
+
+              <!-- 4 Satellite Connected Hubs -->
+              <div class="satellite-node node-top-left active" id="sat-node-1">
+                <span class="sat-icon">📱</span>
+                <span class="sat-name">WhatsApp API</span>
+              </div>
+              <div class="satellite-node node-top-right" id="sat-node-2">
+                <span class="sat-icon">⚡</span>
+                <span class="sat-name">POS Counter</span>
+              </div>
+              <div class="satellite-node node-bottom-left" id="sat-node-3">
+                <span class="sat-icon">🔒</span>
+                <span class="sat-name">Offline DB</span>
+              </div>
+              <div class="satellite-node node-bottom-right" id="sat-node-4">
+                <span class="sat-icon">📊</span>
+                <span class="sat-name">Auto P&L</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Right: Live Module Inspector & Event Pipeline -->
+          <div class="architecture-inspector-card" id="architecture-inspector">
+            <div class="inspector-top-meta">
+              <div class="inspector-badge" id="insp-badge">CRM & LEDGER</div>
+              <div class="inspector-id-chip" id="insp-id">MODULE #01</div>
+            </div>
+
+            <div class="inspector-main-info">
+              <div class="insp-icon-box" id="insp-icon">👥</div>
+              <div>
+                <h3 class="insp-title" id="insp-title">Customer 360° & Account Ledgers</h3>
+                <p class="insp-desc" id="insp-desc">Stores complete CNIC, contact profile, balance history, and auto-links every sale, recovery alert, and legal agreement to this customer.</p>
+              </div>
+            </div>
+
+            <!-- Dynamic 3-Step Live Pipeline -->
+            <div class="inspector-pipeline-box">
+              <div class="pipeline-title">⚡ Real-Time Connected Workflow</div>
+              <div class="pipeline-steps-row" id="insp-pipeline">
+                <div class="p-mini-step">
+                  <span class="p-step-num">1</span>
+                  <span class="p-step-text" id="p-step-1">Profile Created</span>
+                </div>
+                <span class="p-arrow">➔</span>
+                <div class="p-mini-step">
+                  <span class="p-step-num">2</span>
+                  <span class="p-step-text" id="p-step-2">Linked to POS Sale</span>
+                </div>
+                <span class="p-arrow">➔</span>
+                <div class="p-mini-step">
+                  <span class="p-step-num">3</span>
+                  <span class="p-step-text" id="p-step-3">WhatsApp Synced</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Performance Metrics -->
+            <div class="inspector-metrics-bar">
+              <div class="insp-metric-pill">
+                <span class="m-dot">🟢</span>
+                <strong id="insp-metric-1">⚡ Instant Search (&lt;10ms)</strong>
+              </div>
+              <div class="insp-metric-pill">
+                <span class="m-dot">🛡️</span>
+                <strong id="insp-metric-2">🔒 100% Unique CNIC Protection</strong>
+              </div>
+            </div>
+
+            <!-- Interactive Footer / Action -->
+            <div class="inspector-footer">
+              <span class="inspector-hint">✨ Click any module above to explore live flow</span>
+              <a href="#customers-section" class="btn-sm-primary" id="insp-action-btn">Explore Module &rarr;</a>
+            </div>
+          </div>
+
         </div>
 
       </div>
