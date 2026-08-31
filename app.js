@@ -534,6 +534,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnOpenDemoConcierge = document.getElementById('btn-open-demo-concierge');
   const btnOpenDemoFinal = document.getElementById('btn-open-demo-final');
   const btnOpenDemoFinalSec = document.getElementById('btn-open-demo-final-sec');
+  const btnFooterDemo = document.getElementById('btn-footer-demo');
 
   if (btnOpenDemo && demoModal) {
     btnOpenDemo.addEventListener('click', (e) => {
@@ -565,6 +566,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnOpenDemoFinalSec && demoModal) {
     btnOpenDemoFinalSec.addEventListener('click', (e) => {
+      e.preventDefault();
+      demoModal.classList.add('active');
+    });
+  }
+
+  if (btnFooterDemo && demoModal) {
+    btnFooterDemo.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
     });
