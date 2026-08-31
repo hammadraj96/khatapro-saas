@@ -633,6 +633,132 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- PROMOTION OFFER POPUP LOGIC ---
+  const promoModal = document.getElementById('promo-modal-overlay');
+  const btnClosePromo = document.getElementById('btn-close-promo');
+  const promoOfferForm = document.getElementById('promo-offer-form');
+  const promoTimerEl = document.getElementById('promo-timer');
+
+  // Open Promo function
+  function openPromoModal() {
+    if (promoModal && !promoModal.classList.contains('active')) {
+      promoModal.classList.add('active');
+    }
+  }
+
+  // Close Promo function
+  function closePromoModal() {
+    if (promoModal) {
+      promoModal.classList.remove('active');
+      try {
+        sessionStorage.setItem('khatapro_promo_dismissed', 'true');
+      } catch (e) {}
+    }
+  }
+
+  if (btnClosePromo) {
+    btnClosePromo.addEventListener('click', closePromoModal);
+  }
+
+  if (promoModal) {
+    promoModal.addEventListener('click', (e) => {
+      if (e.target === promoModal) {
+        closePromoModal();
+      }
+    });
+  }
+
+  // Wire Announcement Bar link to open Promo Modal
+  if (btnAnnouncementDemo) {
+    btnAnnouncementDemo.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPromoModal();
+    });
+  }
+
+  // Real-time dynamic countdown timer (starts from 09:59)
+  if (promoTimerEl) {
+    let durationSeconds = 9 * 60 + 59;
+    const timerInterval = setInterval(() => {
+      if (durationSeconds <= 0) {
+        clearInterval(timerInterval);
+        promoTimerEl.textContent = '00:00';
+        return;
+      }
+      durationSeconds--;
+      const mins = Math.floor(durationSeconds / 60);
+      const secs = durationSeconds % 60;
+      promoTimerEl.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }, 1000);
+  }
+
+  // Timed Auto-Popup (after 6 seconds)
+  let promoHasPopped = false;
+  try {
+    if (sessionStorage.getItem('khatapro_promo_dismissed') === 'true') {
+      promoHasPopped = true;
+    }
+  } catch (e) {}
+
+  if (!promoHasPopped) {
+    setTimeout(() => {
+      try {
+        if (sessionStorage.getItem('khatapro_promo_dismissed') !== 'true') {
+          openPromoModal();
+          promoHasPopped = true;
+        }
+      } catch (e) {
+        openPromoModal();
+      }
+    }, 6000);
+
+    // Exit-intent trigger on desktop
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY <= 0 && !promoHasPopped) {
+        try {
+          if (sessionStorage.getItem('khatapro_promo_dismissed') !== 'true') {
+            openPromoModal();
+            promoHasPopped = true;
+          }
+        } catch (err) {
+          openPromoModal();
+        }
+      }
+    });
+  }
+
+  // Promo Form Submission Handler
+  if (promoOfferForm) {
+    promoOfferForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('promo-name')?.value || '';
+      const shop = document.getElementById('promo-shop')?.value || '';
+      const phone = document.getElementById('promo-phone')?.value || '';
+
+      const isUrdu = document.documentElement.lang === 'ur' || document.documentElement.dir === 'rtl';
+      
+      const successTitle = isUrdu ? 'مبارک ہو! 50% ڈسکاؤنٹ محفوظ کر لیا گیا 🎉' : 'Congratulations! 50% Discount Locked In 🎉';
+      const successSub = isUrdu 
+        ? 'ہم نے آپ کا ڈسکاؤنٹ واؤچر اور انسٹالیشن کوڈ آپ کے واٹس ایپ پر تیار کر دیا ہے۔' 
+        : 'Your exclusive discount voucher and activation setup have been generated for WhatsApp.';
+      const btnText = isUrdu ? 'واٹس ایپ پر آفر حاصل کریں 🟢' : 'Open in WhatsApp Now 🟢';
+
+      const waMsg = encodeURIComponent(`السلام علیکم! میں نے کھاتہ پرو 50% ڈسکاؤنٹ آفر کا فارم بھرا ہے۔\nنام: ${name}\nدکان: ${shop}\nواٹس ایپ: ${phone}\nبراہ کرم میرا لائف ٹائم لائسنس ڈسکاؤنٹ کوڈ ارسال کریں۔`);
+      const waUrl = `https://wa.me/923001234567?text=${waMsg}`;
+
+      promoOfferForm.innerHTML = `
+        <div style="text-align: center; padding: 24px 10px;">
+          <div style="width: 56px; height: 56px; background: #ECFDF5; border-radius: 50%; color: #059669; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">✓</div>
+          <h3 style="color: #0F172A; font-size: 1.35rem; font-weight: 800; margin-bottom: 8px;">${successTitle}</h3>
+          <p style="color: #64748B; font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px;">${successSub}</p>
+          <a href="${waUrl}" target="_blank" rel="noopener" class="btn-promo-submit" style="text-decoration: none; display: inline-flex;">
+            <span>${btnText}</span>
+          </a>
+        </div>
+      `;
+    });
+  }
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
