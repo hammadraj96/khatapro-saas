@@ -4577,53 +4577,53 @@ input:checked+.slider:before {
   line-height: 1.7;
 }
 
-/* --- SECTION 16 — FINAL CTA BANNER (ULTRA HIGH-CTR LUXURY POWERHOUSE) --- */
+/* --- SECTION 16 — FINAL CTA BANNER (THEME-MATCHED LIGHT LUXURY) --- */
 .final-cta-section {
   padding: 60px 0 100px;
   position: relative;
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 50%, #F8FAFC 100%);
 }
 
 .final-cta-card {
-  background: radial-gradient(ellipse at 50% -10%, #1E3A8A 0%, #0F172A 70%, #080C14 100%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: var(--radius-2xl);
   padding: 68px 48px;
-  color: #FFFFFF;
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 30px 80px -15px rgba(15, 23, 42, 0.4), 0 0 50px -10px rgba(13, 153, 255, 0.25);
+  box-shadow: 0 25px 60px -10px rgba(15, 23, 42, 0.06), 0 0 50px -10px rgba(13, 153, 255, 0.08);
 }
 
 .final-cta-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px);
   background-size: 28px 28px;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .cta-glow-decor-1 {
   position: absolute;
-  top: -100px;
+  top: -120px;
   left: -80px;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(13, 153, 255, 0.35) 0%, rgba(13, 153, 255, 0) 70%);
-  filter: blur(60px);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(13, 153, 255, 0.12) 0%, rgba(13, 153, 255, 0) 70%);
+  filter: blur(50px);
   pointer-events: none;
 }
 
 .cta-glow-decor-2 {
   position: absolute;
-  bottom: -100px;
+  bottom: -120px;
   right: -80px;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0) 70%);
-  filter: blur(60px);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0) 70%);
+  filter: blur(50px);
   pointer-events: none;
 }
 
@@ -4638,16 +4638,15 @@ input:checked+.slider:before {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  padding: 7px 20px;
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  padding: 7px 22px;
   border-radius: var(--radius-full);
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   font-weight: 700;
-  color: #BAE6FD;
+  color: var(--accent-cyan);
   margin-bottom: 24px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-sm);
 }
 
 .cta-live-dot {
@@ -4655,7 +4654,7 @@ input:checked+.slider:before {
   height: 8px;
   border-radius: 50%;
   background: #10B981;
-  box-shadow: 0 0 10px #10B981, 0 0 20px #10B981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
   animation: pulse-dot 2s infinite ease-in-out;
 }
 
@@ -4669,23 +4668,23 @@ input:checked+.slider:before {
   font-size: clamp(2.2rem, 4.4vw, 3.6rem);
   font-weight: 800;
   line-height: 1.25;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   letter-spacing: -0.02em;
-  color: #FFFFFF;
+  color: var(--text-main);
 }
 
 .cta-headline-highlight {
   display: block;
-  background: linear-gradient(135deg, #38BDF8 0%, #60A5FA 50%, #34D399 100%);
+  background: linear-gradient(135deg, #0D99FF 0%, #1E3A8A 55%, #059669 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .cta-sub {
   font-size: 1.15rem;
-  max-width: 760px;
+  max-width: 780px;
   margin: 0 auto 38px;
-  color: #CBD5E1;
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
@@ -4702,19 +4701,19 @@ input:checked+.slider:before {
 .btn-cta-launch {
   padding: 15px 38px;
   border-radius: var(--radius-full);
-  background: #FFFFFF;
-  color: #0F172A;
+  background: linear-gradient(135deg, #0D99FF 0%, #0080DF 100%);
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), 0 0 25px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 25px rgba(13, 153, 255, 0.35);
   transition: all var(--transition-fast);
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  border: 1px solid #FFFFFF;
+  border: none;
 }
 
 .btn-cta-launch::after {
@@ -4724,7 +4723,7 @@ input:checked+.slider:before {
   left: -60%;
   width: 40%;
   height: 200%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transform: rotate(25deg);
   transition: left 0.75s ease-in-out;
   pointer-events: none;
@@ -4736,9 +4735,9 @@ input:checked+.slider:before {
 
 .btn-cta-launch:hover {
   transform: translateY(-3px) scale(1.02);
-  background: #F8FAFC;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 35px rgba(255, 255, 255, 0.6);
-  color: #0284C7;
+  background: linear-gradient(135deg, #0080DF 0%, #0265B8 100%);
+  box-shadow: 0 16px 36px rgba(13, 153, 255, 0.5);
+  color: #FFFFFF;
 }
 
 .btn-cta-launch svg {
@@ -4757,10 +4756,9 @@ html[dir="rtl"] .btn-cta-launch:hover svg {
 .btn-cta-secondary {
   padding: 15px 32px;
   border-radius: var(--radius-full);
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  color: #FFFFFF;
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: var(--text-main);
   font-size: 16px;
   font-weight: 500;
   transition: all var(--transition-fast);
@@ -4768,15 +4766,15 @@ html[dir="rtl"] .btn-cta-launch:hover svg {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-cta-secondary:hover {
-  background: rgba(16, 185, 129, 0.2);
-  border-color: rgba(52, 211, 153, 0.6);
-  color: #34D399;
+  background: #ECFDF5;
+  border-color: #10B981;
+  color: #059669;
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.25);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.18);
 }
 
 /* Trust Badges Strip */
@@ -4784,23 +4782,23 @@ html[dir="rtl"] .btn-cta-launch:hover svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .cta-trust-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.84rem;
-  color: #94A3B8;
+  font-size: 0.88rem;
+  color: var(--text-muted);
   font-weight: 600;
 }
 
 .cta-trust-chip span:first-child {
-  color: #34D399;
+  color: #059669;
   font-weight: 800;
 }
 
