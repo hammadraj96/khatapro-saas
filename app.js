@@ -568,6 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnOpenDemo.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     });
   }
 
@@ -575,6 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnOpenDemoManifesto.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     });
   }
 
@@ -582,6 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnOpenDemoConcierge.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     });
   }
 
@@ -589,6 +592,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnOpenDemoFinal.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     });
   }
 
@@ -596,6 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnOpenDemoFinalSec.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     });
   }
 
@@ -603,12 +608,14 @@ document.addEventListener('DOMContentLoaded', () => {
     btnFooterDemo.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     });
   }
 
   if (btnCloseModal && demoModal) {
     btnCloseModal.addEventListener('click', () => {
       demoModal.classList.remove('active');
+      document.body.style.overflow = '';
     });
   }
 
@@ -616,6 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
     demoModal.addEventListener('click', (e) => {
       if (e.target === demoModal) {
         demoModal.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   }
@@ -643,6 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openPromoModal() {
     if (promoModal && !promoModal.classList.contains('active')) {
       promoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
   }
 
@@ -650,6 +659,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closePromoModal() {
     if (promoModal) {
       promoModal.classList.remove('active');
+      document.body.style.overflow = '';
       try {
         sessionStorage.setItem('khatapro_promo_dismissed', 'true');
       } catch (e) {}

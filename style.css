@@ -309,20 +309,23 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  height: 38px;
+  min-height: 38px;
   background: linear-gradient(90deg, #090D16 0%, #0F172A 20%, #0369A1 50%, #0F172A 80%, #090D16 100%);
   color: #FFFFFF;
   z-index: 1002;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 16px;
+  padding: 6px 40px 6px 16px;
   font-size: 0.84rem;
   font-weight: 500;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow: hidden;
+}
+
+html[dir="rtl"] .announcement-bar {
+  padding: 6px 16px 6px 40px;
 }
 
 .announcement-bar.hidden {
@@ -335,10 +338,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   max-width: 1420px;
   width: 100%;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .announcement-tag {
@@ -354,6 +358,7 @@ ul {
   letter-spacing: 0.04em;
   color: #38BDF8;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .announcement-tag-dot {
@@ -366,11 +371,14 @@ ul {
 }
 
 .announcement-text {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .announcement-link {
@@ -384,6 +392,7 @@ ul {
   transition: color var(--transition-fast);
   margin-left: 4px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 html[dir="rtl"] .announcement-link {
@@ -397,27 +406,31 @@ html[dir="rtl"] .announcement-link {
 
 .announcement-close-btn {
   position: absolute;
-  right: 0;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.25rem;
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 4px 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
   line-height: 1;
+  border-radius: 4px;
 }
 
 html[dir="rtl"] .announcement-close-btn {
   right: auto;
-  left: 0;
+  left: 12px;
 }
 
 .announcement-close-btn:hover {
   color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* --- FLOATING PILL NAVBAR --- */
@@ -5331,9 +5344,13 @@ html[dir="rtl"] .footer-col ul li a:hover {
   border-radius: 28px;
   max-width: 580px;
   width: 100%;
+  max-height: calc(100vh - 36px);
+  max-height: calc(100dvh - 36px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding: 40px 36px;
   position: relative;
-  overflow: hidden;
   box-shadow: 0 30px 80px -15px rgba(15, 23, 42, 0.35), 0 0 50px -10px rgba(13, 153, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.9);
   animation: promoModalSpring 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -5344,6 +5361,7 @@ html[dir="rtl"] .footer-col ul li a:hover {
     transform: scale(0.88) translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: scale(1) translateY(0);
     opacity: 1;
@@ -5598,7 +5616,7 @@ html[dir="rtl"] .promo-country-tag {
 .promo-phone-wrap input {
   border: none;
   padding: 11px 12px;
-  width: 100%;
+  width: 86%;
 }
 
 .promo-phone-wrap input:focus {
@@ -5762,9 +5780,31 @@ html[dir="rtl"] .promo-country-tag {
     padding: 60px 0;
   }
 
+  .announcement-bar {
+    padding: 6px 36px 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  html[dir="rtl"] .announcement-bar {
+    padding: 6px 12px 6px 36px;
+  }
+
+  .announcement-tag {
+    font-size: 0.68rem;
+    padding: 2px 8px;
+  }
+
+  .announcement-text {
+    font-size: 0.76rem;
+  }
+
   .navbar-wrapper {
-    top: 10px;
+    top: 48px;
     padding: 0 10px;
+  }
+
+  body.no-announcement .navbar-wrapper {
+    top: 10px;
   }
 
   .navbar-pill {
@@ -5796,8 +5836,12 @@ html[dir="rtl"] .promo-country-tag {
   }
 
   .hero-section {
-    padding-top: 100px;
+    padding-top: 110px;
     padding-bottom: 40px;
+  }
+
+  body.no-announcement .hero-section {
+    padding-top: 85px;
   }
 
   .hero-title {
@@ -6134,10 +6178,176 @@ html[dir="rtl"] .promo-country-tag {
     font-size: 44px;
     line-height: 52px;
   }
+
+  /* Promo Modal Responsive Styling (<= 768px) */
+  .promo-modal-overlay {
+    padding: 12px;
+    align-items: center;
+  }
+
+  .promo-modal-card {
+    padding: 28px 18px 20px;
+    border-radius: 22px;
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+  }
+
+  .promo-close-btn {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.15rem;
+  }
+
+  html[dir="rtl"] .promo-close-btn {
+    right: auto;
+    left: 12px;
+  }
+
+  .promo-badge-row {
+    margin-bottom: 12px;
+    gap: 6px;
+  }
+
+  .promo-pill-badge,
+  .promo-timer-box {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+  }
+
+  .promo-headline {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .promo-sub {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+
+  .promo-benefits-list {
+    padding: 10px 12px;
+    gap: 8px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+  }
+
+  .promo-benefit-item {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    gap: 8px;
+  }
+
+  .promo-check-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 0.65rem;
+  }
+
+  .promo-form {
+    gap: 10px;
+  }
+
+  .promo-input-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .promo-field {
+    gap: 4px;
+  }
+
+  .promo-field label {
+    font-size: 0.75rem;
+  }
+
+  .promo-field input {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+
+  .promo-phone-wrap {
+    border-radius: 8px;
+  }
+
+  .promo-country-tag {
+    padding: 10px 10px;
+    font-size: 0.78rem;
+  }
+
+  .btn-promo-submit {
+    padding: 12px 14px;
+    font-size: 15px;
+    margin-top: 2px;
+  }
+
+  .promo-trust-footer {
+    font-size: 0.68rem;
+    gap: 4px;
+    margin-top: 2px;
+  }
 }
 
 /* Small Mobile Phones (<= 480px) */
 @media (max-width: 480px) {
+  .announcement-bar {
+    padding: 5px 28px 5px 8px;
+  }
+
+  html[dir="rtl"] .announcement-bar {
+    padding: 5px 8px 5px 28px;
+  }
+
+  .announcement-tag {
+    display: none;
+  }
+
+  .announcement-text {
+    font-size: 0.72rem;
+    line-height: 1.32;
+  }
+
+  .announcement-link {
+    font-size: 0.72rem;
+  }
+
+  .announcement-close-btn {
+    right: 4px;
+    font-size: 1.1rem;
+    padding: 2px 4px;
+  }
+
+  html[dir="rtl"] .announcement-close-btn {
+    right: auto;
+    left: 4px;
+  }
+
+  .navbar-wrapper {
+    top: 44px;
+    padding: 0 8px;
+  }
+
+  body.no-announcement .navbar-wrapper {
+    top: 8px;
+  }
+
+  .navbar-pill {
+    padding: 8px 12px;
+    border-radius: 18px;
+  }
+
+  .hero-section {
+    padding-top: 95px;
+  }
+
+  body.no-announcement .hero-section {
+    padding-top: 75px;
+  }
+
   .hero-cards-grid {
     max-width: 100%;
   }
@@ -6155,6 +6365,15 @@ html[dir="rtl"] .promo-country-tag {
     padding: 24px 18px;
   }
 
+  .promo-modal-card {
+    padding: 22px 14px 16px;
+    border-radius: 18px;
+  }
+
+  .promo-headline {
+    font-size: 1.18rem;
+  }
+
   .studio-frame-footer {
     flex-direction: column;
     align-items: stretch;
@@ -6164,6 +6383,25 @@ html[dir="rtl"] .promo-country-tag {
 
   .studio-frame-footer .btn-sm-primary {
     width: 100%;
+  }
+}
+
+/* Ultra Small Mobile Handsets (<= 360px) */
+@media (max-width: 360px) {
+  .announcement-text {
+    font-size: 0.68rem;
+  }
+
+  .promo-modal-card {
+    padding: 18px 12px 14px;
+  }
+
+  .promo-headline {
+    font-size: 1.05rem;
+  }
+
+  .promo-benefit-item:last-child {
+    display: none;
   }
 }
 
