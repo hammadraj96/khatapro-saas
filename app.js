@@ -535,6 +535,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnOpenDemoFinal = document.getElementById('btn-open-demo-final');
   const btnOpenDemoFinalSec = document.getElementById('btn-open-demo-final-sec');
   const btnFooterDemo = document.getElementById('btn-footer-demo');
+  const btnAnnouncementDemo = document.getElementById('btn-announcement-demo');
+  const btnCloseAnnouncement = document.getElementById('btn-close-announcement');
+  const announcementBar = document.getElementById('announcement-bar');
+
+  // Announcement Bar interactions
+  if (btnCloseAnnouncement && announcementBar) {
+    btnCloseAnnouncement.addEventListener('click', () => {
+      announcementBar.classList.add('hidden');
+      document.body.classList.add('no-announcement');
+      try {
+        sessionStorage.setItem('khatapro_announcement_closed', 'true');
+      } catch (e) {}
+    });
+
+    try {
+      if (sessionStorage.getItem('khatapro_announcement_closed') === 'true') {
+        announcementBar.classList.add('hidden');
+        document.body.classList.add('no-announcement');
+      }
+    } catch (e) {}
+  }
+
+  if (btnAnnouncementDemo && demoModal) {
+    btnAnnouncementDemo.addEventListener('click', (e) => {
+      e.preventDefault();
+      demoModal.classList.add('active');
+    });
+  }
 
   if (btnOpenDemo && demoModal) {
     btnOpenDemo.addEventListener('click', (e) => {
