@@ -4577,35 +4577,115 @@ input:checked+.slider:before {
   line-height: 1.7;
 }
 
-/* --- SECTION 16 — FINAL CTA BANNER --- */
+/* --- SECTION 16 — FINAL CTA BANNER (ULTRA HIGH-CTR LUXURY POWERHOUSE) --- */
 .final-cta-section {
   padding: 60px 0 100px;
+  position: relative;
 }
 
 .final-cta-card {
-  background: radial-gradient(circle at top right, #00A3FF 0%, #0D99FF 40%, #0284C7 100%);
-  border-radius: var(--radius-xl);
-  padding: 70px 40px;
+  background: radial-gradient(ellipse at 50% -10%, #1E3A8A 0%, #0F172A 70%, #080C14 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-2xl);
+  padding: 68px 48px;
   color: #FFFFFF;
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 50px -10px rgba(13, 153, 255, 0.4);
+  box-shadow: 0 30px 80px -15px rgba(15, 23, 42, 0.4), 0 0 50px -10px rgba(13, 153, 255, 0.25);
+}
+
+.final-cta-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.cta-glow-decor-1 {
+  position: absolute;
+  top: -100px;
+  left: -80px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(13, 153, 255, 0.35) 0%, rgba(13, 153, 255, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.cta-glow-decor-2 {
+  position: absolute;
+  bottom: -100px;
+  right: -80px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.cta-pill-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 7px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #BAE6FD;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cta-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 10px #10B981, 0 0 20px #10B981;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
 }
 
 .cta-headline {
   font-family: var(--font-urdu-display);
-  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 16px;
+  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.cta-headline-highlight {
+  display: block;
+  background: linear-gradient(135deg, #38BDF8 0%, #60A5FA 50%, #34D399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .cta-sub {
-  font-size: 1.2rem;
-  max-width: 680px;
-  margin: 0 auto 36px;
-  opacity: 0.95;
+  font-size: 1.15rem;
+  max-width: 760px;
+  margin: 0 auto 38px;
+  color: #CBD5E1;
   line-height: 1.7;
 }
 
@@ -4613,36 +4693,73 @@ input:checked+.slider:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
+  margin-bottom: 38px;
 }
 
+/* Primary High-CTR Launch Button */
 .btn-cta-launch {
-  padding: 14px 36px;
+  padding: 15px 38px;
   border-radius: var(--radius-full);
   background: #FFFFFF;
-  color: #0284C7;
+  color: #0F172A;
   font-size: 16px;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  gap: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), 0 0 25px rgba(255, 255, 255, 0.4);
   transition: all var(--transition-fast);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #FFFFFF;
+}
+
+.btn-cta-launch::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  transform: rotate(25deg);
+  transition: left 0.75s ease-in-out;
+  pointer-events: none;
+}
+
+.btn-cta-launch:hover::after {
+  left: 130%;
 }
 
 .btn-cta-launch:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
   background: #F8FAFC;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 35px rgba(255, 255, 255, 0.6);
+  color: #0284C7;
 }
 
+.btn-cta-launch svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn-cta-launch:hover svg {
+  transform: translateX(4px);
+}
+
+html[dir="rtl"] .btn-cta-launch:hover svg {
+  transform: translateX(-4px);
+}
+
+/* Secondary High-CTR WhatsApp Button */
 .btn-cta-secondary {
-  padding: 14px 28px;
+  padding: 15px 32px;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 500;
@@ -4650,13 +4767,41 @@ input:checked+.slider:before {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(52, 211, 153, 0.6);
+  color: #34D399;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.25);
+}
+
+/* Trust Badges Strip */
+.cta-trust-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+.cta-trust-chip span:first-child {
+  color: #34D399;
+  font-weight: 800;
 }
 
 /* --- SECTION 17 — MODERN DARK FOOTER --- */
