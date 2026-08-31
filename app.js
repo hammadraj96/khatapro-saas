@@ -530,8 +530,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnCloseModal = document.getElementById('btn-close-modal');
   const demoLeadForm = document.getElementById('demo-lead-form');
 
+  const btnOpenDemoManifesto = document.getElementById('btn-open-demo-manifesto');
+
   if (btnOpenDemo && demoModal) {
     btnOpenDemo.addEventListener('click', (e) => {
+      e.preventDefault();
+      demoModal.classList.add('active');
+    });
+  }
+
+  if (btnOpenDemoManifesto && demoModal) {
+    btnOpenDemoManifesto.addEventListener('click', (e) => {
       e.preventDefault();
       demoModal.classList.add('active');
     });
