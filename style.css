@@ -5341,24 +5341,21 @@ html[dir="rtl"] .footer-col ul li a:hover {
 
 .promo-modal-card {
   background: #FFFFFF;
-  border-radius: 28px;
-  max-width: 580px;
-  width: 100%;
-  max-height: calc(100vh - 36px);
-  max-height: calc(100dvh - 36px);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  padding: 40px 36px;
+  border-radius: 24px;
+  max-width: 500px;
+  width: 95%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 26px 28px 20px;
   position: relative;
   box-shadow: 0 30px 80px -15px rgba(15, 23, 42, 0.35), 0 0 50px -10px rgba(13, 153, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.9);
-  animation: promoModalSpring 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: promoModalSpring 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes promoModalSpring {
   from {
-    transform: scale(0.88) translateY(20px);
+    transform: scale(0.9) translateY(15px);
     opacity: 0;
   }
 
@@ -5370,37 +5367,37 @@ html[dir="rtl"] .footer-col ul li a:hover {
 
 .promo-glow-cyan {
   position: absolute;
-  top: -100px;
-  left: -80px;
-  width: 320px;
-  height: 320px;
+  top: -80px;
+  left: -60px;
+  width: 260px;
+  height: 260px;
   background: radial-gradient(circle, rgba(13, 153, 255, 0.18) 0%, rgba(13, 153, 255, 0) 70%);
-  filter: blur(40px);
+  filter: blur(35px);
   pointer-events: none;
 }
 
 .promo-glow-purple {
   position: absolute;
-  bottom: -100px;
-  right: -80px;
-  width: 320px;
-  height: 320px;
+  bottom: -80px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
   background: radial-gradient(circle, rgba(139, 92, 246, 0.16) 0%, rgba(139, 92, 246, 0) 70%);
-  filter: blur(40px);
+  filter: blur(35px);
   pointer-events: none;
 }
 
 .promo-close-btn {
   position: absolute;
-  top: 18px;
-  right: 20px;
-  width: 36px;
-  height: 36px;
+  top: 14px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #F1F5F9;
   border: 1px solid rgba(15, 23, 42, 0.08);
   color: var(--text-muted);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5412,7 +5409,7 @@ html[dir="rtl"] .footer-col ul li a:hover {
 
 html[dir="rtl"] .promo-close-btn {
   right: auto;
-  left: 20px;
+  left: 16px;
 }
 
 .promo-close-btn:hover {
@@ -5424,34 +5421,33 @@ html[dir="rtl"] .promo-close-btn {
 .promo-modal-header {
   position: relative;
   z-index: 2;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
 }
 
 .promo-badge-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .promo-pill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   background: #EFF6FF;
   border: 1px solid #DBEAFE;
-  padding: 5px 14px;
+  padding: 3px 10px;
   border-radius: var(--radius-full);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 700;
   color: var(--accent-cyan);
 }
 
 .promo-pulsing-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #0D99FF;
   box-shadow: 0 0 8px rgba(13, 153, 255, 0.8);
@@ -5461,23 +5457,23 @@ html[dir="rtl"] .promo-close-btn {
 .promo-timer-box {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background: #FEF2F2;
   border: 1px solid #FECACA;
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: var(--radius-full);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 700;
   color: #DC2626;
 }
 
 .promo-headline {
   font-family: var(--font-urdu-display);
-  font-size: 1.65rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  line-height: 1.3;
+  line-height: 1.25;
   color: var(--text-main);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .promo-highlight {
@@ -5487,74 +5483,62 @@ html[dir="rtl"] .promo-close-btn {
 }
 
 .promo-sub {
-  font-size: 0.95rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.4;
+  margin-bottom: 0;
 }
 
-/* Benefit items */
-.promo-benefits-list {
+/* Compact Value Highlights Strip */
+.promo-highlights-strip {
   position: relative;
   z-index: 2;
-  background: #F8FAFC;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: var(--radius-lg);
-  padding: 16px 18px;
-  margin-bottom: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.promo-benefit-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.86rem;
-  color: var(--text-main);
-  line-height: 1.5;
-}
-
-.promo-check-icon {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #ECFDF5;
-  color: #059669;
-  font-size: 0.72rem;
-  font-weight: 900;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
+  justify-content: space-between;
+  background: #F8FAFC;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-md);
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  gap: 6px;
 }
 
-/* Fast Form */
+.promo-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.p-check {
+  color: #059669;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+/* Compact Fast Form */
 .promo-form {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
 }
 
 .promo-input-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-@media (max-width: 540px) {
-  .promo-input-row {
-    grid-template-columns: 1fr;
-  }
+  gap: 8px;
 }
 
 .promo-field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 3px;
   text-align: left;
 }
 
@@ -5563,16 +5547,16 @@ html[dir="rtl"] .promo-field {
 }
 
 .promo-field label {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--text-main);
 }
 
 .promo-field input {
-  padding: 11px 14px;
+  padding: 8px 10px;
   border: 1.5px solid rgba(15, 23, 42, 0.12);
-  border-radius: var(--radius-md);
-  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
   color: var(--text-main);
   background: #FFFFFF;
   transition: all var(--transition-fast);
@@ -5581,14 +5565,14 @@ html[dir="rtl"] .promo-field {
 .promo-field input:focus {
   outline: none;
   border-color: #0D99FF;
-  box-shadow: 0 0 0 3px rgba(13, 153, 255, 0.15);
+  box-shadow: 0 0 0 2.5px rgba(13, 153, 255, 0.15);
 }
 
 .promo-phone-wrap {
   display: flex;
   align-items: center;
   border: 1.5px solid rgba(15, 23, 42, 0.12);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   background: #FFFFFF;
   overflow: hidden;
   transition: all var(--transition-fast);
@@ -5596,13 +5580,13 @@ html[dir="rtl"] .promo-field {
 
 .promo-phone-wrap:focus-within {
   border-color: #0D99FF;
-  box-shadow: 0 0 0 3px rgba(13, 153, 255, 0.15);
+  box-shadow: 0 0 0 2.5px rgba(13, 153, 255, 0.15);
 }
 
 .promo-country-tag {
   background: #F1F5F9;
-  padding: 11px 12px;
-  font-size: 0.84rem;
+  padding: 8px 10px;
+  font-size: 0.78rem;
   font-weight: 700;
   color: var(--text-muted);
   border-right: 1px solid rgba(15, 23, 42, 0.08);
@@ -5615,8 +5599,8 @@ html[dir="rtl"] .promo-country-tag {
 
 .promo-phone-wrap input {
   border: none;
-  padding: 11px 12px;
-  width: 86%;
+  padding: 8px 10px;
+  width: 100%;
 }
 
 .promo-phone-wrap input:focus {
@@ -5625,23 +5609,23 @@ html[dir="rtl"] .promo-country-tag {
 
 .btn-promo-submit {
   width: 100%;
-  padding: 14px;
+  padding: 11px 16px;
   border-radius: var(--radius-full);
   background: linear-gradient(135deg, #0D99FF 0%, #0080DF 100%);
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(13, 153, 255, 0.38);
+  box-shadow: 0 8px 20px rgba(13, 153, 255, 0.35);
   transition: all var(--transition-fast);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   position: relative;
   overflow: hidden;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .btn-promo-submit::after {
@@ -5662,8 +5646,8 @@ html[dir="rtl"] .promo-country-tag {
 }
 
 .btn-promo-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(13, 153, 255, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(13, 153, 255, 0.45);
   background: linear-gradient(135deg, #0080DF 0%, #0265B8 100%);
 }
 
@@ -5671,12 +5655,12 @@ html[dir="rtl"] .promo-country-tag {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  font-size: 0.76rem;
+  gap: 6px;
+  font-size: 0.7rem;
   color: var(--text-muted);
   font-weight: 500;
   flex-wrap: wrap;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* --- RESPONSIVE MEDIA QUERIES (FULL MULTI-DEVICE SUPPORT) --- */
@@ -6186,18 +6170,18 @@ html[dir="rtl"] .promo-country-tag {
   }
 
   .promo-modal-card {
-    padding: 28px 18px 20px;
-    border-radius: 22px;
-    max-height: calc(100vh - 24px);
-    max-height: calc(100dvh - 24px);
+    padding: 22px 20px 16px;
+    border-radius: 20px;
+    max-width: 480px;
+    overflow: hidden !important;
   }
 
   .promo-close-btn {
-    top: 12px;
+    top: 10px;
     right: 12px;
-    width: 32px;
-    height: 32px;
-    font-size: 1.15rem;
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
   }
 
   html[dir="rtl"] .promo-close-btn {
@@ -6206,87 +6190,84 @@ html[dir="rtl"] .promo-country-tag {
   }
 
   .promo-badge-row {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     gap: 6px;
   }
 
   .promo-pill-badge,
   .promo-timer-box {
-    font-size: 0.72rem;
-    padding: 3px 8px;
+    font-size: 0.7rem;
+    padding: 2px 8px;
   }
 
   .promo-headline {
-    font-size: 1.3rem;
-    line-height: 1.3;
-    margin-bottom: 6px;
+    font-size: 1.22rem;
+    line-height: 1.25;
+    margin-bottom: 4px;
   }
 
   .promo-sub {
-    font-size: 0.82rem;
-    line-height: 1.45;
-    margin-bottom: 12px;
-  }
-
-  .promo-benefits-list {
-    padding: 10px 12px;
-    gap: 8px;
-    margin-bottom: 14px;
-    border-radius: 12px;
-  }
-
-  .promo-benefit-item {
     font-size: 0.78rem;
-    line-height: 1.4;
-    gap: 8px;
+    line-height: 1.35;
+    margin-bottom: 0;
   }
 
-  .promo-check-icon {
-    width: 16px;
-    height: 16px;
-    font-size: 0.65rem;
+  .promo-highlights-strip {
+    padding: 5px 10px;
+    gap: 4px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .promo-highlight-item {
+    font-size: 0.7rem;
+    gap: 3px;
+  }
+
+  .p-check {
+    font-size: 0.7rem;
   }
 
   .promo-form {
-    gap: 10px;
-  }
-
-  .promo-input-row {
-    grid-template-columns: 1fr;
     gap: 8px;
   }
 
+  .promo-input-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
   .promo-field {
-    gap: 4px;
+    gap: 3px;
   }
 
   .promo-field label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .promo-field input {
-    padding: 10px 12px;
-    font-size: 0.85rem;
-    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 0.82rem;
+    border-radius: 6px;
   }
 
   .promo-phone-wrap {
-    border-radius: 8px;
+    border-radius: 6px;
   }
 
   .promo-country-tag {
-    padding: 10px 10px;
-    font-size: 0.78rem;
+    padding: 7px 8px;
+    font-size: 0.75rem;
   }
 
   .btn-promo-submit {
-    padding: 12px 14px;
-    font-size: 15px;
+    padding: 10px 14px;
+    font-size: 14px;
     margin-top: 2px;
   }
 
   .promo-trust-footer {
-    font-size: 0.68rem;
+    font-size: 0.66rem;
     gap: 4px;
     margin-top: 2px;
   }
@@ -6362,16 +6343,49 @@ html[dir="rtl"] .promo-country-tag {
   }
 
   .modal-card {
-    padding: 24px 18px;
+    padding: 20px 16px;
+    border-radius: 16px;
   }
 
   .promo-modal-card {
-    padding: 22px 14px 16px;
+    padding: 18px 14px 14px;
     border-radius: 18px;
+    max-width: 94%;
+    overflow: hidden !important;
   }
 
   .promo-headline {
-    font-size: 1.18rem;
+    font-size: 1.12rem;
+    line-height: 1.25;
+  }
+
+  .promo-sub {
+    font-size: 0.74rem;
+  }
+
+  .promo-highlights-strip {
+    padding: 4px 8px;
+    gap: 3px;
+    margin-bottom: 8px;
+  }
+
+  .promo-highlight-item {
+    font-size: 0.65rem;
+  }
+
+  .promo-field input {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+
+  .promo-country-tag {
+    padding: 6px 7px;
+    font-size: 0.72rem;
+  }
+
+  .btn-promo-submit {
+    padding: 9px 12px;
+    font-size: 13.5px;
   }
 
   .studio-frame-footer {
@@ -6393,14 +6407,20 @@ html[dir="rtl"] .promo-country-tag {
   }
 
   .promo-modal-card {
-    padding: 18px 12px 14px;
+    padding: 15px 10px 12px;
+    border-radius: 14px;
+    overflow: hidden !important;
   }
 
   .promo-headline {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
   }
 
-  .promo-benefit-item:last-child {
+  .promo-sub {
+    display: none;
+  }
+
+  .promo-highlight-item:last-child {
     display: none;
   }
 }
