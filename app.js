@@ -14,6 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // 1A. MEGA DROPDOWN MENU CONTROLLER
+  const navDropdownItem = document.getElementById('nav-dropdown-item');
+  const navDropdownToggle = document.getElementById('nav-dropdown-toggle');
+  const megaDropdownMenu = document.getElementById('mega-dropdown-menu');
+
+  if (navDropdownItem && navDropdownToggle) {
+    navDropdownToggle.addEventListener('click', (e) => {
+      // If clicking toggle link directly on touch or click
+      if (window.innerWidth >= 992) {
+        // Toggle on click for desktop/tablets
+        navDropdownItem.classList.toggle('active');
+      }
+    });
+
+    // Close when clicking any link inside dropdown
+    if (megaDropdownMenu) {
+      megaDropdownMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navDropdownItem.classList.remove('active');
+        });
+      });
+    }
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navDropdownItem.contains(e.target)) {
+        navDropdownItem.classList.remove('active');
+      }
+    });
+  }
+
   // 1B. MOBILE MENU DRAWER CONTROLLER
   const btnMobileToggle = document.getElementById('btn-mobile-toggle');
   const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');

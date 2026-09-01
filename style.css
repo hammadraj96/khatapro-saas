@@ -532,6 +532,283 @@ body.no-announcement .hero-section {
   background: rgba(15, 23, 42, 0.04);
 }
 
+/* --- HEYGEN-STYLE MEGA DROPDOWN MENU --- */
+.nav-item.has-dropdown {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .nav-item.has-dropdown {
+    position: static;
+  }
+}
+
+.nav-item.has-dropdown:hover .nav-link,
+.nav-item.has-dropdown.active .nav-link {
+  background: #E0F2FE;
+  color: #0284C7;
+  font-weight: 700;
+}
+
+.nav-item.has-dropdown:hover .dropdown-chevron,
+.nav-item.has-dropdown.active .dropdown-chevron {
+  transform: rotate(180deg);
+  color: #0284C7;
+}
+
+.mega-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  width: min(1160px, calc(100vw - 32px));
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px -15px rgba(15, 23, 42, 0.18), 0 0 0 1px rgba(15, 23, 42, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1100;
+  overflow: hidden;
+  text-align: left;
+}
+
+html[dir="rtl"] .mega-dropdown-menu {
+  text-align: right;
+}
+
+.nav-item.has-dropdown:hover .mega-dropdown-menu,
+.nav-item.has-dropdown.active .mega-dropdown-menu,
+.mega-dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mega-dropdown-inner {
+  position: relative;
+  background: #FFFFFF;
+}
+
+.mega-glow-top {
+  position: absolute;
+  top: -60px;
+  right: 8%;
+  width: 450px;
+  height: 180px;
+  background: radial-gradient(ellipse, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.mega-glow-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 8%;
+  width: 450px;
+  height: 180px;
+  background: radial-gradient(ellipse, rgba(168, 85, 247, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 36px;
+  padding: 28px 32px 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.mega-col-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94A3B8;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Left Column: Featured Card */
+.mega-featured-card {
+  display: block;
+  background: linear-gradient(135deg, #0284C7 0%, #0D99FF 45%, #8B5CF6 80%, #D946EF 100%);
+  border-radius: 16px;
+  padding: 18px 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 25px -5px rgba(13, 153, 255, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.mega-featured-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -4px rgba(13, 153, 255, 0.45);
+}
+
+.mfc-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mfc-badge {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.mfc-arrow {
+  font-size: 16px;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.mega-featured-card:hover .mfc-arrow {
+  transform: translateX(4px);
+}
+
+html[dir="rtl"] .mega-featured-card:hover .mfc-arrow {
+  transform: translateX(-4px);
+}
+
+.mfc-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  color: #FFFFFF;
+}
+
+.mfc-desc {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.mega-products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Item Links */
+.mega-item-link {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.mega-item-link:hover {
+  background: #F8FAFC;
+  transform: translateX(3px);
+}
+
+html[dir="rtl"] .mega-item-link:hover {
+  transform: translateX(-3px);
+}
+
+.mil-title {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 2px;
+  transition: color 0.18s ease;
+}
+
+.mega-item-link:hover .mil-title {
+  color: #0D99FF;
+}
+
+.mil-desc {
+  display: block;
+  font-size: 0.78rem;
+  color: #64748B;
+  line-height: 1.35;
+}
+
+/* Right Column: Capabilities Grid */
+.mega-capabilities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 18px;
+}
+
+/* Full-Width Bottom Featured Strip */
+.mega-bottom-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #0284C7 0%, #0D99FF 35%, #A855F7 75%, #F472B6 100%);
+  padding: 13px 32px;
+  text-decoration: none;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  transition: filter 0.2s ease;
+}
+
+.mega-bottom-banner:hover {
+  filter: brightness(1.05);
+}
+
+.mbb-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mbb-pill {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(4px);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+
+.mbb-title {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.mbb-desc {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mbb-right {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .mega-dropdown-menu {
+    display: none;
+  }
+}
+
 .dropdown-chevron {
   transition: transform var(--transition-fast);
 }
@@ -5600,7 +5877,7 @@ html[dir="rtl"] .promo-country-tag {
 .promo-phone-wrap input {
   border: none;
   padding: 8px 10px;
-  width: 100%;
+  width: 72%;
 }
 
 .promo-phone-wrap input:focus {
@@ -6277,6 +6554,7 @@ html[dir="rtl"] .promo-country-tag {
 @media (max-width: 480px) {
   .announcement-bar {
     padding: 5px 28px 5px 8px;
+    display: none;
   }
 
   html[dir="rtl"] .announcement-bar {
@@ -6308,7 +6586,7 @@ html[dir="rtl"] .promo-country-tag {
   }
 
   .navbar-wrapper {
-    top: 44px;
+    top: 10px;
     padding: 0 8px;
   }
 
