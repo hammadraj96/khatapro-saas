@@ -14,33 +14,80 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 1A. MEGA DROPDOWN MENU CONTROLLER
-  const navDropdownItem = document.getElementById('nav-dropdown-item');
-  const navDropdownToggle = document.getElementById('nav-dropdown-toggle');
-  const megaDropdownMenu = document.getElementById('mega-dropdown-menu');
+  // 1A. SEAMLESS EXPANDING HEADER & MEGA PANE CONTROLLER
+  const megaNavItems = document.querySelectorAll('.nav-item.has-mega');
+  const megaPanes = document.querySelectorAll('.mega-pane');
+  const navbarPill = document.getElementById('navbar');
 
-  if (navDropdownItem && navDropdownToggle) {
-    navDropdownToggle.addEventListener('click', (e) => {
-      // If clicking toggle link directly on touch or click
+  if (navbarPill && megaNavItems.length > 0) {
+    function showMegaPane(tabName) {
+      megaNavItems.forEach(item => {
+        if (item.getAttribute('data-tab') === tabName) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+
+      megaPanes.forEach(pane => {
+        if (pane.id === `mega-pane-${tabName}`) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+
+      navbarPill.classList.add('is-expanded');
+    }
+
+    function closeMegaDropdown() {
+      navbarPill.classList.remove('is-expanded');
+      megaNavItems.forEach(item => item.classList.remove('active'));
+    }
+
+    megaNavItems.forEach(item => {
+      const tabName = item.getAttribute('data-tab');
+
+      // Mouse enter on desktop
+      item.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 992) {
+          showMegaPane(tabName);
+        }
+      });
+
+      // Click on tablet / touch
+      item.addEventListener('click', (e) => {
+        if (window.innerWidth >= 992) {
+          if (navbarPill.classList.contains('is-expanded') && item.classList.contains('active')) {
+            closeMegaDropdown();
+          } else {
+            showMegaPane(tabName);
+          }
+        }
+      });
+    });
+
+    // Collapse when mouse leaves the navbar
+    navbarPill.addEventListener('mouseleave', () => {
       if (window.innerWidth >= 992) {
-        // Toggle on click for desktop/tablets
-        navDropdownItem.classList.toggle('active');
+        closeMegaDropdown();
       }
     });
 
-    // Close when clicking any link inside dropdown
-    if (megaDropdownMenu) {
-      megaDropdownMenu.querySelectorAll('a').forEach(link => {
+    // Close when clicking any link inside mega dropdown
+    const megaDropdownWrap = document.getElementById('navbar-mega-dropdown');
+    if (megaDropdownWrap) {
+      megaDropdownWrap.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-          navDropdownItem.classList.remove('active');
+          closeMegaDropdown();
         });
       });
     }
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
-      if (!navDropdownItem.contains(e.target)) {
-        navDropdownItem.classList.remove('active');
+      if (!navbarPill.contains(e.target)) {
+        closeMegaDropdown();
       }
     });
   }

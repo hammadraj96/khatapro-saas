@@ -39,200 +39,259 @@
   <!-- FLOATING PILL NAVBAR -->
   <header class="navbar-wrapper">
     <nav class="navbar-pill" id="navbar">
-      <!-- Logo & Brand -->
-      <a href="#" class="nav-brand">
-        <div class="brand-logo-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M9 17H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="16" cy="16.5" r="2.5" fill="#0D99FF"/>
-          </svg>
-        </div>
-        <span class="brand-title">Khata<span>Pro</span></span>
-      </a>
-
-      <!-- Center Navigation Links -->
-      <ul class="nav-menu">
-        <li class="nav-item has-dropdown" id="nav-dropdown-item">
-          <a href="#digital-studio" class="nav-link" id="nav-dropdown-toggle">
-            <span>Features</span>
-            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      <!-- TOP ROW: Sleek Pill Bar (Image 1) -->
+      <div class="navbar-top-row">
+        <!-- Logo & Brand with subtle vertical divider -->
+        <div class="nav-brand-wrap">
+          <a href="#" class="nav-brand">
+            <div class="brand-logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M9 17H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="16" cy="16.5" r="2.5" fill="#0D99FF"/>
+              </svg>
+            </div>
+            <span class="brand-title">Khata<span>Pro</span></span>
           </a>
+          <span class="nav-brand-divider"></span>
+        </div>
 
-          <!-- HEYGEN-STYLE MODERN LUXURY MEGA DROPDOWN MENU -->
-          <div class="mega-dropdown-menu" id="mega-dropdown-menu">
-            <div class="mega-dropdown-inner">
-              
-              <!-- Ambient Top/Bottom Glow Effects -->
-              <div class="mega-glow-top"></div>
-              <div class="mega-glow-bottom"></div>
+        <!-- Center Navigation Links -->
+        <ul class="nav-menu">
+          <li class="nav-item has-mega" data-tab="platform">
+            <a href="#digital-studio" class="nav-link">
+              <span>Platform</span>
+            </a>
+          </li>
+          <li class="nav-item has-mega" data-tab="usecases">
+            <a href="#customers-section" class="nav-link">
+              <span>Use cases</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#installments-section" class="nav-link">
+              <span>Installments</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#pos-section" class="nav-link">
+              <span>POS & Counter</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#finance-section" class="nav-link">
+              <span>Finance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#pricing-section" class="nav-link">
+              <span>Pricing</span>
+            </a>
+          </li>
+        </ul>
 
-              <!-- Top Content Grid: Left (Products) & Right (Capabilities) -->
-              <div class="mega-menu-grid">
+        <!-- Right Nav Actions (Matching Image 1 & 2) -->
+        <div class="nav-actions">
+          <a href="../index.html" class="lang-pill" title="Switch to Urdu (اردو)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>UR</span>
+          </a>
+          <a href="#demo-modal" class="btn-nav-secondary btn-desktop-only" id="btn-open-demo">
+            <span>Book a demo</span>
+          </a>
+          <a href="#pricing-section" class="btn-nav-primary btn-desktop-only">
+            <span>Sign in</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <!-- Mobile Menu Toggle Button -->
+          <button class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
 
-                <!-- Left Column: PRODUCTS -->
-                <div class="mega-col-products">
-                  <div class="mega-col-label">PRODUCTS</div>
-
-                  <!-- Featured Gradient Hero Card -->
-                  <a href="#digital-studio" class="mega-featured-card">
-                    <div class="mfc-badge-row">
-                      <span class="mfc-badge">Featured</span>
-                      <span class="mfc-arrow">→</span>
-                    </div>
-                    <h4 class="mfc-title">Smart Khata 360°</h4>
-                    <p class="mfc-desc">Complete showroom ledger, biometric customer profiles & automated WhatsApp recovery engine.</p>
-                  </a>
-
-                  <!-- Products Vertical List -->
-                  <div class="mega-products-list">
-                    <a href="#installments-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">WhatsApp Recovery Bot</span>
-                        <span class="mil-desc">Automated installment reminder voice & text slips</span>
-                      </div>
-                    </a>
-                    <a href="#pos-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">POS & 80mm Counter</span>
-                        <span class="mil-desc">Thermal receipt print with instant QR verification</span>
-                      </div>
-                    </a>
-                    <a href="#digital-khata" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Legal Stamp Contract Studio</span>
-                        <span class="mil-desc">1-Click judicial stamp deed agreement generation</span>
-                      </div>
-                    </a>
-                    <a href="#security-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Offline SQLite Vault</span>
-                        <span class="mil-desc">100% offline desktop speed with bank-grade security</span>
-                      </div>
-                    </a>
-                  </div>
+      <!-- INTEGRATED SEAMLESS EXPANDING MEGA DROPDOWN (Image 2) -->
+      <div class="navbar-mega-dropdown" id="navbar-mega-dropdown">
+        
+        <!-- PANE 1: PLATFORM -->
+        <div class="mega-pane active" id="mega-pane-platform">
+          <div class="mega-menu-grid-3col">
+            <!-- Left Column: Featured Card + Recovery Bot -->
+            <div class="mega-col-left">
+              <div class="mega-col-label">PRODUCTS</div>
+              <a href="#digital-studio" class="mega-featured-card">
+                <div class="mfc-badge-row">
+                  <span class="mfc-badge">FEATURED</span>
+                  <span class="mfc-arrow">→</span>
                 </div>
-
-                <!-- Right Column: CORE CAPABILITIES & TOOLS (2-Column Subgrid) -->
-                <div class="mega-col-capabilities">
-                  <div class="mega-col-label">CORE CAPABILITIES & TOOLS</div>
-
-                  <div class="mega-capabilities-grid">
-                    
-                    <a href="#installments-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Installment Schedule Engine</span>
-                        <span class="mil-desc">Custom markup, daily & monthly tenures</span>
-                      </div>
-                    </a>
-
-                    <a href="#customers-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Customer Biometrics & 360°</span>
-                        <span class="mil-desc">Guarantor records, CNIC vault & credit limits</span>
-                      </div>
-                    </a>
-
-                    <a href="#finance-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Real-Time Daily P&L</span>
-                        <span class="mil-desc">Instant net margin, supplier payables & ledger</span>
-                      </div>
-                    </a>
-
-                    <a href="#pos-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Inventory & Chassis/IMEI</span>
-                        <span class="mil-desc">Engine/Chassis numbers & barcode tracking</span>
-                      </div>
-                    </a>
-
-                    <a href="#digital-khata" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Urdu Thermal Invoicing</span>
-                        <span class="mil-desc">Shop header, tax breakdown & warranty terms</span>
-                      </div>
-                    </a>
-
-                    <a href="#security-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Multi-User Cashier Roles</span>
-                        <span class="mil-desc">Role-based cashier & manager restrictions</span>
-                      </div>
-                    </a>
-
-                    <a href="#customers-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Digital SMS & WhatsApp Slips</span>
-                        <span class="mil-desc">Instant digital receipt delivery on cash sales</span>
-                      </div>
-                    </a>
-
-                    <a href="#security-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">Cloud Sync & Auto Backup</span>
-                        <span class="mil-desc">Local-first privacy with encrypted cloud backup</span>
-                      </div>
-                    </a>
-
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- Full-Width Bottom Featured Strip -->
-              <a href="#pricing-section" class="mega-bottom-banner">
-                <div class="mbb-left">
-                  <span class="mbb-pill">● 2026 EDITION</span>
-                  <span class="mbb-title">Meet KhataPro Enterprise V2.4</span>
-                  <span class="mbb-desc">Pakistan's fastest 100% offline retail & installment ERP engine.</span>
-                </div>
-                <div class="mbb-right">
-                  <span>Explore Enterprise V2.4 →</span>
-                </div>
+                <h4 class="mfc-title">Smart Khata 360°</h4>
+                <p class="mfc-desc">Every ledger, installment recovery & customer contract format your business needs.</p>
               </a>
+              <div class="mega-products-list">
+                <a href="#installments-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">WhatsApp Recovery Bot</span>
+                    <span class="mil-desc">AI installment reminders with voice & SMS slips</span>
+                  </div>
+                </a>
+                <a href="#pos-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">POS & 80mm Counter</span>
+                    <span class="mil-desc">Thermal receipt print with instant QR verification</span>
+                  </div>
+                </a>
+              </div>
+            </div>
 
+            <!-- Middle Column: Capabilities -->
+            <div class="mega-col-mid">
+              <div class="mega-col-label">CORE CAPABILITIES</div>
+              <div class="mega-products-list">
+                <a href="#digital-khata" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Legal Stamp Contract Studio</span>
+                    <span class="mil-desc">1-Click judicial stamp deed agreement generation</span>
+                  </div>
+                </a>
+                <a href="#security-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Offline SQLite Vault</span>
+                    <span class="mil-desc">100% offline desktop speed with bank-grade security</span>
+                  </div>
+                </a>
+                <a href="#finance-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Real-Time Daily P&L</span>
+                    <span class="mil-desc">Instant net margin, supplier payables & ledger</span>
+                  </div>
+                </a>
+                <a href="#customers-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Customer Biometrics & 360°</span>
+                    <span class="mil-desc">Guarantor records, CNIC vault & credit limits</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Showcase Frame (Matching Image 2) -->
+            <div class="mega-col-right">
+              <div class="mega-visual-frame">
+                <div class="mvf-preview">
+                  <div class="mvf-chip">
+                    <span class="mvf-chip-title">ENTERPRISE V2.4</span>
+                    <span class="mvf-chip-sub">100% Offline Ready</span>
+                  </div>
+                  <div class="mvf-badge-center">
+                    <span class="mvf-badge-dot"></span>
+                    <span>Biometric Khata Verified</span>
+                  </div>
+                </div>
+                <a href="#pricing-section" class="mvf-footer-link">
+                  <span>Explore Enterprise Suite</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="nav-item">
-          <a href="#customers-section" class="nav-link">Customers</a>
-        </li>
-        <li class="nav-item">
-          <a href="#installments-section" class="nav-link">Installments & Recovery</a>
-        </li>
-        <li class="nav-item">
-          <a href="#finance-section" class="nav-link">Finance & P&L</a>
-        </li>
-        <li class="nav-item">
-          <a href="#pricing-section" class="nav-link">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a href="#faq-section" class="nav-link">FAQ</a>
-        </li>
-      </ul>
 
-      <!-- Nav Actions -->
-      <div class="nav-actions">
-        <a href="../index.html" class="lang-pill" title="Switch to Urdu (اردو)">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span>UR</span>
-        </a>
-        <a href="#demo-modal" class="btn-nav-secondary btn-desktop-only" id="btn-open-demo">
-          <span>Book Demo</span>
-        </a>
-        <a href="#pricing-section" class="btn-nav-primary btn-desktop-only">
-          <span>Sign In</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </a>
-        <!-- Mobile Menu Toggle Button -->
-        <button class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span>
-        </button>
+          <!-- Bottom Full-Width Featured Strip -->
+          <a href="#pricing-section" class="mega-bottom-banner">
+            <div class="mbb-left">
+              <span class="mbb-pill">● 2026 EDITION</span>
+              <span class="mbb-title">Meet KhataPro Enterprise V2.4</span>
+              <span class="mbb-desc">The world's most advanced 100% offline retail & installment ERP.</span>
+            </div>
+            <div class="mbb-right">
+              <span>Explore Enterprise V2.4 →</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PANE 2: USE CASES (Matching Image 2) -->
+        <div class="mega-pane" id="mega-pane-usecases">
+          <div class="mega-menu-grid-3col">
+            <!-- Left Column: Real Estate / Showroom Card -->
+            <div class="mega-col-left">
+              <a href="#customers-section" class="mega-featured-card">
+                <div class="mfc-badge-row">
+                  <span class="mfc-badge">FEATURED</span>
+                  <span class="mfc-arrow">→</span>
+                </div>
+                <h4 class="mfc-title">Auto & Electronics Showroom</h4>
+                <p class="mfc-desc">Every installment plan, markup calculator & recovery format your showroom needs.</p>
+              </a>
+              <div class="mega-products-list">
+                <a href="#customers-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Mobile & Electronics Stores</span>
+                    <span class="mil-desc">IMEI tracking, installment recovery & cash billing</span>
+                  </div>
+                </a>
+                <a href="#customers-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Bike & Auto Showrooms</span>
+                    <span class="mil-desc">Engine & chassis numbers, guarantor stamp contracts</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Middle Column: Retail & Wholesale -->
+            <div class="mega-col-mid">
+              <div class="mega-products-list" style="margin-top: 6px;">
+                <a href="#finance-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Wholesale & Distribution</span>
+                    <span class="mil-desc">High-volume ledger, bulk billing & supplier balances</span>
+                  </div>
+                </a>
+                <a href="#pos-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Superstores & Retail POS</span>
+                    <span class="mil-desc">Fast barcode billing, thermal slips & daily sales</span>
+                  </div>
+                </a>
+                <a href="#digital-khata" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Jewelry & High-Ticket Retail</span>
+                    <span class="mil-desc">Customer CNIC vault, custom agreements & secure khata</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Frame (Matching Image 2 directly) -->
+            <div class="mega-col-right">
+              <div class="mega-visual-frame">
+                <div class="mvf-preview" style="background: linear-gradient(135deg, #0284C7 0%, #10B981 100%);">
+                  <div class="mvf-chip">
+                    <span class="mvf-chip-title">SHOWROOM SUITE</span>
+                    <span class="mvf-chip-sub">Installments & Recovery</span>
+                  </div>
+                  <div class="mvf-badge-center">
+                    <span class="mvf-badge-dot"></span>
+                    <span>Guarantor & Stamp Verified</span>
+                  </div>
+                </div>
+                <a href="#customers-section" class="mvf-footer-link">
+                  <span>Explore all use cases</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </nav>
 

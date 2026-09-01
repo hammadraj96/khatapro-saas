@@ -44,208 +44,263 @@
   <!-- FLOATING PILL NAVBAR -->
   <header class="navbar-wrapper">
     <nav class="navbar-pill" id="navbar">
-      <!-- Logo & Brand -->
-      <a href="#" class="nav-brand">
-        <div class="brand-logo-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <path d="M9 17H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <circle cx="16" cy="16.5" r="2.5" fill="#0D99FF" />
-          </svg>
+      <!-- TOP ROW: Sleek Pill Bar (Image 1) -->
+      <div class="navbar-top-row">
+        <!-- Logo & Brand with subtle vertical divider -->
+        <div class="nav-brand-wrap">
+          <a href="#" class="nav-brand">
+            <div class="brand-logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 17H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="16" cy="16.5" r="2.5" fill="#0D99FF" />
+              </svg>
+            </div>
+            <span class="brand-title">کھاتہ<span>پرو</span></span>
+          </a>
+          <span class="nav-brand-divider"></span>
         </div>
-        <span class="brand-title">کھاتہ<span>پرو</span></span>
-      </a>
 
-      <!-- Center Navigation Links -->
-      <ul class="nav-menu">
-        <li class="nav-item has-dropdown" id="nav-dropdown-item">
-          <a href="#digital-studio" class="nav-link" id="nav-dropdown-toggle">
-            <span>خصوصیات و ماڈیولز</span>
-            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
+        <!-- Center Navigation Links -->
+        <ul class="nav-menu">
+          <li class="nav-item has-mega" data-tab="platform">
+            <a href="#digital-studio" class="nav-link">
+              <span>پلیٹ فارم</span>
+            </a>
+          </li>
+          <li class="nav-item has-mega" data-tab="usecases">
+            <a href="#customers-section" class="nav-link">
+              <span>استعمال کے شعبے</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#installments-section" class="nav-link">
+              <span>اقساط و ریکوری</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#pos-section" class="nav-link">
+              <span>نقد کاؤنٹر و POS</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#finance-section" class="nav-link">
+              <span>مالیات و منافع</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#pricing-section" class="nav-link">
+              <span>قیمتیں</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right Nav Actions (Matching Image 1 & 2) -->
+        <div class="nav-actions">
+          <a href="index-en.html" class="lang-pill" title="Switch to English">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>EN</span>
+          </a>
+          <a href="#demo-modal" class="btn-nav-secondary btn-desktop-only" id="btn-open-demo">
+            <span>ڈیمو بک کریں</span>
+          </a>
+          <a href="#pricing-section" class="btn-nav-primary btn-desktop-only">
+            <span>سائن ان</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
           </a>
+          <!-- Mobile Menu Toggle Button -->
+          <button class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
 
-          <!-- HEYGEN-STYLE MODERN LUXURY MEGA DROPDOWN MENU (URDU) -->
-          <div class="mega-dropdown-menu" id="mega-dropdown-menu">
-            <div class="mega-dropdown-inner">
-              
-              <!-- Ambient Top/Bottom Glow Effects -->
-              <div class="mega-glow-top"></div>
-              <div class="mega-glow-bottom"></div>
-
-              <!-- Top Content Grid -->
-              <div class="mega-menu-grid">
-
-                <!-- Left Column: پروڈکٹس -->
-                <div class="mega-col-products">
-                  <div class="mega-col-label">پروڈکٹس</div>
-
-                  <!-- Featured Gradient Hero Card -->
-                  <a href="#digital-studio" class="mega-featured-card">
-                    <div class="mfc-badge-row">
-                      <span class="mfc-badge">نمایاں فیچر</span>
-                      <span class="mfc-arrow">←</span>
-                    </div>
-                    <h4 class="mfc-title">سمارٹ کھاتہ 360° سٹوڈیو</h4>
-                    <p class="mfc-desc">مکمل شو روم لیجر، بائیو میٹرک کسٹمر پروفائلز اور خودکار واٹس ایپ ریکوری انجن۔</p>
-                  </a>
-
-                  <!-- Products Vertical List -->
-                  <div class="mega-products-list">
-                    <a href="#installments-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">واٹس ایپ ریکوری بوٹ</span>
-                        <span class="mil-desc">اقساط کی خودکار یاد دہانی، آڈیو و ٹیکسٹ پیغامات</span>
-                      </div>
-                    </a>
-                    <a href="#pos-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">نقد کاؤنٹر و 80mm پرنٹ</span>
-                        <span class="mil-desc">تھرمل رسید پرنٹنگ مع فوری QR کوڈ ویریفکیشن</span>
-                      </div>
-                    </a>
-                    <a href="#digital-khata" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">عدالتی اسٹامپ پیپر سٹوڈیو</span>
-                        <span class="mil-desc">1-کلک میں قانونی معاہدہ اور اقرار نامہ جنریٹر</span>
-                      </div>
-                    </a>
-                    <a href="#security-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">100% آف لائن SQLite والٹ</span>
-                        <span class="mil-desc">بغیر انٹرنیٹ انتہائی تیز رفتار و بینک لیول سیکیورٹی</span>
-                      </div>
-                    </a>
-                  </div>
+      <!-- INTEGRATED SEAMLESS EXPANDING MEGA DROPDOWN (Image 2) -->
+      <div class="navbar-mega-dropdown" id="navbar-mega-dropdown">
+        
+        <!-- PANE 1: PLATFORM (URDU) -->
+        <div class="mega-pane active" id="mega-pane-platform">
+          <div class="mega-menu-grid-3col">
+            <!-- Left Column: Featured Card + Recovery Bot -->
+            <div class="mega-col-left">
+              <div class="mega-col-label">پروڈکٹس</div>
+              <a href="#digital-studio" class="mega-featured-card">
+                <div class="mfc-badge-row">
+                  <span class="mfc-badge">نمایاں فیچر</span>
+                  <span class="mfc-arrow">←</span>
                 </div>
-
-                <!-- Right Column: اہم صلاحیتیں و ماڈیولز -->
-                <div class="mega-col-capabilities">
-                  <div class="mega-col-label">اہم صلاحیتیں و بزنس ماڈیولز</div>
-
-                  <div class="mega-capabilities-grid">
-                    
-                    <a href="#installments-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">خودکار اقساط شیڈول انجن</span>
-                        <span class="mil-desc">کسٹم مارک اپ، یومیہ و ماہانہ پلانز</span>
-                      </div>
-                    </a>
-
-                    <a href="#customers-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">گاہک بائیو میٹرک و 360° ہب</span>
-                        <span class="mil-desc">ضمانتیوں کا ریکارڈ، شناختی کارڈ والٹ و لمیٹ</span>
-                      </div>
-                    </a>
-
-                    <a href="#finance-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">روزانہ کا خالص منافع (P&L)</span>
-                        <span class="mil-desc">فوری منافع، سپلائر ادائیگیاں اور کیش لیجر</span>
-                      </div>
-                    </a>
-
-                    <a href="#pos-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">انوینٹری و چیسس / IMEI</span>
-                        <span class="mil-desc">انجن و چیسس نمبرز، موبائل IMEI اور بارکوڈز</span>
-                      </div>
-                    </a>
-
-                    <a href="#digital-khata" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">اردو تھرمل بلنگ ڈیزائن</span>
-                        <span class="mil-desc">دکان کا نام، ٹیکس بریک ڈاؤن و وارنٹی شرائط</span>
-                      </div>
-                    </a>
-
-                    <a href="#security-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">کیشیئر و منیجر رولز</span>
-                        <span class="mil-desc">صارفین کے اختیارات اور ڈیٹا ڈیلیٹ پر پابندی</span>
-                      </div>
-                    </a>
-
-                    <a href="#customers-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">ڈیجیٹل SMS و واٹس ایپ رسید</span>
-                        <span class="mil-desc">ہر فروخت پر گاہک کے موبائل پر فوری رسید</span>
-                      </div>
-                    </a>
-
-                    <a href="#security-section" class="mega-item-link">
-                      <div class="mil-content">
-                        <span class="mil-title">آٹو بیک اپ و کلاؤڈ سنک</span>
-                        <span class="mil-desc">لوکل پرائیویسی مع انکرپٹڈ گوگل ڈرائیو بیک اپ</span>
-                      </div>
-                    </a>
-
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- Full-Width Bottom Featured Strip -->
-              <a href="#pricing-section" class="mega-bottom-banner">
-                <div class="mbb-left">
-                  <span class="mbb-pill">● نیا 2026 ایڈیشن</span>
-                  <span class="mbb-title">کھاتہ پرو انٹرپرائز V2.4 سے ملیں</span>
-                  <span class="mbb-desc">پاکستانی تاجروں کے لیے دنیا کا تیز ترین 100% آف لائن ERP انجن۔</span>
-                </div>
-                <div class="mbb-right">
-                  <span>انٹرپرائز V2.4 دیکھیں ←</span>
-                </div>
+                <h4 class="mfc-title">سمارٹ کھاتہ 360° سٹوڈیو</h4>
+                <p class="mfc-desc">ہر شو روم کا لیجر، اقساط کی ریکوری اور عدالتی اسٹامپ معاہدے آپ کی دکان کے مطابق۔</p>
               </a>
+              <div class="mega-products-list">
+                <a href="#installments-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">واٹس ایپ ریکوری بوٹ</span>
+                    <span class="mil-desc">خودکار اقساط کے پیغامات مع اردو وائس نوٹس اور سلپ</span>
+                  </div>
+                </a>
+                <a href="#pos-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">نقد کاؤنٹر و 80mm پرنٹ</span>
+                    <span class="mil-desc">تھرمل رسید پرنٹنگ مع فوری QR کوڈ ویریفکیشن</span>
+                  </div>
+                </a>
+              </div>
+            </div>
 
+            <!-- Middle Column: Capabilities -->
+            <div class="mega-col-mid">
+              <div class="mega-col-label">اہم صلاحیتیں</div>
+              <div class="mega-products-list">
+                <a href="#digital-khata" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">عدالتی اسٹامپ پیپر سٹوڈیو</span>
+                    <span class="mil-desc">1-کلک میں قانونی اقرار نامہ اور بائیو میٹرک معاہدہ</span>
+                  </div>
+                </a>
+                <a href="#security-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">100% آف لائن SQLite والٹ</span>
+                    <span class="mil-desc">بغیر انٹرنیٹ انتہائی تیز رفتار و بینک لیول سیکیورٹی</span>
+                  </div>
+                </a>
+                <a href="#finance-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">روزانہ کا خالص منافع (P&L)</span>
+                    <span class="mil-desc">فوری منافع، سپلائر ادائیگیاں اور کیش لیجر</span>
+                  </div>
+                </a>
+                <a href="#customers-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">گاہک بائیو میٹرک و 360° ہب</span>
+                    <span class="mil-desc">ضمانتیوں کا ریکارڈ، شناختی کارڈ والٹ و لمیٹ</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Showcase Frame (Matching Image 2) -->
+            <div class="mega-col-right">
+              <div class="mega-visual-frame">
+                <div class="mvf-preview">
+                  <div class="mvf-chip">
+                    <span class="mvf-chip-title">انٹرپرائز V2.4</span>
+                    <span class="mvf-chip-sub">100% آف لائن تیار</span>
+                  </div>
+                  <div class="mvf-badge-center">
+                    <span class="mvf-badge-dot"></span>
+                    <span>بائیو میٹرک کھاتہ تصدیق شدہ</span>
+                  </div>
+                </div>
+                <a href="#pricing-section" class="mvf-footer-link">
+                  <span>انٹرپرائز سوٹ دیکھیں</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="nav-item">
-          <a href="#customers-section" class="nav-link">گاہک مینجمنٹ</a>
-        </li>
-        <li class="nav-item">
-          <a href="#installments-section" class="nav-link">اقساط و ریکوری</a>
-        </li>
-        <li class="nav-item">
-          <a href="#finance-section" class="nav-link">مالیات و منافع</a>
-        </li>
-        <li class="nav-item">
-          <a href="#pricing-section" class="nav-link">قیمتیں</a>
-        </li>
-        <li class="nav-item">
-          <a href="#faq-section" class="nav-link">سوال و جواب</a>
-        </li>
-      </ul>
 
-      <!-- Nav Actions -->
-      <div class="nav-actions">
-        <a href="index-en.html" class="lang-pill" title="Switch to English">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
-          <span>EN</span>
-        </a>
-        <a href="#demo-modal" class="btn-nav-secondary btn-desktop-only" id="btn-open-demo">
-          <span>نظام دیکھیں</span>
-        </a>
-        <a href="#pricing-section" class="btn-nav-primary btn-desktop-only">
-          <span>سائن ان</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </a>
-        <!-- Mobile Menu Toggle Button -->
-        <button class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span>
-        </button>
+          <!-- Bottom Full-Width Featured Strip -->
+          <a href="#pricing-section" class="mega-bottom-banner">
+            <div class="mbb-left">
+              <span class="mbb-pill">● نیا 2026 ایڈیشن</span>
+              <span class="mbb-title">کھاتہ پرو انٹرپرائز V2.4 سے ملیں</span>
+              <span class="mbb-desc">پاکستانی تاجروں کے لیے دنیا کا تیز ترین 100% آف لائن ERP انجن۔</span>
+            </div>
+            <div class="mbb-right">
+              <span>انٹرپرائز V2.4 دیکھیں ←</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PANE 2: USE CASES (Matching Image 2 in Urdu) -->
+        <div class="mega-pane" id="mega-pane-usecases">
+          <div class="mega-menu-grid-3col">
+            <!-- Left Column: Showroom Card -->
+            <div class="mega-col-left">
+              <a href="#customers-section" class="mega-featured-card">
+                <div class="mfc-badge-row">
+                  <span class="mfc-badge">نمایاں انڈسٹری</span>
+                  <span class="mfc-arrow">←</span>
+                </div>
+                <h4 class="mfc-title">آٹو و الیکٹرانکس شو رومز</h4>
+                <p class="mfc-desc">ہر قسط کا پلان، کسٹم مارک اپ اور ریکوری شیڈول آپ کے شو روم کی ضروریات کے مطابق۔</p>
+              </a>
+              <div class="mega-products-list">
+                <a href="#customers-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">موبائل و الیکٹرانکس شاپس</span>
+                    <span class="mil-desc">IMEI ٹریکنگ، اقساط کی ریکوری اور کیش کاؤنٹر</span>
+                  </div>
+                </a>
+                <a href="#customers-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">موٹر سائیکل و کار شو رومز</span>
+                    <span class="mil-desc">انجن و چیسس نمبرز، ضمانتیوں کے اسٹامپ معاہدے</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Middle Column: Retail & Wholesale -->
+            <div class="mega-col-mid">
+              <div class="mega-products-list" style="margin-top: 6px;">
+                <a href="#finance-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">ہول سیل و ڈسٹری بیوٹرز</span>
+                    <span class="mil-desc">تیز رفتار لیجر، بلک بلنگ اور سپلائرز کے بقایا جات</span>
+                  </div>
+                </a>
+                <a href="#pos-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">سپر اسٹورز و ریٹیل کاؤنٹرز</span>
+                    <span class="mil-desc">فوری بارکوڈ بلنگ، تھرمل پرنٹ اور روزانہ کی سیل</span>
+                  </div>
+                </a>
+                <a href="#digital-khata" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">جیولری و لگژری شو رومز</span>
+                    <span class="mil-desc">شناختی کارڈ والٹ، کسٹم اقرار نامے اور محفوظ کھاتہ</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Frame -->
+            <div class="mega-col-right">
+              <div class="mega-visual-frame">
+                <div class="mvf-preview" style="background: linear-gradient(135deg, #0284C7 0%, #10B981 100%);">
+                  <div class="mvf-chip">
+                    <span class="mvf-chip-title">شو روم سوٹ</span>
+                    <span class="mvf-chip-sub">اقساط و ریکوری انجن</span>
+                  </div>
+                  <div class="mvf-badge-center">
+                    <span class="mvf-badge-dot"></span>
+                    <span>ضمانتی و اسٹامپ تصدیق شدہ</span>
+                  </div>
+                </div>
+                <a href="#customers-section" class="mvf-footer-link">
+                  <span>تمام شعبے دیکھیں</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </nav>
 
