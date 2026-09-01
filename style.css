@@ -62,9 +62,9 @@
   /* Typography Stacks */
   --font-urdu-display: 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
   --font-urdu-body: 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
-  --font-en-display: 'Outfit', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  --font-en-body: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  --font-numeric: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-en-display: Inter, system-ui, -apple-system, sans-serif;
+  --font-en-body: Inter, system-ui, -apple-system, sans-serif;
+  --font-numeric: Inter, system-ui, -apple-system, sans-serif;
 
   /* Transitions */
   --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
@@ -138,17 +138,60 @@ html[dir="rtl"] .section-head-center h2 {
   letter-spacing: normal;
 }
 
+/* --- LTR ENGLISH TYPOGRAPHY ENFORCEMENT --- */
+html[dir="ltr"] body,
+html[dir="ltr"] p,
+html[dir="ltr"] span,
+html[dir="ltr"] button,
+html[dir="ltr"] input,
+html[dir="ltr"] select,
+html[dir="ltr"] a,
+html[dir="ltr"] .section-desc,
+html[dir="ltr"] .hero-subtitle,
+html[dir="ltr"] .usecases-subtitle,
+html[dir="ltr"] .cta-sub,
+html[dir="ltr"] .emotional-subtitle {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
 html[dir="ltr"] body {
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 17px;
   line-height: 25px;
   letter-spacing: -0.01em;
 }
 
 html[dir="ltr"] h1,
+html[dir="ltr"] h2,
+html[dir="ltr"] h3,
+html[dir="ltr"] h4,
+html[dir="ltr"] h5,
+html[dir="ltr"] h6,
+html[dir="ltr"] .hero-title,
+html[dir="ltr"] .usecases-title,
+html[dir="ltr"] .section-title,
+html[dir="ltr"] .usecase-heading,
+html[dir="ltr"] .cta-headline,
+html[dir="ltr"] .emotional-title-1,
+html[dir="ltr"] .emotional-title-2,
+html[dir="ltr"] .studio-bottom-card h3,
+html[dir="ltr"] .pricing-card-header h3,
+html[dir="ltr"] .modal-header h3,
+html[dir="ltr"] .sec-pillar-card h3,
+html[dir="ltr"] .tri-card h4,
+html[dir="ltr"] .ind-card h4,
+html[dir="ltr"] .footer-col h4,
+html[dir="ltr"] .timeline-head h4,
+html[dir="ltr"] .table-header-row h4,
+html[dir="ltr"] .mfc-title,
+html[dir="ltr"] .modal-title,
+html[dir="ltr"] .promo-headline,
+html[dir="ltr"] .section-head-center h2 {
+  font-family: Inter, system-ui, -apple-system, sans-serif !important;
+}
+
+html[dir="ltr"] h1,
 html[dir="ltr"] .hero-title,
 html[dir="ltr"] .usecases-title {
-  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 80px;
   font-weight: 800;
   line-height: 88px;
@@ -162,7 +205,6 @@ html[dir="ltr"] .usecase-heading,
 html[dir="ltr"] .cta-headline,
 html[dir="ltr"] .emotional-title-1,
 html[dir="ltr"] .emotional-title-2 {
-  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 56px;
   font-weight: 800;
   line-height: 64px;
@@ -175,7 +217,6 @@ html[dir="ltr"] .studio-bottom-card h3,
 html[dir="ltr"] .pricing-card-header h3,
 html[dir="ltr"] .modal-header h3,
 html[dir="ltr"] .sec-pillar-card h3 {
-  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 30px;
@@ -189,7 +230,6 @@ html[dir="ltr"] .ind-card h4,
 html[dir="ltr"] .footer-col h4,
 html[dir="ltr"] .timeline-head h4,
 html[dir="ltr"] .table-header-row h4 {
-  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 30px;
@@ -202,7 +242,6 @@ html[dir="ltr"] .section-desc,
 html[dir="ltr"] .hero-subtitle,
 html[dir="ltr"] .cta-sub,
 html[dir="ltr"] .emotional-subtitle {
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 26px;
 }
