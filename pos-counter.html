@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POS & Counter — KhataPro | Sub-Second Barcode Checkout & Anti-Theft Retail POS</title>
+  <meta name="description"
+    content="Experience KhataPro's sub-second barcode billing, 100% offline desktop speed, blind shift cash reconciliation, and 80mm thermal receipt printing for Pakistani retail and showrooms." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230D99FF'><path d='M4 4h16v16H4z'/></svg>" />
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, Outfit & Noto Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-light pos-page">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-tag">NEW 2026</span>
+      <span class="announcement-text">KhataPro POS 2.4 is live! Sub-second thermal billing with blind shift reconciliation.</span>
+      <a href="#pricing-section" class="announcement-link">Explore Now &rarr;</a>
+      <button type="button" class="announcement-close-btn" id="btn-close-announcement"
+        aria-label="Close announcement">&times;</button>
+    </div>
+  </div>
+
+  <!-- FLOATING EXPANDING GLASS NAVBAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar-pill" id="navbar">
+      <!-- TOP ROW: Sleek Pill Bar -->
+      <div class="navbar-top-row">
+        <!-- Logo & Brand -->
+        <div class="nav-brand-wrap">
+          <a href="index-en.html" class="nav-brand">
+            <div class="brand-logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 17H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="16" cy="16.5" r="2.5" fill="#0D99FF" />
+              </svg>
+            </div>
+            <span class="brand-title">Khata<span>Pro</span></span>
+          </a>
+          <span class="nav-brand-divider"></span>
+        </div>
+
+        <!-- Center Navigation Links -->
+        <ul class="nav-menu">
+          <li class="nav-item has-mega" data-tab="platform">
+            <a href="index-en.html#digital-studio" class="nav-link">
+              <span>Platform</span>
+            </a>
+          </li>
+          <li class="nav-item has-mega" data-tab="usecases">
+            <a href="use-cases.html" class="nav-link">
+              <span>Use cases</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index-en.html#installments-section" class="nav-link">
+              <span>Installments</span>
+            </a>
+          </li>
+          <li class="nav-item current-page">
+            <a href="pos-counter.html" class="nav-link">
+              <span>POS & Counter</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index-en.html#finance-section" class="nav-link">
+              <span>Finance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index-en.html#pricing-section" class="nav-link">
+              <span>Pricing</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right Nav Actions -->
+        <div class="nav-actions">
+          <a href="pos-counter-ur.html" class="lang-pill" title="Switch to Urdu (اردو)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+            <span>UR</span>
+          </a>
+          <a href="#demo-modal" class="btn-nav-secondary btn-desktop-only" id="btn-open-demo">
+            <span>Book a demo</span>
+          </a>
+          <a href="index-en.html#pricing-section" class="btn-nav-primary btn-desktop-only">
+            <span>Sign in</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <!-- Mobile Menu Toggle Button -->
+          <button class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu"
+            aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- INTEGRATED SEAMLESS EXPANDING MEGA DROPDOWN -->
+      <div class="navbar-mega-dropdown" id="navbar-mega-dropdown">
+        <!-- PANE 1: PLATFORM -->
+        <div class="mega-pane" id="mega-pane-platform">
+          <div class="mega-menu-grid-3col">
+            <div class="mega-col-left">
+              <div class="mega-col-label">PRODUCTS</div>
+              <a href="index-en.html#digital-studio" class="mega-featured-card">
+                <div class="mfc-badge-row">
+                  <span class="mfc-badge">FEATURED</span>
+                  <span class="mfc-arrow">→</span>
+                </div>
+                <h4 class="mfc-title">Smart Khata 360°</h4>
+                <p class="mfc-desc">Every ledger, installment recovery & customer contract format your business needs.</p>
+              </a>
+              <div class="mega-products-list">
+                <a href="index-en.html#installments-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">WhatsApp Recovery Bot</span>
+                    <span class="mil-desc">AI installment reminders with voice & SMS slips</span>
+                  </div>
+                </a>
+                <a href="pos-counter.html" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">POS & 80mm Counter</span>
+                    <span class="mil-desc">Thermal receipt print with instant QR verification</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Middle Column: Capabilities -->
+            <div class="mega-col-mid">
+              <div class="mega-col-label">CORE CAPABILITIES</div>
+              <div class="mega-products-list">
+                <a href="index-en.html#digital-khata" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Legal Stamp Contract Studio</span>
+                    <span class="mil-desc">1-Click judicial stamp deed agreement generation</span>
+                  </div>
+                </a>
+                <a href="index-en.html#security-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Offline SQLite Vault</span>
+                    <span class="mil-desc">100% offline desktop speed with bank-grade security</span>
+                  </div>
+                </a>
+                <a href="index-en.html#finance-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Real-Time Daily P&L</span>
+                    <span class="mil-desc">Instant net margin, supplier payables & ledger</span>
+                  </div>
+                </a>
+                <a href="index-en.html#customers-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Customer Biometrics & 360°</span>
+                    <span class="mil-desc">Guarantor records, CNIC vault & credit limits</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Showcase Frame -->
+            <div class="mega-col-right">
+              <div class="mega-visual-frame">
+                <div class="mvf-preview">
+                  <div class="mvf-chip">
+                    <span class="mvf-chip-title">ENTERPRISE V2.4</span>
+                    <span class="mvf-chip-sub">100% Offline Ready</span>
+                  </div>
+                  <div class="mvf-badge-center">
+                    <span class="mvf-badge-dot"></span>
+                    <span>Biometric Khata Verified</span>
+                  </div>
+                </div>
+                <a href="index-en.html#pricing-section" class="mvf-footer-link">
+                  <span>Explore Enterprise Suite</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Full-Width Featured Strip -->
+          <a href="index-en.html#pricing-section" class="mega-bottom-banner">
+            <div class="mbb-left">
+              <span class="mbb-pill">● 2026 EDITION</span>
+              <span class="mbb-title">Meet KhataPro Enterprise V2.4</span>
+              <span class="mbb-desc">The world's most advanced 100% offline retail & installment ERP.</span>
+            </div>
+            <div class="mbb-right">
+              <span>Explore Enterprise V2.4 →</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PANE 2: USE CASES -->
+        <div class="mega-pane" id="mega-pane-usecases">
+          <div class="mega-menu-grid-3col">
+            <div class="mega-col-left">
+              <a href="use-cases.html#electronics" class="mega-featured-card">
+                <div class="mfc-badge-row">
+                  <span class="mfc-badge">FEATURED</span>
+                  <span class="mfc-arrow">→</span>
+                </div>
+                <h4 class="mfc-title">Auto & Electronics Showrooms</h4>
+                <p class="mfc-desc">Every installment plan, markup calculator & recovery format your showroom needs.</p>
+              </a>
+              <div class="mega-products-list">
+                <a href="use-cases.html#electronics" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Mobile & Electronics Stores</span>
+                    <span class="mil-desc">IMEI tracking, installment recovery & cash billing</span>
+                  </div>
+                </a>
+                <a href="use-cases.html#auto" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Motorcycle & Auto Dealerships</span>
+                    <span class="mil-desc">Chassis & engine tracking with legal stamp contracts</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="mega-col-mid">
+              <div class="mega-col-label">RETAIL & DISTRIBUTION</div>
+              <div class="mega-products-list">
+                <a href="use-cases.html#wholesale" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Wholesale & FMCG Distribution</span>
+                    <span class="mil-desc">High-volume debtor ledgers & route collection</span>
+                  </div>
+                </a>
+                <a href="use-cases.html#superstores" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Superstores & Retail POS</span>
+                    <span class="mil-desc">Sub-second barcode scan & thermal receipts</span>
+                  </div>
+                </a>
+                <a href="use-cases.html#furniture" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Appliances & Furniture</span>
+                    <span class="mil-desc">Wedding packages & 12-24 month installment tenures</span>
+                  </div>
+                </a>
+                <a href="use-cases.html#jewelry" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">Jewelry & High-Ticket Boutiques</span>
+                    <span class="mil-desc">Weight-based karat pricing & offline client vault</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="mega-col-right">
+              <div class="mega-visual-frame">
+                <div class="mvf-preview">
+                  <div class="mvf-chip">
+                    <span class="mvf-chip-title">REAL-WORLD PROVEN</span>
+                    <span class="mvf-chip-sub">1,200+ Pakistani Businesses</span>
+                  </div>
+                  <div class="mvf-badge-center">
+                    <span class="mvf-badge-dot"></span>
+                    <span>PKR 4.2B+ Portfolio Protected</span>
+                  </div>
+                </div>
+                <a href="use-cases.html" class="mvf-footer-link">
+                  <span>View All 6 Industry Editions</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+      <div class="mobile-mega-accordion" id="mob-acc-platform">
+        <button type="button" class="mobile-mega-head" data-acc="mob-acc-platform">
+          <div class="mobile-mega-head-left">
+            <span class="mobile-mega-icon">⚡</span>
+            <span>Platform & Modules</span>
+          </div>
+          <svg class="mobile-mega-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-mega-body">
+          <div class="mobile-mega-items">
+            <a href="index-en.html#installments-section" class="mobile-mega-item">
+              <span class="mmi-title">WhatsApp Recovery Bot</span>
+              <span class="mmi-desc">Automated installment reminders with voice & SMS slips</span>
+            </a>
+            <a href="pos-counter.html" class="mobile-mega-item">
+              <span class="mmi-title">POS & 80mm Counter</span>
+              <span class="mmi-desc">Fast thermal receipt print with QR verification</span>
+            </a>
+            <a href="index-en.html#digital-khata" class="mobile-mega-item">
+              <span class="mmi-title">Legal Stamp Contract Studio</span>
+              <span class="mmi-desc">1-Click judicial stamp deed agreement generation</span>
+            </a>
+            <a href="index-en.html#security-section" class="mobile-mega-item">
+              <span class="mmi-title">100% Offline SQLite Vault</span>
+              <span class="mmi-desc">Zero cloud lag & bank-grade local security</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu-direct-links">
+        <a href="use-cases.html" class="mobile-direct-link">
+          <span>Use Cases & Industries</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+        <a href="index-en.html#installments-section" class="mobile-direct-link">
+          <span>Installments Engine</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+        <a href="pos-counter.html" class="mobile-direct-link active">
+          <span>POS & Counter</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+        <a href="index-en.html#finance-section" class="mobile-direct-link">
+          <span>Finance & Ledger</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+        <a href="index-en.html#pricing-section" class="mobile-direct-link">
+          <span>Pricing & Plans</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="mobile-menu-actions">
+        <a href="pos-counter-ur.html" class="mobile-lang-btn" title="Switch to Urdu">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>Switch to Urdu (اردو)</span>
+        </a>
+        <a href="#demo-modal" class="btn-mobile-demo" id="btn-mobile-open-demo">Book a demo</a>
+        <a href="index-en.html#pricing-section" class="btn-mobile-signin">Sign in &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN POS & COUNTER CONTENT -->
+  <main class="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="pos-hero" id="hero">
+      <div class="container pos-hero-container">
+        <div class="usecases-eyebrow">
+          <span>⚡ PURPOSE-BUILT HIGH-SPEED COUNTER ENGINE</span>
+        </div>
+        <h1 class="pos-hero-title">
+          Sub-Second Barcode Checkout, Zero Cashier Pilferage, <br />
+          <span>100% Offline Counter Reliability.</span>
+        </h1>
+        <p class="pos-hero-subtitle">
+          Built for high-traffic supermarkets, mobile showrooms, and wholesale distribution depots across Pakistan. Ring up 15 items in under 10 seconds, print crisp 80mm thermal receipts with QR verification, and eliminate cash drawer shortages with blind shift reconciliation.
+        </p>
+
+        <div class="usecases-hero-ctas">
+          <a href="#terminal-sim" class="btn-hero-primary">
+            <span>Try Interactive POS Simulator ↓</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+          <a href="#demo-modal" class="btn-hero-secondary" id="btn-hero-demo-trigger">
+            <span>Book Live Showroom Demo</span>
+          </a>
+        </div>
+
+        <!-- 4 KPI Benchmark Strip -->
+        <div class="pos-hero-stats">
+          <div class="pos-stat-item">
+            <div class="pos-stat-val">0.18<span>s</span></div>
+            <div class="pos-stat-lbl">80mm Thermal Receipt Print Speed</div>
+          </div>
+          <div class="pos-stat-item">
+            <div class="pos-stat-val">35,000<span>+</span></div>
+            <div class="pos-stat-lbl">Barcodes Cached in Local Memory</div>
+          </div>
+          <div class="pos-stat-item">
+            <div class="pos-stat-val">0.00<span>Rs</span></div>
+            <div class="pos-stat-lbl">Blind Shift Cash Discrepancy Audits</div>
+          </div>
+          <div class="pos-stat-item">
+            <div class="pos-stat-val">100<span>%</span></div>
+            <div class="pos-stat-lbl">Offline Zero Cloud-Lag Reliability</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE LIVE POS TERMINAL SIMULATOR -->
+    <section class="pos-sim-section" id="terminal-sim">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="pill-badge"
+            style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;">
+            <span>TEST LIVE COUNTER BILLING</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #FFFFFF; margin-top: 10px;">
+            Interactive Live POS Terminal Simulator
+          </h2>
+          <p style="color: #94A3B8; font-size: 1.05rem; max-width: 680px; margin: 10px auto 0;">
+            Click on items or use search below to simulate real counter billing. Test sub-second ring-ups, Pakistani payment splits, and live 80mm thermal receipt generation.
+          </p>
+        </div>
+
+        <div class="pos-terminal-wrapper">
+          <!-- Terminal Header -->
+          <div class="pos-terminal-header">
+            <div class="pos-terminal-title">
+              <span class="pos-terminal-dot"></span>
+              <span>TERMINAL #01 • CASHIER: MUHAMMAD ALI • SHIFT ACTIVE</span>
+            </div>
+            <div class="pos-terminal-badge">
+              <span>OFFLINE MESH: SYNCD</span>
+            </div>
+          </div>
+
+          <!-- Keyboard Shortcuts Strip -->
+          <div class="pos-shortcut-strip">
+            <span class="pos-kbd-chip"><kbd>F1</kbd> Quick Search</span>
+            <span class="pos-kbd-chip"><kbd>F2</kbd> Discount (PKR/%)</span>
+            <span class="pos-kbd-chip"><kbd>F3</kbd> Customer Phone</span>
+            <span class="pos-kbd-chip"><kbd>F4</kbd> Hold / Park Cart</span>
+            <span class="pos-kbd-chip"><kbd>F5</kbd> Recall Cart</span>
+            <span class="pos-kbd-chip"><kbd>Enter</kbd> Cash & Print</span>
+          </div>
+
+          <!-- Terminal Grid -->
+          <div class="pos-terminal-grid">
+            <!-- Left: Product Catalog & Search -->
+            <div class="pos-catalog-side">
+              <div class="pos-search-bar">
+                <input type="text" class="pos-search-input" id="pos-sim-search"
+                  placeholder="🔍 Scan barcode or search (e.g., iPhone, Ghee, Rice, AC, Oil)..." />
+              </div>
+
+              <div class="pos-category-chips">
+                <button type="button" class="pos-cat-btn active" data-cat="all">All Products</button>
+                <button type="button" class="pos-cat-btn" data-cat="electronics">📱 Electronics & Phones</button>
+                <button type="button" class="pos-cat-btn" data-cat="grocery">🛒 Supermarket FMCG</button>
+                <button type="button" class="pos-cat-btn" data-cat="auto">🏍️ Auto & Bikes</button>
+                <button type="button" class="pos-cat-btn" data-cat="appliances">🛋️ Appliances</button>
+              </div>
+
+              <div class="pos-product-grid" id="pos-product-list">
+                <!-- Products populated dynamically via JS -->
+              </div>
+            </div>
+
+            <!-- Right: Active Cart & Total -->
+            <div class="pos-cart-side">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <span style="font-weight: 800; font-size: 0.95rem; color: #F8FAFC;">Active Order Cart</span>
+                  <span style="font-size: 0.78rem; color: #94A3B8;" id="pos-item-count">0 items</span>
+                </div>
+
+                <div class="pos-cart-table-wrap">
+                  <table class="pos-cart-table">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody id="pos-cart-body">
+                      <!-- Cart items will be rendered here -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Payment Split Buttons -->
+              <div>
+                <div style="font-size: 0.78rem; color: #94A3B8; margin-bottom: 6px; font-weight: 700;">
+                  SELECT PAYMENT METHOD:
+                </div>
+                <div class="pos-payment-methods">
+                  <button type="button" class="pos-pay-btn active" data-pay="cash">💵 Cash</button>
+                  <button type="button" class="pos-pay-btn" data-pay="jazzcash">📱 JazzCash</button>
+                  <button type="button" class="pos-pay-btn" data-pay="easypaisa">🟢 EasyPaisa</button>
+                  <button type="button" class="pos-pay-btn" data-pay="raast">💳 Raast/Card</button>
+                </div>
+
+                <div class="pos-cart-summary">
+                  <div class="pos-summary-row">
+                    <span>Subtotal:</span>
+                    <span id="pos-subtotal">PKR 0</span>
+                  </div>
+                  <div class="pos-summary-row">
+                    <span>Trade Discount (F2):</span>
+                    <span style="color: #38BDF8;" id="pos-discount">- PKR 0</span>
+                  </div>
+                  <div class="pos-summary-total">
+                    <span>Grand Total:</span>
+                    <span id="pos-grand-total">PKR 0</span>
+                  </div>
+                </div>
+
+                <button type="button" class="btn-pos-print" id="btn-print-sim-receipt">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                  </svg>
+                  <span>Print 80mm Thermal Receipt (Enter)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE 6 PILLARS OF KHATAPRO COUNTER ARCHITECTURE -->
+    <section class="pos-pillars-section" id="pillars">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="pill-badge">
+            <span>ENGINEERED FOR COUNTER VELOCITY</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+            The 6 Pillars of KhataPro Counter Architecture
+          </h2>
+          <p style="color: #64748B; font-size: 1.05rem; max-width: 680px; margin: 10px auto 0;">
+            Why Pakistan's fastest retail marts, wholesale depots, and mobile dealerships replace traditional cloud POS with KhataPro.
+          </p>
+        </div>
+
+        <div class="pos-pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">⚡</div>
+            <h3>Keyboard-Only Lightning Billing</h3>
+            <p>
+              Cashiers never need to touch the mouse. Dedicated function keys allow 15-item customer baskets to be scanned, totaled, and printed in under 10 seconds.
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> F1–F12 quick action hotkeys</li>
+              <li><span>✓</span> Instant barcode buffer handling</li>
+              <li><span>✓</span> One-touch item quantity multiplication</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">🛡️</div>
+            <h3>Anti-Theft & Blind Shift Audit</h3>
+            <p>
+              Stop cashier cash drawer shortages. Day-end blind cash counting requires cashiers to enter physical cash before seeing system totals, flagging discrepancies to the exact rupee.
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> Manager PIN needed to void/edit sales</li>
+              <li><span>✓</span> Blind cash drawer reconciliation report</li>
+              <li><span>✓</span> Detailed cashier audit log & shift handover</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">🖨️</div>
+            <h3>80mm & 58mm Thermal Print Studio</h3>
+            <p>
+              Print beautiful bilingual Urdu & English thermal receipts with your shop logo, terms, and QR warranty verification code in less than 0.2 seconds.
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> USB, LAN, Network & Bluetooth printing</li>
+              <li><span>✓</span> Auto cash drawer kick (RJ11)</li>
+              <li><span>✓</span> Custom shop header & return policy footer</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">💳</div>
+            <h3>Multi-Payment Split Engine</h3>
+            <p>
+              Accept complex customer payments seamlessly. Split single invoices into Cash (PKR 5,000) + JazzCash/EasyPaisa (PKR 10,000) + Raast Card (PKR 15,000).
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> Native JazzCash, EasyPaisa, Raast tags</li>
+              <li><span>✓</span> Dual cash + digital payment split</li>
+              <li><span>✓</span> Automated bank & wallet ledger sync</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">🔄</div>
+            <h3>Multi-Counter LAN Mesh</h3>
+            <p>
+              Operate 5 to 10 cash counters simultaneously across your showroom local network without internet. The master computer aggregates sales in real time.
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> 100% offline local SQLite network</li>
+              <li><span>✓</span> Real-time central stock decrement</li>
+              <li><span>✓</span> Zero broadband outage dependency</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 6 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">⚖️</div>
+            <h3>Weighing Scale & Barcode Printing</h3>
+            <p>
+              Direct RS232 / USB digital weighing scale connection for loose groceries, dry fruits, meat, and gold. Generates custom barcode stickers on demand.
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> Live weight auto-capture on counter</li>
+              <li><span>✓</span> Custom barcode & price sticker printing</li>
+              <li><span>✓</span> Perishable expiry date tracking & alerts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HARDWARE COMPATIBILITY MATRIX -->
+    <section class="pos-hardware-section" id="hardware">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="pill-badge">
+            <span>PLUG & PLAY COMPATIBILITY</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+            Works with All Standard Pakistani POS Hardware
+          </h2>
+          <p style="color: #64748B; font-size: 1rem; max-width: 600px; margin: 8px auto 0;">
+            No expensive proprietary hardware needed. KhataPro connects instantly to existing equipment.
+          </p>
+        </div>
+
+        <div class="hardware-grid-4col">
+          <div class="hardware-card">
+            <div class="hardware-icon">📷</div>
+            <div class="hardware-title">Barcode Scanners</div>
+            <p class="hardware-desc">1D Laser, 2D QR, Wireless Bluetooth & Hands-free Omnidirectional scanners (Honeywell, Zebra, Datalogic, Sunmi).</p>
+          </div>
+
+          <div class="hardware-card">
+            <div class="hardware-icon">🖨️</div>
+            <div class="hardware-title">Thermal Printers</div>
+            <p class="hardware-desc">80mm & 58mm USB / LAN / Bluetooth printers (Epson, Xprinter, Rongta, Black Copper, Posiflex, Bixolon).</p>
+          </div>
+
+          <div class="hardware-card">
+            <div class="hardware-icon">💰</div>
+            <div class="hardware-title">Cash Drawers</div>
+            <p class="hardware-desc">Standard 4-Bill / 5-Bill heavy-duty RJ11 12V/24V auto-kick cash drawers triggered instantly on receipt print.</p>
+          </div>
+
+          <div class="hardware-card">
+            <div class="hardware-icon">📺</div>
+            <div class="hardware-title">Customer Pole Displays</div>
+            <p class="hardware-desc">VFD 2-Line customer price displays and dual-monitor secondary customer-facing checkout screens.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL CASE STUDIES SECTION -->
+    <section class="usecase-stories-section" style="background: #F8FAFC;">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="pill-badge">
+            <span>REAL RESULTS FROM REAL COUNTERS</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+            Trusted by Pakistan's Busy Retail Counters
+          </h2>
+        </div>
+
+        <div class="stories-grid-3col">
+          <div class="story-card">
+            <div>
+              <div class="story-badge-row">
+                <span class="story-city">📍 Lahore, Model Town</span>
+                <span class="story-metric-pill">1,400+ Bills / Day</span>
+              </div>
+              <p class="story-quote">
+                "We run 4 billing counters in our superstore. Old cloud software kept spinning during peak evening rush. KhataPro's offline speed is instant, and the blind drawer audit matched our cash down to 0 rupee difference."
+              </p>
+            </div>
+            <div class="story-author-info">
+              <div class="story-avatar">AM</div>
+              <div>
+                <div class="story-author-name">Al-Madina Mart & Bakery</div>
+                <div class="story-author-business">4-Counter Superstore</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div>
+              <div class="story-badge-row">
+                <span class="story-city">📍 Karachi, Saddar Electronics</span>
+                <span class="story-metric-pill">0.2s IMEI Thermal Print</span>
+              </div>
+              <p class="story-quote">
+                "Scanning IMEI numbers and printing customer warranty slips used to take 2 minutes per phone. KhataPro prints formatted receipts with dual IMEIs in under 2 seconds. The keyboard shortcuts are a lifesaver."
+              </p>
+            </div>
+            <div class="story-author-info">
+              <div class="story-avatar">RK</div>
+              <div>
+                <div class="story-author-name">Raza Telecom & Gadgets</div>
+                <div class="story-author-business">Smartphones & Accessories</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div>
+              <div class="story-badge-row">
+                <span class="story-city">📍 Rawalpindi, City Saddar</span>
+                <span class="story-metric-pill">100% Blind Audit Match</span>
+              </div>
+              <p class="story-quote">
+                "Cashier shortages were costing us 15,000 to 20,000 every month. KhataPro's blind shift reconciliation stopped theft immediately. Cashiers take their job seriously when every rupee is audited."
+              </p>
+            </div>
+            <div class="story-author-info">
+              <div class="story-avatar">HQ</div>
+              <div>
+                <div class="story-author-name">Haq Auto Parts Depot</div>
+                <div class="story-author-business">Wholesale & Retail Counter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGH-CONVERTING CLOSING CTA SECTION -->
+    <section class="cta-banner-section" style="padding: 90px 0;">
+      <div class="container">
+        <div class="cta-glass-card"
+          style="text-align: center; max-width: 900px; margin: 0 auto; padding: 50px 30px; border-radius: 28px; background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; position: relative; border: 1.5px solid rgba(56, 189, 248, 0.4); box-shadow: 0 25px 60px rgba(0,0,0,0.3);">
+          <span class="pill-badge"
+            style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8; margin-bottom: 16px;">
+            READY TO UPGRADE YOUR COUNTER?
+          </span>
+          <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px;">
+            Modernize Your Billing Counter in Less Than 15 Minutes.
+          </h2>
+          <p style="font-size: 1.1rem; color: #CBD5E1; max-width: 640px; margin: 0 auto 32px;">
+            Join over 1,200+ Pakistani showroom and retail business owners who stopped cash leakages and achieved lightning counter velocity with KhataPro.
+          </p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="index-en.html#pricing-section" class="btn-hero-primary">
+              <span>View Lifetime & Monthly License Plans</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+            <a href="#demo-modal" class="btn-hero-secondary" id="btn-cta-demo-trigger">
+              <span>Schedule Free Counter Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-dark">
+    <div class="container footer-container">
+
+      <!-- Top Concierge Bar -->
+      <div class="footer-concierge-bar">
+        <div class="footer-concierge-info">
+          <span>💬</span>
+          <span>Need custom POS hardware integration, multi-counter setup, or a live demo?</span>
+        </div>
+        <div class="footer-concierge-actions">
+          <a href="https://wa.me/923001234567?text=Hi%20KhataPro%20Team%2C%20I%20need%20a%20POS%20demo"
+            target="_blank" rel="noopener" class="btn-footer-wa">
+            <span>🟢 Chat on WhatsApp</span>
+          </a>
+          <a href="tel:+923001234567" class="btn-footer-phone">
+            <span>📞 0300-1234567</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Authority -->
+        <div class="footer-col-brand">
+          <div class="footer-logo">
+            <div class="brand-logo-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="16" cy="16.5" r="2.5" fill="#0D99FF" />
+              </svg>
+            </div>
+            <span class="brand-title">Khata<span>Pro</span></span>
+          </div>
+          <p class="footer-about">
+            Pakistan's leading offline-first retail POS, digital khata, and installment recovery operating system for showrooms and supermarkets.
+          </p>
+          <div class="footer-brand-badges">
+            <div class="footer-status-pill">
+              <span class="footer-status-dot"></span>
+              <span>All Systems Operational • 99.98% Local Uptime</span>
+            </div>
+            <div class="footer-meta-chips">
+              <span>🔒 100% Offline SQLite</span>
+              <span>•</span>
+              <span>🇵🇰 Urdu & English Ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Product Modules -->
+        <div class="footer-col">
+          <h4>Core Modules</h4>
+          <ul>
+            <li><a href="pos-counter.html"><span>›</span> POS & 80mm Thermal Print</a></li>
+            <li><a href="index-en.html#installments-section"><span>›</span> Installment Recovery Bot</a></li>
+            <li><a href="index-en.html#digital-khata"><span>›</span> Legal Stamp Contract Studio</a></li>
+            <li><a href="index-en.html#customers-section"><span>›</span> Customer Biometrics & Ledger</a></li>
+            <li><a href="index-en.html#finance-section"><span>›</span> Real-Time Profit & Loss (P&L)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Target Businesses -->
+        <div class="footer-col">
+          <h4>Industry Editions</h4>
+          <ul>
+            <li><a href="use-cases.html#electronics"><span>›</span> Mobile & Electronics Stores</a></li>
+            <li><a href="use-cases.html#auto"><span>›</span> Motorcycle Dealerships</a></li>
+            <li><a href="use-cases.html#superstores"><span>›</span> Superstores & Marts</a></li>
+            <li><a href="use-cases.html#wholesale"><span>›</span> Wholesale & Distribution</a></li>
+            <li><a href="use-cases.html#furniture"><span>›</span> Appliances & Furniture</a></li>
+            <li><a href="use-cases.html#jewelry"><span>›</span> Gold & Jewelry Boutiques</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Trust & Support -->
+        <div class="footer-col">
+          <h4>Trust & Support</h4>
+          <ul>
+            <li><a href="index-en.html#security-section"><span>›</span> Offline Security Architecture</a></li>
+            <li><a href="index-en.html#pricing-section"><span>›</span> Transparent Lifetime Pricing</a></li>
+            <li><a href="index-en.html#faq-section"><span>›</span> Documentation & FAQ</a></li>
+            <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener"><span>›</span> Dedicated WhatsApp Concierge</a></li>
+            <li><a href="#demo-modal"><span>›</span> Request On-Site Demo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
+          © 2026 KhataPro Technologies (Pvt) Ltd. Built with pride for Pakistani businesses 🇵🇰.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#privacy">Privacy Policy</a>
+          <span>•</span>
+          <a href="#terms">Terms of Service</a>
+          <span>•</span>
+          <a href="#security">Security Statement</a>
+          <span>•</span>
+          <a href="#license">EULA License</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 80MM THERMAL RECEIPT MODAL PREVIEW -->
+  <div class="receipt-modal-overlay" id="receipt-modal">
+    <div class="thermal-paper">
+      <button type="button" id="btn-close-receipt"
+        style="position: absolute; top: 8px; right: 10px; background: none; border: none; font-size: 18px; font-weight: 800; cursor: pointer;">&times;</button>
+      <div class="thermal-header">
+        <div class="thermal-shop-name">AL-MADINA MEGA STORE</div>
+        <div>Main Boulevard, Gulberg III, Lahore</div>
+        <div>Phone: 0300-1234567 • NTN: 8940219-4</div>
+        <div style="margin-top: 4px; font-size: 10px;" id="receipt-datetime">Date: 01-Sep-2026 10:45 AM</div>
+        <div style="font-size: 10px;">Cashier: M. Ali (Terminal #01)</div>
+      </div>
+
+      <div class="thermal-row" style="font-weight: 800; border-bottom: 1px dashed #000; padding-bottom: 4px;">
+        <span>ITEM</span>
+        <span>QTY</span>
+        <span>PRICE</span>
+      </div>
+
+      <div id="receipt-items-list">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="thermal-divider"></div>
+
+      <div class="thermal-row">
+        <span>SUBTOTAL:</span>
+        <span id="receipt-subtotal">PKR 0</span>
+      </div>
+      <div class="thermal-row">
+        <span>DISCOUNT:</span>
+        <span id="receipt-discount">PKR 0</span>
+      </div>
+      <div class="thermal-row" style="font-size: 14px; font-weight: 900;">
+        <span>TOTAL:</span>
+        <span id="receipt-grand-total">PKR 0</span>
+      </div>
+      <div class="thermal-row">
+        <span>PAID VIA:</span>
+        <span id="receipt-pay-method" style="text-transform: uppercase;">CASH</span>
+      </div>
+
+      <div class="thermal-footer">
+        <div>*** THANK YOU FOR SHOPPING! ***</div>
+        <div>Return Policy: 3 Days with original receipt</div>
+        <div style="font-size: 9px; margin-top: 4px;">Powered by KhataPro Offline POS</div>
+        <div class="thermal-qr">
+          <svg viewBox="0 0 100 100" width="100%" height="100%">
+            <rect x="0" y="0" width="30" height="30" fill="#000" />
+            <rect x="5" y="5" width="20" height="20" fill="#fff" />
+            <rect x="10" y="10" width="10" height="10" fill="#000" />
+            <rect x="70" y="0" width="30" height="30" fill="#000" />
+            <rect x="75" y="5" width="20" height="20" fill="#fff" />
+            <rect x="80" y="10" width="10" height="10" fill="#000" />
+            <rect x="0" y="70" width="30" height="30" fill="#000" />
+            <rect x="5" y="75" width="20" height="20" fill="#fff" />
+            <rect x="10" y="80" width="10" height="10" fill="#000" />
+            <rect x="40" y="40" width="20" height="20" fill="#000" />
+            <rect x="45" y="10" width="10" height="20" fill="#000" />
+            <rect x="10" y="45" width="20" height="10" fill="#000" />
+            <rect x="70" y="45" width="20" height="10" fill="#000" />
+            <rect x="45" y="70" width="10" height="20" fill="#000" />
+          </svg>
+        </div>
+        <div style="font-size: 8px; letter-spacing: 0.5px;">VERIFY: KP-INV-94028</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK DEMO MODAL -->
+  <div class="modal-overlay" id="demo-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="btn-close-demo" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Book a 1-on-1 Counter Demo</h3>
+        <p class="modal-desc">See KhataPro live with your exact showroom inventory and counter hardware.</p>
+      </div>
+      <form class="modal-form" id="demo-form"
+        onsubmit="event.preventDefault(); alert('Thank you! Our technical specialist will contact you on WhatsApp within 15 minutes.'); document.getElementById('demo-modal').classList.remove('active');">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="e.g. Muhammad Ali" required />
+        </div>
+        <div class="form-group">
+          <label>Business / Mart Name</label>
+          <input type="text" placeholder="e.g. Al-Madina Superstore & POS" required />
+        </div>
+        <div class="form-group">
+          <label>WhatsApp Number</label>
+          <input type="tel" placeholder="0300 1234567" required />
+        </div>
+        <div class="form-group">
+          <label>Business Type</label>
+          <select style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid #CBD5E1;">
+            <option>Retail Superstore & Mart</option>
+            <option>Mobile & Electronics Showroom</option>
+            <option>Auto Parts & Bike Dealership</option>
+            <option>Wholesale & FMCG Depot</option>
+            <option>Home Appliances & Furniture</option>
+            <option>Jewelry / Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-hero-primary" style="width:100%; justify-content:center; margin-top:10px;">
+          <span>Confirm Showroom Demo</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script src="app.js"></script>
+  <script>
+    // POS Terminal Simulator Interactive Logic
+    const sampleProducts = [
+      { id: 1, name: "iPhone 16 Pro Max 256GB", barcode: "894029104820", price: 495000, cat: "electronics" },
+      { id: 2, name: "Samsung Galaxy A55 5G", barcode: "880609104819", price: 125000, cat: "electronics" },
+      { id: 3, name: "Dalda Banaspati Ghee 5KG", barcode: "896400010482", price: 2650, cat: "grocery" },
+      { id: 4, name: "Super Basmati Rice 10KG", barcode: "896400030192", price: 3850, cat: "grocery" },
+      { id: 5, name: "National Foods Biryani Masala", barcode: "896100049201", price: 140, cat: "grocery" },
+      { id: 6, name: "Honda CG 125 Tuning Kit", barcode: "921004820194", price: 4500, cat: "auto" },
+      { id: 7, name: "Crown Engine Oil 20W-50 1L", barcode: "921004829910", price: 1250, cat: "auto" },
+      { id: 8, name: "Haier 1.5 Ton Inverter AC", barcode: "894029109938", price: 185000, cat: "appliances" }
+    ];
+
+    let cart = [
+      { ...sampleProducts[2], qty: 2 },
+      { ...sampleProducts[3], qty: 1 }
+    ];
+    let activeCategory = "all";
+    let selectedPayMethod = "cash";
+    let discountAmount = 150;
+
+    const prodListEl = document.getElementById('pos-product-list');
+    const cartBodyEl = document.getElementById('pos-cart-body');
+    const subtotalEl = document.getElementById('pos-subtotal');
+    const discountEl = document.getElementById('pos-discount');
+    const grandTotalEl = document.getElementById('pos-grand-total');
+    const itemCountEl = document.getElementById('pos-item-count');
+    const searchInput = document.getElementById('pos-sim-search');
+    const catBtns = document.querySelectorAll('.pos-cat-btn');
+    const payBtns = document.querySelectorAll('.pos-pay-btn');
+
+    function renderProducts() {
+      if (!prodListEl) return;
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+      const filtered = sampleProducts.filter(p => {
+        const matchesCat = activeCategory === 'all' || p.cat === activeCategory;
+        const matchesQuery = p.name.toLowerCase().includes(query) || p.barcode.includes(query);
+        return matchesCat && matchesQuery;
+      });
+
+      prodListEl.innerHTML = filtered.map(p => `
+        <div class="pos-product-card" onclick="addToCart(${p.id})">
+          <div>
+            <div class="pos-prod-barcode">BARCODE: ${p.barcode}</div>
+            <div class="pos-prod-name">${p.name}</div>
+          </div>
+          <div class="pos-prod-price-row">
+            <span class="pos-prod-price">PKR ${p.price.toLocaleString('en-US')}</span>
+            <div class="pos-prod-add">+</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderCart() {
+      if (!cartBodyEl) return;
+      if (cart.length === 0) {
+        cartBodyEl.innerHTML = `
+          <tr>
+            <td colspan="5" style="text-align: center; color: #64748B; padding: 30px 0;">
+              🛒 Cart is empty. Click a product on the left or search above to scan.
+            </td>
+          </tr>
+        `;
+      } else {
+        cartBodyEl.innerHTML = cart.map((item, idx) => `
+          <tr class="pos-cart-row">
+            <td>
+              <strong style="color: #F8FAFC; display:block;">${item.name}</strong>
+              <span style="color: #64748B; font-size: 0.72rem;">${item.barcode}</span>
+            </td>
+            <td>
+              <div class="pos-cart-qty-ctrl">
+                <button class="pos-qty-btn" onclick="updateQty(${idx}, -1)">-</button>
+                <span style="font-weight: 700; color: #F8FAFC;">${item.qty}</span>
+                <button class="pos-qty-btn" onclick="updateQty(${idx}, 1)">+</button>
+              </div>
+            </td>
+            <td style="color: #94A3B8;">PKR ${item.price.toLocaleString('en-US')}</td>
+            <td style="color: #38BDF8; font-weight: 800;">PKR ${(item.price * item.qty).toLocaleString('en-US')}</td>
+            <td>
+              <button onclick="removeFromCart(${idx})" style="background:none; border:none; color: #EF4444; font-weight: 800; cursor:pointer;">&times;</button>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const finalDiscount = subtotal > discountAmount ? discountAmount : 0;
+      const grandTotal = Math.max(0, subtotal - finalDiscount);
+
+      if (subtotalEl) subtotalEl.textContent = `PKR ${subtotal.toLocaleString('en-US')}`;
+      if (discountEl) discountEl.textContent = `- PKR ${finalDiscount.toLocaleString('en-US')}`;
+      if (grandTotalEl) grandTotalEl.textContent = `PKR ${grandTotal.toLocaleString('en-US')}`;
+      if (itemCountEl) itemCountEl.textContent = `${totalItems} items (${cart.length} unique)`;
+    }
+
+    window.addToCart = function (id) {
+      const prod = sampleProducts.find(p => p.id === id);
+      if (!prod) return;
+      const existing = cart.find(c => c.id === id);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ ...prod, qty: 1 });
+      }
+      renderCart();
+    };
+
+    window.updateQty = function (idx, delta) {
+      if (!cart[idx]) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) {
+        cart.splice(idx, 1);
+      }
+      renderCart();
+    };
+
+    window.removeFromCart = function (idx) {
+      cart.splice(idx, 1);
+      renderCart();
+    };
+
+    // Category click handlers
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.cat;
+        renderProducts();
+      });
+    });
+
+    // Payment method selector
+    payBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        payBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedPayMethod = btn.dataset.pay;
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', renderProducts);
+    }
+
+    // Thermal Receipt Modal Trigger
+    const receiptModal = document.getElementById('receipt-modal');
+    const printBtn = document.getElementById('btn-print-sim-receipt');
+    const closeReceiptBtn = document.getElementById('btn-close-receipt');
+
+    if (printBtn) {
+      printBtn.addEventListener('click', () => {
+        if (cart.length === 0) {
+          alert('Please add at least one item to cart before printing receipt.');
+          return;
+        }
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+        const finalDiscount = subtotal > discountAmount ? discountAmount : 0;
+        const grandTotal = Math.max(0, subtotal - finalDiscount);
+
+        const itemsContainer = document.getElementById('receipt-items-list');
+        if (itemsContainer) {
+          itemsContainer.innerHTML = cart.map(item => `
+            <div class="thermal-row" style="font-size: 11px;">
+              <span style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.name}</span>
+              <span>${item.qty}x</span>
+              <span>${(item.price * item.qty).toLocaleString('en-US')}</span>
+            </div>
+          `).join('');
+        }
+
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) + ' ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const dtEl = document.getElementById('receipt-datetime');
+        if (dtEl) dtEl.textContent = `Date: ${dateStr}`;
+
+        const recSub = document.getElementById('receipt-subtotal');
+        const recDisc = document.getElementById('receipt-discount');
+        const recTotal = document.getElementById('receipt-grand-total');
+        const recPay = document.getElementById('receipt-pay-method');
+
+        if (recSub) recSub.textContent = `PKR ${subtotal.toLocaleString('en-US')}`;
+        if (recDisc) recDisc.textContent = `PKR ${finalDiscount.toLocaleString('en-US')}`;
+        if (recTotal) recTotal.textContent = `PKR ${grandTotal.toLocaleString('en-US')}`;
+        if (recPay) recPay.textContent = selectedPayMethod;
+
+        if (receiptModal) receiptModal.classList.add('active');
+      });
+    }
+
+    if (closeReceiptBtn && receiptModal) {
+      closeReceiptBtn.addEventListener('click', () => {
+        receiptModal.classList.remove('active');
+      });
+      receiptModal.addEventListener('click', (e) => {
+        if (e.target === receiptModal) receiptModal.classList.remove('active');
+      });
+    }
+
+    // Modal open / close handlers for Demo Modal
+    const demoModal = document.getElementById('demo-modal');
+    const demoOpenBtns = document.querySelectorAll('#btn-open-demo, #btn-hero-demo-trigger, #btn-cta-demo-trigger, #btn-mobile-open-demo');
+    const demoCloseBtn = document.getElementById('btn-close-demo');
+
+    demoOpenBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (btn.getAttribute('href') === '#demo-modal') {
+          e.preventDefault();
+          if (demoModal) demoModal.classList.add('active');
+        }
+      });
+    });
+
+    if (demoCloseBtn && demoModal) {
+      demoCloseBtn.addEventListener('click', () => {
+        demoModal.classList.remove('active');
+      });
+      demoModal.addEventListener('click', (e) => {
+        if (e.target === demoModal) demoModal.classList.remove('active');
+      });
+    }
+
+    // Initial render
+    renderProducts();
+    renderCart();
+  </script>
+</body>
+
+</html>

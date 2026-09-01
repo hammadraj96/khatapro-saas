@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پی او ایس و کاؤنٹر بلنگ — کھاتہ پرو | برق رفتار بارکوڈ چیک آؤٹ و بلائنڈ کیش آڈٹ</title>
+  <meta name="description"
+    content="کھاتہ پرو کے ذریعے 0.2 سیکنڈ میں بارکوڈ بلنگ، 100% آف لائن اسپیڈ، کیش دراز کے نقصانات کا خاتمہ اور 80mm اردو تھرمل رسید پرنٹنگ حاصل کریں۔" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230D99FF'><path d='M4 4h16v16H4z'/></svg>" />
+
+  <!-- Google Fonts: Noto Sans Arabic, Inter, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-light pos-page">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-tag">نیا 2026</span>
+      <span class="announcement-text">کھاتہ پرو POS 2.4 لائیو ہے! بغیر انٹرنیٹ بجلی کی رفتار سے بلنگ اور بلائنڈ کیش
+        آڈٹ۔</span>
+      <a href="index.html#pricing-section" class="announcement-link">تفصیلات دیکھیں &larr;</a>
+      <button type="button" class="announcement-close-btn" id="btn-close-announcement"
+        aria-label="Close announcement">&times;</button>
+    </div>
+  </div>
+
+  <!-- FLOATING EXPANDING GLASS NAVBAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar-pill" id="navbar">
+      <!-- TOP ROW: Sleek Pill Bar -->
+      <div class="navbar-top-row">
+        <!-- Logo & Brand -->
+        <div class="nav-brand-wrap">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 17H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="16" cy="16.5" r="2.5" fill="#0D99FF" />
+              </svg>
+            </div>
+            <span class="brand-title">کھاتہ<span>پرو</span></span>
+          </a>
+          <span class="nav-brand-divider"></span>
+        </div>
+
+        <!-- Center Navigation Links -->
+        <ul class="nav-menu">
+          <li class="nav-item has-mega" data-tab="platform">
+            <a href="index.html#digital-studio" class="nav-link">
+              <span>پلیٹ فارم</span>
+            </a>
+          </li>
+          <li class="nav-item has-mega" data-tab="usecases">
+            <a href="use-cases-ur.html" class="nav-link">
+              <span>استعمال کے شعبے</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#installments-section" class="nav-link">
+              <span>اقساط انجن</span>
+            </a>
+          </li>
+          <li class="nav-item current-page">
+            <a href="pos-counter-ur.html" class="nav-link">
+              <span>پی او ایس و کاؤنٹر</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#finance-section" class="nav-link">
+              <span>مالیات</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#pricing-section" class="nav-link">
+              <span>قیمتیں</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right Nav Actions -->
+        <div class="nav-actions">
+          <a href="pos-counter.html" class="lang-pill" title="Switch to English">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+            <span>EN</span>
+          </a>
+          <a href="#demo-modal" class="btn-nav-secondary btn-desktop-only" id="btn-open-demo">
+            <span>ڈیمو حاصل کریں</span>
+          </a>
+          <a href="index.html#pricing-section" class="btn-nav-primary btn-desktop-only">
+            <span>سائن ان کریں</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </a>
+          <!-- Mobile Menu Toggle Button -->
+          <button class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu"
+            aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- INTEGRATED SEAMLESS EXPANDING MEGA DROPDOWN -->
+      <div class="navbar-mega-dropdown" id="navbar-mega-dropdown">
+        <!-- PANE 1: PLATFORM -->
+        <div class="mega-pane" id="mega-pane-platform">
+          <div class="mega-menu-grid-3col">
+            <div class="mega-col-left">
+              <div class="mega-col-label">پروڈکٹس</div>
+              <a href="index.html#digital-studio" class="mega-featured-card">
+                <div class="mfc-badge-row">
+                  <span class="mfc-badge">نمایاں فیچر</span>
+                  <span class="mfc-arrow">←</span>
+                </div>
+                <h4 class="mfc-title">سمارٹ کھاتہ 360°</h4>
+                <p class="mfc-desc">مکمل لیجر، واٹس ایپ ریکوری، اور عدالتی اسٹامپ معاہدے آپ کی دکان کے لیے۔</p>
+              </a>
+              <div class="mega-products-list">
+                <a href="index.html#installments-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">واٹس ایپ ریکوری بوٹ</span>
+                    <span class="mil-desc">خودکار اقساط کے پیغامات مع اردو وائس نوٹس اور سلپ</span>
+                  </div>
+                </a>
+                <a href="pos-counter-ur.html" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">پی او ایس و 80mm کاؤنٹر</span>
+                    <span class="mil-desc">تھرمل رسید پرنٹنگ مع فوری QR کوڈ تصدیق</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Middle Column: Capabilities -->
+            <div class="mega-col-mid">
+              <div class="mega-col-label">بنیادی خصوصیات</div>
+              <div class="mega-products-list">
+                <a href="index.html#digital-khata" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">عدالتی اسٹامپ پیپر اسٹوڈیو</span>
+                    <span class="mil-desc">1-کلک میں قانونی اقرار نامہ اور بائیو میٹرک معاہدہ</span>
+                  </div>
+                </a>
+                <a href="index.html#security-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">100% آف لائن SQLite والٹ</span>
+                    <span class="mil-desc">بغیر انٹرنیٹ انتہائی تیز رفتار و بینک لیول سیکیورٹی</span>
+                  </div>
+                </a>
+                <a href="index.html#finance-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">ریئل ٹائم روزانہ نفع و نقصان (P&L)</span>
+                    <span class="mil-desc">خالص منافع، سپلائر لیجر اور بقایا جات کا درست حساب</span>
+                  </div>
+                </a>
+                <a href="index.html#customers-section" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">کسٹمر بائیو میٹرکس و 360°</span>
+                    <span class="mil-desc">ضامنان کا ریکارڈ، شناختی کارڈ والٹ اور ادھار کی حد</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Showcase Frame -->
+            <div class="mega-col-right">
+              <div class="mega-visual-frame">
+                <div class="mvf-preview">
+                  <div class="mvf-chip">
+                    <span class="mvf-chip-title">ENTERPRISE V2.4</span>
+                    <span class="mvf-chip-sub">100% آف لائن ریڈی</span>
+                  </div>
+                  <div class="mvf-badge-center">
+                    <span class="mvf-badge-dot"></span>
+                    <span>بائیو میٹرک کھاتہ ویریفائیڈ</span>
+                  </div>
+                </div>
+                <a href="index.html#pricing-section" class="mvf-footer-link">
+                  <span>انٹرپرائز پیکجز دیکھیں</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Full-Width Featured Strip -->
+          <a href="index.html#pricing-section" class="mega-bottom-banner">
+            <div class="mbb-left">
+              <span class="mbb-pill">● 2026 ایڈیشن</span>
+              <span class="mbb-title">کھاتہ پرو انٹرپرائز V2.4 سے ملیں</span>
+              <span class="mbb-desc">پاکستان کا جدید ترین 100% آف لائن ریٹیل اور انسٹالمنٹ ای آر پی۔</span>
+            </div>
+            <div class="mbb-right">
+              <span>انٹرپرائز سوٹ دریافت کریں ←</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PANE 2: USE CASES -->
+        <div class="mega-pane" id="mega-pane-usecases">
+          <div class="mega-menu-grid-3col">
+            <div class="mega-col-left">
+              <a href="use-cases-ur.html#electronics" class="mega-featured-card">
+                <div class="mfc-badge-row">
+                  <span class="mfc-badge">نمایاں انڈسٹری</span>
+                  <span class="mfc-arrow">←</span>
+                </div>
+                <h4 class="mfc-title">آٹو و الیکٹرانکس شو رومز</h4>
+                <p class="mfc-desc">ہر قسط کا فارمولا، مارک اپ کیلکولیٹر اور ریکوری شیڈول جو آپ کے شو روم کو چاہیے۔</p>
+              </a>
+              <div class="mega-products-list">
+                <a href="use-cases-ur.html#electronics" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">موبائل و الیکٹرانکس شاپس</span>
+                    <span class="mil-desc">IMEI ٹریکنگ، اقساط کی ریکوری اور کیش کاؤنٹر</span>
+                  </div>
+                </a>
+                <a href="use-cases-ur.html#auto" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">موٹر سائیکل و کار شو رومز</span>
+                    <span class="mil-desc">چیسس و انجن ٹریکنگ مع قانونی اسٹامپ معاہدے</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="mega-col-mid">
+              <div class="mega-col-label">ریٹیل و ڈسٹری بیوشن</div>
+              <div class="mega-products-list">
+                <a href="use-cases-ur.html#wholesale" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">ہول سیل و ڈسٹری بیوٹرز</span>
+                    <span class="mil-desc">تیز رفتار لیجر، بلک بلنگ اور سپلائرز کے بقایا جات</span>
+                  </div>
+                </a>
+                <a href="use-cases-ur.html#superstores" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">سپر اسٹورز و ریٹیل POS</span>
+                    <span class="mil-desc">0.2 سیکنڈ بارکوڈ اسکین اور تھرمل رسید پرنٹنگ</span>
+                  </div>
+                </a>
+                <a href="use-cases-ur.html#furniture" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">گھریلو سامان و فرنیچر</span>
+                    <span class="mil-desc">شادی پیکجز اور 12 تا 24 ماہ کے اقساط پلانز</span>
+                  </div>
+                </a>
+                <a href="use-cases-ur.html#jewelry" class="mega-item-link">
+                  <div class="mil-content">
+                    <span class="mil-title">جیولری و لگژری شو رومز</span>
+                    <span class="mil-desc">تولہ و گرام ریٹ فارمولا اور پرائیویٹ کسٹمر والٹ</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="mega-col-right">
+              <div class="mega-visual-frame">
+                <div class="mvf-preview">
+                  <div class="mvf-chip">
+                    <span class="mvf-chip-title">پاکستان بھر میں تصدیق شدہ</span>
+                    <span class="mvf-chip-sub">1,200+ فعال کاروباری ادارے</span>
+                  </div>
+                  <div class="mvf-badge-center">
+                    <span class="mvf-badge-dot"></span>
+                    <span>4.2 ارب+ روپے کا پورٹ فولیو محفوظ</span>
+                  </div>
+                </div>
+                <a href="use-cases-ur.html" class="mvf-footer-link">
+                  <span>تمام 6 شعبے دیکھیں</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+      <div class="mobile-mega-accordion" id="mob-acc-platform">
+        <button type="button" class="mobile-mega-head" data-acc="mob-acc-platform">
+          <div class="mobile-mega-head-left">
+            <span class="mobile-mega-icon">⚡</span>
+            <span>پلیٹ فارم و پروڈکٹس</span>
+          </div>
+          <svg class="mobile-mega-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-mega-body">
+          <div class="mobile-mega-items">
+            <a href="index.html#installments-section" class="mobile-mega-item">
+              <span class="mmi-title">واٹس ایپ ریکوری بوٹ</span>
+              <span class="mmi-desc">خودکار اقساط کے پیغامات مع اردو وائس نوٹس اور سلپ</span>
+            </a>
+            <a href="pos-counter-ur.html" class="mobile-mega-item">
+              <span class="mmi-title">پی او ایس و 80mm کاؤنٹر</span>
+              <span class="mmi-desc">تھرمل رسید پرنٹنگ مع فوری QR کوڈ تصدیق</span>
+            </a>
+            <a href="index.html#digital-khata" class="mobile-mega-item">
+              <span class="mmi-title">عدالتی اسٹامپ پیپر اسٹوڈیو</span>
+              <span class="mmi-desc">1-کلک میں قانونی اقرار نامہ اور بائیو میٹرک معاہدہ</span>
+            </a>
+            <a href="index.html#security-section" class="mobile-mega-item">
+              <span class="mmi-title">100% آف لائن SQLite والٹ</span>
+              <span class="mmi-desc">بغیر انٹرنیٹ انتہائی تیز رفتار و بینک لیول سیکیورٹی</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu-direct-links">
+        <a href="use-cases-ur.html" class="mobile-direct-link">
+          <span>استعمال کے شعبے</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <a href="index.html#installments-section" class="mobile-direct-link">
+          <span>اقساط انجن</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <a href="pos-counter-ur.html" class="mobile-direct-link active">
+          <span>پی او ایس و کاؤنٹر</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <a href="index.html#finance-section" class="mobile-direct-link">
+          <span>مالیات و منافع</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <a href="index.html#pricing-section" class="mobile-direct-link">
+          <span>قیمتیں و پیکجز</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="mobile-menu-actions">
+        <a href="pos-counter.html" class="mobile-lang-btn" title="Switch to English">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>انگریزی میں دیکھیں (English)</span>
+        </a>
+        <a href="#demo-modal" class="btn-mobile-demo" id="btn-mobile-open-demo">مفت ڈیمو حاصل کریں</a>
+        <a href="index.html#pricing-section" class="btn-mobile-signin">سائن ان کریں &larr;</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN POS & COUNTER CONTENT -->
+  <main class="main-content">
+
+    <!-- HERO SECTION (URDU) -->
+    <section class="pos-hero" id="hero">
+      <div class="container pos-hero-container">
+        <div class="usecases-eyebrow">
+          <span>⚡ پاکستانی ریٹیل و شو روم کاؤنٹرز کا تیز ترین بلنگ سسٹم</span>
+        </div>
+        <h1 class="pos-hero-title">
+          بجلی کی رفتار سے بارکوڈ بلنگ، دراز کی چوری کا خاتمہ <br />
+          <span>اور لوڈشیڈنگ میں بھی 100% آف لائن اسپیڈ۔</span>
+        </h1>
+        <p class="pos-hero-subtitle">
+          پاکستان کے رش والے سپر اسٹورز، موبائل شو رومز اور ہول سیل ڈپوز کے لیے خاص تیار کردہ۔ صرف 10 سیکنڈ میں 15 آئٹمز
+          کا بل بنائیں، فوری 80mm تھرمل رسید پرنٹ کریں اور بلائنڈ شفٹ آڈٹ کے ذریعے کیش دراز کے ہر روپے کا حساب محفوظ
+          بنائیں۔
+        </p>
+
+        <div class="usecases-hero-ctas">
+          <a href="#terminal-sim" class="btn-hero-primary">
+            <span>لائیو POS بلنگ چلا کر دیکھیں ↓</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </a>
+          <a href="#demo-modal" class="btn-hero-secondary" id="btn-hero-demo-trigger">
+            <span>لائیو شو روم ڈیمو بک کریں</span>
+          </a>
+        </div>
+
+        <!-- 4 KPI Benchmark Strip -->
+        <div class="pos-hero-stats">
+          <div class="pos-stat-item">
+            <div class="pos-stat-val">0.18<span>s</span></div>
+            <div class="pos-stat-lbl">80mm تھرمل رسید پرنٹ کی رفتار</div>
+          </div>
+          <div class="pos-stat-item">
+            <div class="pos-stat-val">35,000<span>+</span></div>
+            <div class="pos-stat-lbl">آئٹمز لوکل میموری میں محفوظ</div>
+          </div>
+          <div class="pos-stat-item">
+            <div class="pos-stat-val">0.00<span>روپے</span></div>
+            <div class="pos-stat-lbl">بلائنڈ شفٹ کیش آڈٹ میں فرق</div>
+          </div>
+          <div class="pos-stat-item">
+            <div class="pos-stat-val">100<span>%</span></div>
+            <div class="pos-stat-lbl">بغیر انٹرنیٹ 100% لوکل اسپیڈ</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE LIVE POS TERMINAL SIMULATOR (URDU) -->
+    <section class="pos-sim-section" id="terminal-sim">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="pill-badge"
+            style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;">
+            <span>لائیو کاؤنٹر بلنگ ٹیسٹ کریں</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #FFFFFF; margin-top: 10px;">
+            انٹرایکٹو لائیو POS ٹرمینل سمیلیٹر
+          </h2>
+          <p style="color: #94A3B8; font-size: 1.05rem; max-width: 680px; margin: 10px auto 0;">
+            نیچے دی گئی مصنوعات پر کلک کریں یا سرچ بار میں نام لکھیں۔ دیکھیں کہ کس طرح سیکنڈوں میں بل تیار ہوتا ہے اور
+            تھرمل رسید بنتی ہے۔
+          </p>
+        </div>
+
+        <div class="pos-terminal-wrapper">
+          <!-- Terminal Header -->
+          <div class="pos-terminal-header">
+            <div class="pos-terminal-title">
+              <span class="pos-terminal-dot"></span>
+              <span>کاؤنٹر نمبر 01 • کیشیئر: محمد علی • شفٹ فعال</span>
+            </div>
+            <div class="pos-terminal-badge">
+              <span>آف لائن میش: سنکڈ</span>
+            </div>
+          </div>
+
+          <!-- Keyboard Shortcuts Strip -->
+          <div class="pos-shortcut-strip">
+            <span class="pos-kbd-chip"><kbd>F1</kbd> فوری سرچ</span>
+            <span class="pos-kbd-chip"><kbd>F2</kbd> رعایت (ڈسکاؤنٹ)</span>
+            <span class="pos-kbd-chip"><kbd>F3</kbd> گاہک کا کھاتہ</span>
+            <span class="pos-kbd-chip"><kbd>F4</kbd> عارضی ہولڈ بل</span>
+            <span class="pos-kbd-chip"><kbd>F5</kbd> واپس لائیں</span>
+            <span class="pos-kbd-chip"><kbd>Enter</kbd> کیش وصولی و پرنٹ</span>
+          </div>
+
+          <!-- Terminal Grid -->
+          <div class="pos-terminal-grid">
+            <!-- Left: Product Catalog & Search -->
+            <div class="pos-catalog-side">
+              <div class="pos-search-bar">
+                <input type="text" class="pos-search-input" id="pos-sim-search"
+                  placeholder="🔍 بارکوڈ اسکین کریں یا نام لکھیں (مثلاً آئی فون، گھی، چاول، اے سی، آئل)..." />
+              </div>
+
+              <div class="pos-category-chips">
+                <button type="button" class="pos-cat-btn active" data-cat="all">تمام اشیاء</button>
+                <button type="button" class="pos-cat-btn" data-cat="electronics">📱 موبائل و الیکٹرانکس</button>
+                <button type="button" class="pos-cat-btn" data-cat="grocery">🛒 سپر مارکیٹ گروسری</button>
+                <button type="button" class="pos-cat-btn" data-cat="auto">🏍️ آٹو پارٹس و بائیک</button>
+                <button type="button" class="pos-cat-btn" data-cat="appliances">🛋️ گھریلو سامان</button>
+              </div>
+
+              <div class="pos-product-grid" id="pos-product-list">
+                <!-- Products populated dynamically via JS -->
+              </div>
+            </div>
+
+            <!-- Right: Active Cart & Total -->
+            <div class="pos-cart-side">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <span style="font-weight: 800; font-size: 0.95rem; color: #F8FAFC;">موجودہ کسٹمر بل</span>
+                  <span style="font-size: 0.78rem; color: #94A3B8;" id="pos-item-count">0 اشیاء</span>
+                </div>
+
+                <div class="pos-cart-table-wrap">
+                  <table class="pos-cart-table">
+                    <thead>
+                      <tr>
+                        <th>آئٹم کا نام</th>
+                        <th>تعداد</th>
+                        <th>قیمت</th>
+                        <th>کل رقم</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody id="pos-cart-body">
+                      <!-- Cart items rendered dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Payment Split Buttons -->
+              <div>
+                <div style="font-size: 0.78rem; color: #94A3B8; margin-bottom: 6px; font-weight: 700;">
+                  ادائیگی کا طریقہ منتخب کریں:
+                </div>
+                <div class="pos-payment-methods">
+                  <button type="button" class="pos-pay-btn active" data-pay="نقد (Cash)">💵 نقد کیش</button>
+                  <button type="button" class="pos-pay-btn" data-pay="جاز کیش">📱 جاز کیش</button>
+                  <button type="button" class="pos-pay-btn" data-pay="ایزی پیسہ">🟢 ایزی پیسہ</button>
+                  <button type="button" class="pos-pay-btn" data-pay="راست / کارڈ">💳 راست / کارڈ</button>
+                </div>
+
+                <div class="pos-cart-summary">
+                  <div class="pos-summary-row">
+                    <span>کل رقم (Subtotal):</span>
+                    <span id="pos-subtotal">PKR 0</span>
+                  </div>
+                  <div class="pos-summary-row">
+                    <span>رعایت / ڈسکاؤنٹ (F2):</span>
+                    <span style="color: #38BDF8;" id="pos-discount">- PKR 0</span>
+                  </div>
+                  <div class="pos-summary-total">
+                    <span>خالص واجب الادا رقم:</span>
+                    <span id="pos-grand-total">PKR 0</span>
+                  </div>
+                </div>
+
+                <button type="button" class="btn-pos-print" id="btn-print-sim-receipt">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                  </svg>
+                  <span>80mm تھرمل رسید پرنٹ کریں (Enter)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE 6 PILLARS OF KHATAPRO COUNTER ARCHITECTURE (URDU) -->
+    <section class="pos-pillars-section" id="pillars">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="pill-badge">
+            <span>کاؤنٹر کی رفتار و سیکیورٹی کا جدید نظام</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+            کھاتہ پرو POS کاؤنٹر کے 6 مضبوط ستون
+          </h2>
+          <p style="color: #64748B; font-size: 1.05rem; max-width: 680px; margin: 10px auto 0;">
+            پاکستان کے تیز ترین سپر اسٹورز، ہول سیل ڈپوز اور موبائل شو رومز روایتی سافٹ ویئرز چھوڑ کر کھاتہ پرو کیوں
+            اپناتے ہیں؟
+          </p>
+        </div>
+
+        <div class="pos-pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">⚡</div>
+            <h3>کی بورڈ اونلی برق رفتار بلنگ</h3>
+            <p>
+              کیشیئر کو ماؤس کو چھونے کی قطعی ضرورت نہیں۔ شارٹ کٹ ہاٹ کیز کی مدد سے 15 اشیاء کی ٹرالی کا بل صرف 10 سیکنڈ
+              میں بن جاتا ہے۔
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> F1 تا F12 تیز ترین شارٹ کٹ کیز</li>
+              <li><span>✓</span> بارکوڈ بفر کا فوری اور درست اندراج</li>
+              <li><span>✓</span> ایک بٹن سے تعداد میں ضرب لگانے کی سہولت</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">🛡️</div>
+            <h3>بلائنڈ شفٹ دراز آڈٹ (چوری کا خاتمہ)</h3>
+            <p>
+              کیش دراز میں روزانہ کی شارٹیج کا مکمل خاتمہ۔ شفٹ کے اختتام پر کیشیئر پہلے فزیکل کیش کا اندراج کرتا ہے جس
+              سے ایک ایک روپے کا حساب نکل آتا ہے۔
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> بل ڈیلیٹ یا رعایت پر مینیجر پن لازمی</li>
+              <li><span>✓</span> بلائنڈ کیش کاؤنٹ موازنہ رپورٹ</li>
+              <li><span>✓</span> کیشیئر ہینڈ اوور لاگ اور تفصیلی آڈٹ ٹریل</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">🖨️</div>
+            <h3>80mm و 58mm تھرمل پرنٹ اسٹوڈیو</h3>
+            <p>
+              اردو و انگلش میں آپ کی دکان کے لوگو، واپسی پالیسی اور QR کوڈ تصدیق کے ساتھ خوبصورت تھرمل رسید صرف 0.18
+              سیکنڈ میں پرنٹ کریں۔
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> USB، LAN، نیٹ ورک اور بلوٹوتھ پرنٹنگ</li>
+              <li><span>✓</span> پرنٹ ہوتے ہی کیش دراز کا خودکار کھلنا (RJ11)</li>
+              <li><span>✓</span> کسٹم دکان کا نام اور واپسی کے قوانین</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">💳</div>
+            <h3>ملٹی پیمنٹ اسپلٹ انجن</h3>
+            <p>
+              ایک ہی بل کی ادائیگی کو مختلف طریقوں میں تقسیم کریں۔ مثلاً 5,000 کیش + 10,000 جاز کیش / ایزی پیسہ + 15,000
+              بینک کارڈ۔
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> جاز کیش، ایزی پیسہ، راست کا براہ راست ٹیگ</li>
+              <li><span>✓</span> نقد اور ڈیجیٹل پیمنٹ کا باآسانی اسپلٹ</li>
+              <li><span>✓</span> بینک و موبائل والیٹ کھاتوں کا خودکار اندراج</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">🔄</div>
+            <h3>ملٹی کاؤنٹر لوکل میش (بغیر انٹرنیٹ)</h3>
+            <p>
+              اپنے اسٹور میں 5 سے 10 کاؤنٹرز کو بغیر انٹرنیٹ لوکل نیٹ ورک پر چلائیں۔ مین کمپیوٹر تمام کاؤنٹرز کا ڈیٹا
+              ریئل ٹائم اکٹھا کرتا ہے۔
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> 100% آف لائن لوکل SQLite نیٹ ورک</li>
+              <li><span>✓</span> مرکزی اسٹاک کی ریئل ٹائم کٹوتی</li>
+              <li><span>✓</span> پی ٹی سی ایل یا انٹرنیٹ بندش کا صفر اثر</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 6 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">⚖️</div>
+            <h3>ڈیجیٹل اسکیل و بارکوڈ پرنٹنگ</h3>
+            <p>
+              کھلی دالیں، چاول، گوشت، خشک میوہ جات اور سونے کے لیے ڈیجیٹل وزن کے کانٹے کو براہ راست کنیکٹ کریں اور
+              بارکوڈ اسٹیکر پرنٹ کریں۔
+            </p>
+            <ul class="pillar-feature-list">
+              <li><span>✓</span> کاؤنٹر پر لائیو وزن کی خودکار کیپچرنگ</li>
+              <li><span>✓</span> کسٹم بارکوڈ اور پرائس اسٹیکر پرنٹنگ</li>
+              <li><span>✓</span> مدت ختم (Expiry Date) کی خودکار وارننگ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HARDWARE COMPATIBILITY MATRIX (URDU) -->
+    <section class="pos-hardware-section" id="hardware">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="pill-badge">
+            <span>ہر قسم کے ہارڈویئر کے ساتھ ہم آہنگ</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+            پاکستانی مارکیٹ کے تمام معیاری POS ہارڈویئر کے ساتھ مکمل مطابقت
+          </h2>
+          <p style="color: #64748B; font-size: 1rem; max-width: 600px; margin: 8px auto 0;">
+            کسی مہنگے نئے سامان کی ضرورت نہیں، کھاتہ پرو آپ کے موجودہ پرنٹرز اور اسکینرز کے ساتھ فوری جڑ جاتا ہے۔
+          </p>
+        </div>
+
+        <div class="hardware-grid-4col">
+          <div class="hardware-card">
+            <div class="hardware-icon">📷</div>
+            <div class="hardware-title">بارکوڈ اسکینرز</div>
+            <p class="hardware-desc">1D لیزر، 2D کیو آر کوڈ، وائرلیس بلوٹوتھ اور ہینڈز فری اومنی ڈائریکشنل اسکینرز
+              (Honeywell, Zebra, Sunmi)۔</p>
+          </div>
+
+          <div class="hardware-card">
+            <div class="hardware-icon">🖨️</div>
+            <div class="hardware-title">تھرمل پرنٹرز</div>
+            <p class="hardware-desc">80mm اور 58mm کے تمام USB، LAN اور بلوٹوتھ پرنٹرز (Epson, Xprinter, Rongta, Black
+              Copper, Posiflex)۔</p>
+          </div>
+
+          <div class="hardware-card">
+            <div class="hardware-icon">💰</div>
+            <div class="hardware-title">کیش دراز (Cash Drawer)</div>
+            <p class="hardware-desc">معیاری 4 اور 5 خانوں والے ہیوی ڈیوٹی RJ11 آٹو کک دراز جو بل پرنٹ ہوتے ہی خودکار
+              کھلتے ہیں۔</p>
+          </div>
+
+          <div class="hardware-card">
+            <div class="hardware-icon">📺</div>
+            <div class="hardware-title">کسٹمر ڈسپلے پولز</div>
+            <p class="hardware-desc">VFD کسٹمر پرائس ڈسپلے اور ڈوئل مانیٹر سیکنڈری اسکرینز جہاں گاہک اپنا بل لائیو دیکھ
+              سکتا ہے۔</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL CASE STUDIES SECTION (URDU) -->
+    <section class="usecase-stories-section" style="background: #F8FAFC;">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="pill-badge">
+            <span>اصلی کاؤنٹرز کے اصلی نتائج</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+            پاکستان کے معروف ریٹیل کاؤنٹرز کا بھروسہ
+          </h2>
+        </div>
+
+        <div class="stories-grid-3col">
+          <div class="story-card">
+            <div>
+              <div class="story-badge-row">
+                <span class="story-city">📍 لاہور، ماڈل ٹاؤن</span>
+                <span class="story-metric-pill">1,400+ بلز روزانہ</span>
+              </div>
+              <p class="story-quote">
+                "ہم اپنے سپر اسٹور میں 4 بلنگ کاؤنٹرز چلاتے ہیں۔ پرانے کلاؤڈ سافٹ ویئر شام کے رش میں رک جاتے تھے۔ کھاتہ
+                پرو کی آف لائن اسپیڈ کمال ہے، اور بلائنڈ کیش آڈٹ سے دراز کے حساب میں 0 روپے کا فرق آیا۔"
+              </p>
+            </div>
+            <div class="story-author-info">
+              <div class="story-avatar">ع م</div>
+              <div>
+                <div class="story-author-name">المدینہ مارٹ و بیکری</div>
+                <div class="story-author-business">4 کاؤنٹر سپر اسٹور</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div>
+              <div class="story-badge-row">
+                <span class="story-city">📍 کراچی، صدر الیکٹرانکس مارکیٹ</span>
+                <span class="story-metric-pill">0.2s تھرمل رسید</span>
+              </div>
+              <p class="story-quote">
+                "موبائل کے IMEI اسکین کرنے اور کسٹمر وارنٹی رسید بنانے میں پہلے 2 منٹ لگتے تھے۔ کھاتہ پرو 2 سیکنڈ میں
+                ڈوئل IMEI والی پرنٹ شدہ رسید نکال دیتا ہے۔ کی بورڈ شارٹ کٹس نے ہمارا کام بہت آسان کر دیا۔"
+              </p>
+            </div>
+            <div class="story-author-info">
+              <div class="story-avatar">ر ک</div>
+              <div>
+                <div class="story-author-name">رضا ٹیلی کام اینڈ گیجٹس</div>
+                <div class="story-author-business">اسمارٹ فونز و ایکسیسریز</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div>
+              <div class="story-badge-row">
+                <span class="story-city">📍 راولپنڈی، سٹی صدر روڈ</span>
+                <span class="story-metric-pill">100% کیش آڈٹ میچ</span>
+              </div>
+              <p class="story-quote">
+                "کیشیئرز کی روزانہ کی شارٹیج سے ہمیں ہر ماہ 15 سے 20 ہزار کا نقصان ہوتا تھا۔ کھاتہ پرو کے بلائنڈ شفٹ آڈٹ
+                کے بعد سے ایک روپے کا بھی فرق نہیں آیا، لڑکے اب مکمل ذمہ داری سے کام کرتے ہیں۔"
+              </p>
+            </div>
+            <div class="story-author-info">
+              <div class="story-avatar">ح ق</div>
+              <div>
+                <div class="story-author-name">حق آٹو پارٹس ڈپو</div>
+                <div class="story-author-business">ہول سیل و ریٹیل کاؤنٹر</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGH-CONVERTING CLOSING CTA SECTION (URDU) -->
+    <section class="cta-banner-section" style="padding: 90px 0;">
+      <div class="container">
+        <div class="cta-glass-card"
+          style="text-align: center;  margin: 0 auto; padding: 50px 30px; border-radius: 28px; background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; position: relative; border: 1.5px solid rgba(56, 189, 248, 0.4); box-shadow: 0 25px 60px rgba(0,0,0,0.3);">
+          <span class="pill-badge"
+            style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8; margin-bottom: 16px;">
+            کیا آپ اپنے کاؤنٹر کو جدید بنانا چاہتے ہیں؟
+          </span>
+          <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.25; margin-bottom: 16px;">
+            صرف 15 منٹ میں کاؤنٹر کے نقصانات اور لائنوں کا خاتمہ کریں۔
+          </h2>
+          <p style="font-size: 1.1rem; color: #CBD5E1; max-width: 640px; margin: 0 auto 32px;">
+            پاکستان کے 1,200 سے زائد شو روم اور ریٹیل مالکان میں شامل ہوں جنہوں نے کھاتہ پرو کے ذریعے کیش لیکیج ختم کی
+            اور کاؤنٹر اسپیڈ کو چار گنا بڑھایا۔
+          </p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="index.html#pricing-section" class="btn-hero-primary">
+              <span>لائف ٹائم اور ماہانہ لائسنس پلانز دیکھیں</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+            <a href="#demo-modal" class="btn-hero-secondary" id="btn-cta-demo-trigger">
+              <span>مفت کاؤنٹر ڈیمو بک کریں</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-dark">
+    <div class="container footer-container">
+
+      <!-- Top Concierge Bar -->
+      <div class="footer-concierge-bar">
+        <div class="footer-concierge-info">
+          <span>💬</span>
+          <span>کیا آپ کو کسٹم POS ہارڈویئر سیٹ اپ، ملٹی کاؤنٹر یا لائیو ڈیمو چاہیے؟</span>
+        </div>
+        <div class="footer-concierge-actions">
+          <a href="https://wa.me/923001234567?text=السلام%20علیکم!%20مجھے%20کھاتہ%20پرو%20پی%20او%20ایس%20کا%20ڈیمو%20چاہیے۔"
+            target="_blank" rel="noopener" class="btn-footer-wa">
+            <span>🟢 واٹس ایپ پر بات کریں</span>
+          </a>
+          <a href="tel:+923001234567" class="btn-footer-phone">
+            <span>📞 0300-1234567</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col-brand">
+          <div class="footer-logo">
+            <div class="brand-logo-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M9 13H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="16" cy="16.5" r="2.5" fill="#0D99FF" />
+              </svg>
+            </div>
+            <span class="brand-title">کھاتہ<span>پرو</span></span>
+          </div>
+          <p class="footer-about">
+            پاکستان کا سب سے تیز ترین 100% آف لائن ریٹیل POS، ڈیجیٹل کھاتہ اور اقساط مینجمنٹ سسٹم۔
+          </p>
+          <div class="footer-brand-badges">
+            <div class="footer-status-pill">
+              <span class="footer-status-dot"></span>
+              <span>تمام سسٹمز فعال • 99.98% لوکل اپ ٹائم</span>
+            </div>
+            <div class="footer-meta-chips">
+              <span>🔒 100% آف لائن SQLite والٹ</span>
+              <span>•</span>
+              <span>🇵🇰 اردو و انگلش سپورٹ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Product Modules -->
+        <div class="footer-col">
+          <h4>بنیادی ماڈیولز</h4>
+          <ul>
+            <li><a href="pos-counter-ur.html"><span>›</span> پی او ایس و 80mm تھرمل بلنگ</a></li>
+            <li><a href="index.html#installments-section"><span>›</span> واٹس ایپ اقساط ریکوری بوٹ</a></li>
+            <li><a href="index.html#digital-khata"><span>›</span> عدالتی اسٹامپ معاہدہ اسٹوڈیو</a></li>
+            <li><a href="index.html#customers-section"><span>›</span> کسٹمر کھاتہ و بائیو میٹرکس</a></li>
+            <li><a href="index.html#finance-section"><span>›</span> روزانہ کا نفع و نقصان (P&L)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Target Businesses -->
+        <div class="footer-col">
+          <h4>انڈسٹری ایڈیشنز</h4>
+          <ul>
+            <li><a href="use-cases-ur.html#electronics"><span>›</span> موبائل و الیکٹرانکس شاپس</a></li>
+            <li><a href="use-cases-ur.html#auto"><span>›</span> موٹر سائیکل و کار شو رومز</a></li>
+            <li><a href="use-cases-ur.html#superstores"><span>›</span> سپر اسٹورز و ریٹیل مارٹس</a></li>
+            <li><a href="use-cases-ur.html#wholesale"><span>›</span> ہول سیل و ڈسٹری بیوشن</a></li>
+            <li><a href="use-cases-ur.html#furniture"><span>›</span> گھریلو سامان و فرنیچر</a></li>
+            <li><a href="use-cases-ur.html#jewelry"><span>›</span> سونا و جیولری شو رومز</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Trust & Support -->
+        <div class="footer-col">
+          <h4>رہنمائی و سپورٹ</h4>
+          <ul>
+            <li><a href="index.html#security-section"><span>›</span> آف لائن ڈیٹا سیکیورٹی</a></li>
+            <li><a href="index.html#pricing-section"><span>›</span> شفاف لائف ٹائم قیمتیں</a></li>
+            <li><a href="index.html#faq-section"><span>›</span> سوالات و جوابات (FAQ)</a></li>
+            <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener"><span>›</span> واٹس ایپ سپورٹ
+                سینٹر</a></li>
+            <li><a href="#demo-modal"><span>›</span> کاؤنٹر ڈیمو کی درخواست</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
+          © 2026 کھاتہ پرو ٹیکنالوجیز (پرائیویٹ) لمیٹڈ۔ پاکستانی تاجروں کے لیے فخر کے ساتھ تیار کردہ 🇵🇰۔
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#privacy">پرائیویسی پالیسی</a>
+          <span>•</span>
+          <a href="#terms">شرائط و ضوابط</a>
+          <span>•</span>
+          <a href="#security">سیکیورٹی پالیسی</a>
+          <span>•</span>
+          <a href="#license">لائسنس</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 80MM THERMAL RECEIPT MODAL PREVIEW (URDU) -->
+  <div class="receipt-modal-overlay" id="receipt-modal">
+    <div class="thermal-paper">
+      <button type="button" id="btn-close-receipt"
+        style="position: absolute; top: 8px; left: 10px; background: none; border: none; font-size: 18px; font-weight: 800; cursor: pointer;">&times;</button>
+      <div class="thermal-header">
+        <div class="thermal-shop-name">المدینہ میگا سپر اسٹور</div>
+        <div>مین بلیوارڈ، گلبرگ 3، لاہور</div>
+        <div>فون: 0300-1234567 • این ٹی این: 8940219-4</div>
+        <div style="margin-top: 4px; font-size: 10px;" id="receipt-datetime">تاریخ: 01-Sep-2026 10:45 AM</div>
+        <div style="font-size: 10px;">کیشیئر: محمد علی (کاؤنٹر نمبر 01)</div>
+      </div>
+
+      <div class="thermal-row" style="font-weight: 800; border-bottom: 1px dashed #000; padding-bottom: 4px;">
+        <span>آئٹم کا نام</span>
+        <span>تعداد</span>
+        <span>رقم</span>
+      </div>
+
+      <div id="receipt-items-list">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="thermal-divider"></div>
+
+      <div class="thermal-row">
+        <span>کل رقم (Subtotal):</span>
+        <span id="receipt-subtotal">PKR 0</span>
+      </div>
+      <div class="thermal-row">
+        <span>رعایت / ڈسکاؤنٹ:</span>
+        <span id="receipt-discount">PKR 0</span>
+      </div>
+      <div class="thermal-row" style="font-size: 14px; font-weight: 900;">
+        <span>خالص کل رقم:</span>
+        <span id="receipt-grand-total">PKR 0</span>
+      </div>
+      <div class="thermal-row">
+        <span>ادائیگی بذریعہ:</span>
+        <span id="receipt-pay-method">نقد کیش</span>
+      </div>
+
+      <div class="thermal-footer">
+        <div>*** خریداری کا بہت شکریہ! ***</div>
+        <div>تبدیلی کی پالیسی: 3 دن اصلی رسید کے ساتھ</div>
+        <div style="font-size: 9px; margin-top: 4px;">Powered by KhataPro Offline POS</div>
+        <div class="thermal-qr">
+          <svg viewBox="0 0 100 100" width="100%" height="100%">
+            <rect x="0" y="0" width="30" height="30" fill="#000" />
+            <rect x="5" y="5" width="20" height="20" fill="#fff" />
+            <rect x="10" y="10" width="10" height="10" fill="#000" />
+            <rect x="70" y="0" width="30" height="30" fill="#000" />
+            <rect x="75" y="5" width="20" height="20" fill="#fff" />
+            <rect x="80" y="10" width="10" height="10" fill="#000" />
+            <rect x="0" y="70" width="30" height="30" fill="#000" />
+            <rect x="5" y="75" width="20" height="20" fill="#fff" />
+            <rect x="10" y="80" width="10" height="10" fill="#000" />
+            <rect x="40" y="40" width="20" height="20" fill="#000" />
+            <rect x="45" y="10" width="10" height="20" fill="#000" />
+            <rect x="10" y="45" width="20" height="10" fill="#000" />
+            <rect x="70" y="45" width="20" height="10" fill="#000" />
+            <rect x="45" y="70" width="10" height="20" fill="#000" />
+          </svg>
+        </div>
+        <div style="font-size: 8px; letter-spacing: 0.5px;">VERIFY: KP-INV-94028</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK DEMO MODAL -->
+  <div class="modal-overlay" id="demo-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="btn-close-demo" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">1-on-1 کاؤنٹر لائیو ڈیمو حاصل کریں</h3>
+        <p class="modal-desc">دیکھیں کہ کس طرح کھاتہ پرو آپ کے شو روم اور دکان کے کاؤنٹر پر تیزی سے کام کرتا ہے۔</p>
+      </div>
+      <form class="modal-form" id="demo-form"
+        onsubmit="event.preventDefault(); alert('شکریہ! ہمارے ٹیکنیکل اسپیشلسٹ 15 منٹ میں آپ سے واٹس ایپ پر رابطہ کریں گے۔'); document.getElementById('demo-modal').classList.remove('active');">
+        <div class="form-group">
+          <label>آپ کا نام</label>
+          <input type="text" placeholder="مثلاً: محمد علی" required />
+        </div>
+        <div class="form-group">
+          <label>دکان یا شو روم کا نام</label>
+          <input type="text" placeholder="مثلاً: المدینہ سپر اسٹور و پی او ایس" required />
+        </div>
+        <div class="form-group">
+          <label>واٹس ایپ نمبر</label>
+          <input type="tel" placeholder="0300 1234567" required />
+        </div>
+        <div class="form-group">
+          <label>کاروبار کی قسم</label>
+          <select style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid #CBD5E1;">
+            <option>ریٹیل سپر اسٹور و مارٹ</option>
+            <option>موبائل و الیکٹرانکس شو روم</option>
+            <option>آٹو پارٹس و بائیک ڈیلرشپ</option>
+            <option>ہول سیل و FMCG ڈپو</option>
+            <option>گھریلو سامان و فرنیچر</option>
+            <option>سونا و جیولری / دیگر</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-hero-primary" style="width:100%; justify-content:center; margin-top:10px;">
+          <span>شو روم ڈیمو بک کریں</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script src="app.js"></script>
+  <script>
+    // POS Terminal Simulator Interactive Logic (Urdu)
+    const sampleProducts = [
+      { id: 1, name: "iPhone 16 Pro Max 256GB (پی ٹی اے)", barcode: "894029104820", price: 495000, cat: "electronics" },
+      { id: 2, name: "Samsung Galaxy A55 5G", barcode: "880609104819", price: 125000, cat: "electronics" },
+      { id: 3, name: "ڈالڈا بناسپتی گھی 5 کلو", barcode: "896400010482", price: 2650, cat: "grocery" },
+      { id: 4, name: "سپر باسمتی چاول 10 کلو بیگ", barcode: "896400030192", price: 3850, cat: "grocery" },
+      { id: 5, name: "نیشنل فوڈز بریانی مصالحہ پیکٹ", barcode: "896100049201", price: 140, cat: "grocery" },
+      { id: 6, name: "ہونڈا CG 125 مکمل ٹیوننگ کٹ", barcode: "921004820194", price: 4500, cat: "auto" },
+      { id: 7, name: "کراؤن انجن آئل 20W-50 1L", barcode: "921004829910", price: 1250, cat: "auto" },
+      { id: 8, name: "ہائیر 1.5 ٹن ڈی سی انورٹر AC", barcode: "894029109938", price: 185000, cat: "appliances" }
+    ];
+
+    let cart = [
+      { ...sampleProducts[2], qty: 2 },
+      { ...sampleProducts[3], qty: 1 }
+    ];
+    let activeCategory = "all";
+    let selectedPayMethod = "نقد کیش (Cash)";
+    let discountAmount = 150;
+
+    const prodListEl = document.getElementById('pos-product-list');
+    const cartBodyEl = document.getElementById('pos-cart-body');
+    const subtotalEl = document.getElementById('pos-subtotal');
+    const discountEl = document.getElementById('pos-discount');
+    const grandTotalEl = document.getElementById('pos-grand-total');
+    const itemCountEl = document.getElementById('pos-item-count');
+    const searchInput = document.getElementById('pos-sim-search');
+    const catBtns = document.querySelectorAll('.pos-cat-btn');
+    const payBtns = document.querySelectorAll('.pos-pay-btn');
+
+    function renderProducts() {
+      if (!prodListEl) return;
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+      const filtered = sampleProducts.filter(p => {
+        const matchesCat = activeCategory === 'all' || p.cat === activeCategory;
+        const matchesQuery = p.name.toLowerCase().includes(query) || p.barcode.includes(query);
+        return matchesCat && matchesQuery;
+      });
+
+      prodListEl.innerHTML = filtered.map(p => `
+        <div class="pos-product-card" onclick="addToCart(${p.id})">
+          <div>
+            <div class="pos-prod-barcode">بارکوڈ: ${p.barcode}</div>
+            <div class="pos-prod-name">${p.name}</div>
+          </div>
+          <div class="pos-prod-price-row">
+            <span class="pos-prod-price">PKR ${p.price.toLocaleString('en-US')}</span>
+            <div class="pos-prod-add">+</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderCart() {
+      if (!cartBodyEl) return;
+      if (cart.length === 0) {
+        cartBodyEl.innerHTML = `
+          <tr>
+            <td colspan="5" style="text-align: center; color: #64748B; padding: 30px 0;">
+              🛒 کسٹمر بل خالی ہے۔ بائیں جانب سے آئٹم منتخب کریں یا اوپر بارکوڈ اسکین کریں۔
+            </td>
+          </tr>
+        `;
+      } else {
+        cartBodyEl.innerHTML = cart.map((item, idx) => `
+          <tr class="pos-cart-row">
+            <td>
+              <strong style="color: #F8FAFC; display:block;">${item.name}</strong>
+              <span style="color: #64748B; font-size: 0.72rem;">${item.barcode}</span>
+            </td>
+            <td>
+              <div class="pos-cart-qty-ctrl">
+                <button class="pos-qty-btn" onclick="updateQty(${idx}, -1)">-</button>
+                <span style="font-weight: 700; color: #F8FAFC;">${item.qty}</span>
+                <button class="pos-qty-btn" onclick="updateQty(${idx}, 1)">+</button>
+              </div>
+            </td>
+            <td style="color: #94A3B8;">PKR ${item.price.toLocaleString('en-US')}</td>
+            <td style="color: #38BDF8; font-weight: 800;">PKR ${(item.price * item.qty).toLocaleString('en-US')}</td>
+            <td>
+              <button onclick="removeFromCart(${idx})" style="background:none; border:none; color: #EF4444; font-weight: 800; cursor:pointer;">&times;</button>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const finalDiscount = subtotal > discountAmount ? discountAmount : 0;
+      const grandTotal = Math.max(0, subtotal - finalDiscount);
+
+      if (subtotalEl) subtotalEl.textContent = `PKR ${subtotal.toLocaleString('en-US')}`;
+      if (discountEl) discountEl.textContent = `- PKR ${finalDiscount.toLocaleString('en-US')}`;
+      if (grandTotalEl) grandTotalEl.textContent = `PKR ${grandTotal.toLocaleString('en-US')}`;
+      if (itemCountEl) itemCountEl.textContent = `${totalItems} اشیاء (${cart.length} مختلف)`;
+    }
+
+    window.addToCart = function (id) {
+      const prod = sampleProducts.find(p => p.id === id);
+      if (!prod) return;
+      const existing = cart.find(c => c.id === id);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ ...prod, qty: 1 });
+      }
+      renderCart();
+    };
+
+    window.updateQty = function (idx, delta) {
+      if (!cart[idx]) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) {
+        cart.splice(idx, 1);
+      }
+      renderCart();
+    };
+
+    window.removeFromCart = function (idx) {
+      cart.splice(idx, 1);
+      renderCart();
+    };
+
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.cat;
+        renderProducts();
+      });
+    });
+
+    payBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        payBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedPayMethod = btn.dataset.pay;
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', renderProducts);
+    }
+
+    const receiptModal = document.getElementById('receipt-modal');
+    const printBtn = document.getElementById('btn-print-sim-receipt');
+    const closeReceiptBtn = document.getElementById('btn-close-receipt');
+
+    if (printBtn) {
+      printBtn.addEventListener('click', () => {
+        if (cart.length === 0) {
+          alert('براہ کرم رسید پرنٹ کرنے سے پہلے کم از کم ایک آئٹم شامل کریں۔');
+          return;
+        }
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+        const finalDiscount = subtotal > discountAmount ? discountAmount : 0;
+        const grandTotal = Math.max(0, subtotal - finalDiscount);
+
+        const itemsContainer = document.getElementById('receipt-items-list');
+        if (itemsContainer) {
+          itemsContainer.innerHTML = cart.map(item => `
+            <div class="thermal-row" style="font-size: 11px;">
+              <span style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.name}</span>
+              <span>${item.qty}x</span>
+              <span>${(item.price * item.qty).toLocaleString('en-US')}</span>
+            </div>
+          `).join('');
+        }
+
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) + ' ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const dtEl = document.getElementById('receipt-datetime');
+        if (dtEl) dtEl.textContent = `تاریخ: ${dateStr}`;
+
+        const recSub = document.getElementById('receipt-subtotal');
+        const recDisc = document.getElementById('receipt-discount');
+        const recTotal = document.getElementById('receipt-grand-total');
+        const recPay = document.getElementById('receipt-pay-method');
+
+        if (recSub) recSub.textContent = `PKR ${subtotal.toLocaleString('en-US')}`;
+        if (recDisc) recDisc.textContent = `PKR ${finalDiscount.toLocaleString('en-US')}`;
+        if (recTotal) recTotal.textContent = `PKR ${grandTotal.toLocaleString('en-US')}`;
+        if (recPay) recPay.textContent = selectedPayMethod;
+
+        if (receiptModal) receiptModal.classList.add('active');
+      });
+    }
+
+    if (closeReceiptBtn && receiptModal) {
+      closeReceiptBtn.addEventListener('click', () => {
+        receiptModal.classList.remove('active');
+      });
+      receiptModal.addEventListener('click', (e) => {
+        if (e.target === receiptModal) receiptModal.classList.remove('active');
+      });
+    }
+
+    const demoModal = document.getElementById('demo-modal');
+    const demoOpenBtns = document.querySelectorAll('#btn-open-demo, #btn-hero-demo-trigger, #btn-cta-demo-trigger, #btn-mobile-open-demo');
+    const demoCloseBtn = document.getElementById('btn-close-demo');
+
+    demoOpenBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (btn.getAttribute('href') === '#demo-modal') {
+          e.preventDefault();
+          if (demoModal) demoModal.classList.add('active');
+        }
+      });
+    });
+
+    if (demoCloseBtn && demoModal) {
+      demoCloseBtn.addEventListener('click', () => {
+        demoModal.classList.remove('active');
+      });
+      demoModal.addEventListener('click', (e) => {
+        if (e.target === demoModal) demoModal.classList.remove('active');
+      });
+    }
+
+    renderProducts();
+    renderCart();
+  </script>
+</body>
+
+</html>
