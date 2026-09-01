@@ -60,8 +60,10 @@
   --shadow-glow-cyan: 0 10px 30px -5px rgba(13, 153, 255, 0.3);
 
   /* Typography Stacks */
-  --font-urdu-display: 'Noto Sans Arabic', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  --font-urdu-body: 'Noto Sans Arabic', system-ui, sans-serif;
+  --font-urdu-display: 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+  --font-urdu-body: 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+  --font-en-display: 'Outfit', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-en-body: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
   --font-numeric: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
 
   /* Transitions */
@@ -104,16 +106,49 @@ body {
   min-height: 100vh;
 }
 
+/* --- RTL URDU TYPOGRAPHY ENFORCEMENT --- */
+html[dir="rtl"] body,
+html[dir="rtl"] p,
+html[dir="rtl"] span,
+html[dir="rtl"] button,
+html[dir="rtl"] input,
+html[dir="rtl"] select,
+html[dir="rtl"] a {
+  font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .usecases-title,
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .cta-headline,
+html[dir="rtl"] .usecase-heading,
+html[dir="rtl"] .mfc-title,
+html[dir="rtl"] .modal-title,
+html[dir="rtl"] .promo-headline,
+html[dir="rtl"] .emotional-title-1,
+html[dir="rtl"] .emotional-title-2,
+html[dir="rtl"] .section-head-center h2 {
+  font-family: 'Noto Sans Arabic', system-ui, sans-serif !important;
+  letter-spacing: normal;
+}
+
 html[dir="ltr"] body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 25px;
   letter-spacing: -0.01em;
 }
 
 html[dir="ltr"] h1,
-html[dir="ltr"] .hero-title {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+html[dir="ltr"] .hero-title,
+html[dir="ltr"] .usecases-title {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 80px;
   font-weight: 800;
   line-height: 88px;
@@ -123,10 +158,11 @@ html[dir="ltr"] .hero-title {
 
 html[dir="ltr"] h2,
 html[dir="ltr"] .section-title,
+html[dir="ltr"] .usecase-heading,
 html[dir="ltr"] .cta-headline,
 html[dir="ltr"] .emotional-title-1,
 html[dir="ltr"] .emotional-title-2 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 56px;
   font-weight: 800;
   line-height: 64px;
@@ -139,7 +175,7 @@ html[dir="ltr"] .studio-bottom-card h3,
 html[dir="ltr"] .pricing-card-header h3,
 html[dir="ltr"] .modal-header h3,
 html[dir="ltr"] .sec-pillar-card h3 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 30px;
@@ -153,7 +189,7 @@ html[dir="ltr"] .ind-card h4,
 html[dir="ltr"] .footer-col h4,
 html[dir="ltr"] .timeline-head h4,
 html[dir="ltr"] .table-header-row h4 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 30px;
@@ -166,7 +202,7 @@ html[dir="ltr"] .section-desc,
 html[dir="ltr"] .hero-subtitle,
 html[dir="ltr"] .cta-sub,
 html[dir="ltr"] .emotional-subtitle {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 26px;
 }
@@ -493,10 +529,9 @@ body.no-announcement .hero-section {
   box-shadow: 0 14px 38px -5px rgba(15, 23, 42, 0.12), 0 0 30px -5px rgba(56, 189, 248, 0.22);
 }
 
-/* Seamless Header Expansion on Hover / Active */
+/* Seamless Header Expansion on Hover / is-expanded */
 .navbar-pill.is-expanded,
-.navbar-pill:hover:has(.has-mega:hover),
-.navbar-pill:has(.has-mega.active) {
+.navbar-pill:hover:has(.has-mega:hover) {
   border-radius: 28px;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.96)),
@@ -669,10 +704,9 @@ body.no-announcement .hero-section {
   border-top: 1px solid rgba(15, 23, 42, 0.06);
 }
 
-/* Expand on hover or active class */
+/* Expand on hover or is-expanded class */
 .navbar-pill.is-expanded .navbar-mega-dropdown,
-.navbar-pill:hover:has(.has-mega:hover) .navbar-mega-dropdown,
-.navbar-pill:has(.has-mega.active) .navbar-mega-dropdown {
+.navbar-pill:hover:has(.has-mega:hover) .navbar-mega-dropdown {
   max-height: 600px;
   opacity: 1;
   visibility: visible;
