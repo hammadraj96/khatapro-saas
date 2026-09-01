@@ -128,7 +128,7 @@ h1, .hero-title, .pos-hero-title, .usecases-hero-title {
 
 h2, .section-title, .section-head-center h2 {
   font-size: clamp(1.9rem, 3.2vw, 2.5rem);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--text-heading, #0F172A);
@@ -8523,7 +8523,7 @@ html[dir="rtl"] .pos-cart-table th {
 /* Simulator Section & Dark Components */
 .pos-sim-heading {
   font-size: clamp(1.9rem, 3.2vw, 2.5rem);
-  font-weight: 900;
+  font-weight: 800;
   color: #FFFFFF;
   margin-top: 10px;
 }
@@ -8782,7 +8782,7 @@ html[dir="rtl"] .receipt-close-btn {
 
 .cta-headline-lg {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.15;
   margin-bottom: 16px;
   color: #FFFFFF;
