@@ -1,5 +1,7 @@
 Copy-Item -Path 'index.html' -Destination 'index-ur.html' -Force
 Copy-Item -Path 'use-cases.html' -Destination 'use-cases-en.html' -Force
+Copy-Item -Path 'use-cases.html' -Destination 'use-case-en.html' -Force
+Copy-Item -Path 'use-cases-ur.html' -Destination 'use-case-ur.html' -Force
 Copy-Item -Path 'pos-counter.html' -Destination 'pos-counter-en.html' -Force
 
 $files = @(
@@ -9,6 +11,8 @@ $files = @(
   'use-cases.html',
   'use-cases-en.html',
   'use-cases-ur.html',
+  'use-case-en.html',
+  'use-case-ur.html',
   'pos-counter.html',
   'pos-counter-en.html',
   'pos-counter-ur.html',

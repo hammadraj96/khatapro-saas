@@ -444,14 +444,13 @@
     <section class="pos-sim-section" id="terminal-sim">
       <div class="container">
         <div class="section-head-center">
-          <div class="pill-badge"
-            style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;">
+          <div class="pill-badge pill-badge-cyan">
             <span>لائیو کاؤنٹر بلنگ ٹیسٹ کریں</span>
           </div>
-          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #FFFFFF; margin-top: 10px;">
+          <h2 class="pos-sim-heading">
             انٹرایکٹو لائیو POS ٹرمینل سمیلیٹر
           </h2>
-          <p style="color: #94A3B8; font-size: 1.05rem; max-width: 680px; margin: 10px auto 0;">
+          <p class="pos-sim-sub">
             نیچے دی گئی مصنوعات پر کلک کریں یا سرچ بار میں نام لکھیں۔ دیکھیں کہ کس طرح سیکنڈوں میں بل تیار ہوتا ہے اور
             تھرمل رسید بنتی ہے۔
           </p>
@@ -504,9 +503,9 @@
             <!-- Right: Active Cart & Total -->
             <div class="pos-cart-side">
               <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                  <span style="font-weight: 800; font-size: 0.95rem; color: #F8FAFC;">موجودہ کسٹمر بل</span>
-                  <span style="font-size: 0.78rem; color: #94A3B8;" id="pos-item-count">0 اشیاء</span>
+                <div class="pos-cart-head-wrap">
+                  <span class="pos-cart-head-title">موجودہ کسٹمر بل</span>
+                  <span class="pos-cart-head-count" id="pos-item-count">0 اشیاء</span>
                 </div>
 
                 <div class="pos-cart-table-wrap">
@@ -529,7 +528,7 @@
 
               <!-- Payment Split Buttons -->
               <div>
-                <div style="font-size: 0.78rem; color: #94A3B8; margin-bottom: 6px; font-weight: 700;">
+                <div class="pos-pay-label">
                   ادائیگی کا طریقہ منتخب کریں:
                 </div>
                 <div class="pos-payment-methods">
@@ -546,7 +545,7 @@
                   </div>
                   <div class="pos-summary-row">
                     <span>رعایت / ڈسکاؤنٹ (F2):</span>
-                    <span style="color: #38BDF8;" id="pos-discount">- PKR 0</span>
+                    <span class="pos-discount-val" id="pos-discount">- PKR 0</span>
                   </div>
                   <div class="pos-summary-total">
                     <span>خالص واجب الادا رقم:</span>
@@ -576,10 +575,10 @@
           <div class="pill-badge">
             <span>کاؤنٹر کی رفتار و سیکیورٹی کا جدید نظام</span>
           </div>
-          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+          <h2 class="section-title">
             کھاتہ پرو POS کاؤنٹر کے 6 مضبوط ستون
           </h2>
-          <p style="color: #64748B; font-size: 1.05rem; max-width: 680px; margin: 10px auto 0;">
+          <p class="section-subtitle">
             پاکستان کے تیز ترین سپر اسٹورز، ہول سیل ڈپوز اور موبائل شو رومز روایتی سافٹ ویئرز چھوڑ کر کھاتہ پرو کیوں
             اپناتے ہیں؟
           </p>
@@ -686,10 +685,10 @@
           <div class="pill-badge">
             <span>ہر قسم کے ہارڈویئر کے ساتھ ہم آہنگ</span>
           </div>
-          <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+          <h2 class="section-title">
             پاکستانی مارکیٹ کے تمام معیاری POS ہارڈویئر کے ساتھ مکمل مطابقت
           </h2>
-          <p style="color: #64748B; font-size: 1rem; max-width: 600px; margin: 8px auto 0;">
+          <p class="section-subtitle">
             کسی مہنگے نئے سامان کی ضرورت نہیں، کھاتہ پرو آپ کے موجودہ پرنٹرز اور اسکینرز کے ساتھ فوری جڑ جاتا ہے۔
           </p>
         </div>
@@ -727,13 +726,13 @@
     </section>
 
     <!-- REAL CASE STUDIES SECTION (URDU) -->
-    <section class="usecase-stories-section" style="background: #F8FAFC;">
+    <section class="usecase-stories-section">
       <div class="container">
         <div class="section-head-center">
           <div class="pill-badge">
             <span>اصلی کاؤنٹرز کے اصلی نتائج</span>
           </div>
-          <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+          <h2 class="section-title">
             پاکستان کے معروف ریٹیل کاؤنٹرز کا بھروسہ
           </h2>
         </div>
@@ -803,22 +802,20 @@
     </section>
 
     <!-- HIGH-CONVERTING CLOSING CTA SECTION (URDU) -->
-    <section class="cta-banner-section" style="padding: 90px 0;">
+    <section class="cta-banner-section cta-section">
       <div class="container">
-        <div class="cta-glass-card"
-          style="text-align: center;  margin: 0 auto; padding: 50px 30px; border-radius: 28px; background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; position: relative; border: 1.5px solid rgba(56, 189, 248, 0.4); box-shadow: 0 25px 60px rgba(0,0,0,0.3);">
-          <span class="pill-badge"
-            style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8; margin-bottom: 16px;">
+        <div class="cta-glass-card cta-glass-banner">
+          <span class="pill-badge pill-badge-cta">
             کیا آپ اپنے کاؤنٹر کو جدید بنانا چاہتے ہیں؟
           </span>
-          <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.25; margin-bottom: 16px;">
+          <h2 class="cta-headline-lg">
             صرف 15 منٹ میں کاؤنٹر کے نقصانات اور لائنوں کا خاتمہ کریں۔
           </h2>
-          <p style="font-size: 1.1rem; color: #CBD5E1; max-width: 640px; margin: 0 auto 32px;">
+          <p class="cta-subtitle-lg">
             پاکستان کے 1,200 سے زائد شو روم اور ریٹیل مالکان میں شامل ہوں جنہوں نے کھاتہ پرو کے ذریعے کیش لیکیج ختم کی
             اور کاؤنٹر اسپیڈ کو چار گنا بڑھایا۔
           </p>
-          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <div class="cta-actions-wrap">
             <a href="index.html#pricing-section" class="btn-hero-primary">
               <span>لائف ٹائم اور ماہانہ لائسنس پلانز دیکھیں</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -947,17 +944,16 @@
   <!-- 80MM THERMAL RECEIPT MODAL PREVIEW (URDU) -->
   <div class="receipt-modal-overlay" id="receipt-modal">
     <div class="thermal-paper">
-      <button type="button" id="btn-close-receipt"
-        style="position: absolute; top: 8px; left: 10px; background: none; border: none; font-size: 18px; font-weight: 800; cursor: pointer;">&times;</button>
+      <button type="button" id="btn-close-receipt" class="receipt-close-btn">&times;</button>
       <div class="thermal-header">
         <div class="thermal-shop-name">المدینہ میگا سپر اسٹور</div>
         <div>مین بلیوارڈ، گلبرگ 3، لاہور</div>
         <div>فون: 0300-1234567 • این ٹی این: 8940219-4</div>
-        <div style="margin-top: 4px; font-size: 10px;" id="receipt-datetime">تاریخ: 01-Sep-2026 10:45 AM</div>
-        <div style="font-size: 10px;">کیشیئر: محمد علی (کاؤنٹر نمبر 01)</div>
+        <div class="receipt-date" id="receipt-datetime">تاریخ: 01-Sep-2026 10:45 AM</div>
+        <div class="receipt-cashier">کیشیئر: محمد علی (کاؤنٹر نمبر 01)</div>
       </div>
 
-      <div class="thermal-row" style="font-weight: 800; border-bottom: 1px dashed #000; padding-bottom: 4px;">
+      <div class="thermal-row receipt-table-header">
         <span>آئٹم کا نام</span>
         <span>تعداد</span>
         <span>رقم</span>
@@ -977,7 +973,7 @@
         <span>رعایت / ڈسکاؤنٹ:</span>
         <span id="receipt-discount">PKR 0</span>
       </div>
-      <div class="thermal-row" style="font-size: 14px; font-weight: 900;">
+      <div class="thermal-row receipt-grand-total">
         <span>خالص کل رقم:</span>
         <span id="receipt-grand-total">PKR 0</span>
       </div>
@@ -989,7 +985,7 @@
       <div class="thermal-footer">
         <div>*** خریداری کا بہت شکریہ! ***</div>
         <div>تبدیلی کی پالیسی: 3 دن اصلی رسید کے ساتھ</div>
-        <div style="font-size: 9px; margin-top: 4px;">Powered by KhataPro Offline POS</div>
+        <div class="receipt-watermark">Powered by KhataPro Offline POS</div>
         <div class="thermal-qr">
           <svg viewBox="0 0 100 100" width="100%" height="100%">
             <rect x="0" y="0" width="30" height="30" fill="#000" />
@@ -1008,7 +1004,7 @@
             <rect x="45" y="70" width="10" height="20" fill="#000" />
           </svg>
         </div>
-        <div style="font-size: 8px; letter-spacing: 0.5px;">VERIFY: KP-INV-94028</div>
+        <div class="receipt-verify-code">VERIFY: KP-INV-94028</div>
       </div>
     </div>
   </div>
@@ -1037,7 +1033,7 @@
         </div>
         <div class="form-group">
           <label>کاروبار کی قسم</label>
-          <select style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid #CBD5E1;">
+          <select class="form-select-custom">
             <option>ریٹیل سپر اسٹور و مارٹ</option>
             <option>موبائل و الیکٹرانکس شو روم</option>
             <option>آٹو پارٹس و بائیک ڈیلرشپ</option>
@@ -1046,7 +1042,7 @@
             <option>سونا و جیولری / دیگر</option>
           </select>
         </div>
-        <button type="submit" class="btn-hero-primary" style="width:100%; justify-content:center; margin-top:10px;">
+        <button type="submit" class="btn-hero-primary btn-modal-submit">
           <span>شو روم ڈیمو بک کریں</span>
         </button>
       </form>
@@ -1114,7 +1110,7 @@
       if (cart.length === 0) {
         cartBodyEl.innerHTML = `
           <tr>
-            <td colspan="5" style="text-align: center; color: #64748B; padding: 30px 0;">
+            <td colspan="5" class="pos-cart-empty-message">
               🛒 کسٹمر بل خالی ہے۔ بائیں جانب سے آئٹم منتخب کریں یا اوپر بارکوڈ اسکین کریں۔
             </td>
           </tr>
@@ -1123,20 +1119,20 @@
         cartBodyEl.innerHTML = cart.map((item, idx) => `
           <tr class="pos-cart-row">
             <td>
-              <strong style="color: #F8FAFC; display:block;">${item.name}</strong>
-              <span style="color: #64748B; font-size: 0.72rem;">${item.barcode}</span>
+              <strong class="pos-cart-item-title">${item.name}</strong>
+              <span class="pos-cart-item-barcode">${item.barcode}</span>
             </td>
             <td>
               <div class="pos-cart-qty-ctrl">
                 <button class="pos-qty-btn" onclick="updateQty(${idx}, -1)">-</button>
-                <span style="font-weight: 700; color: #F8FAFC;">${item.qty}</span>
+                <span class="pos-cart-item-qty-num">${item.qty}</span>
                 <button class="pos-qty-btn" onclick="updateQty(${idx}, 1)">+</button>
               </div>
             </td>
-            <td style="color: #94A3B8;">PKR ${item.price.toLocaleString('en-US')}</td>
-            <td style="color: #38BDF8; font-weight: 800;">PKR ${(item.price * item.qty).toLocaleString('en-US')}</td>
+            <td class="pos-cart-item-price">PKR ${item.price.toLocaleString('en-US')}</td>
+            <td class="pos-cart-item-total">PKR ${(item.price * item.qty).toLocaleString('en-US')}</td>
             <td>
-              <button onclick="removeFromCart(${idx})" style="background:none; border:none; color: #EF4444; font-weight: 800; cursor:pointer;">&times;</button>
+              <button class="pos-cart-item-del" onclick="removeFromCart(${idx})">&times;</button>
             </td>
           </tr>
         `).join('');
@@ -1217,8 +1213,8 @@
         const itemsContainer = document.getElementById('receipt-items-list');
         if (itemsContainer) {
           itemsContainer.innerHTML = cart.map(item => `
-            <div class="thermal-row" style="font-size: 11px;">
-              <span style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.name}</span>
+            <div class="thermal-row receipt-item-row">
+              <span class="receipt-item-label">${item.name}</span>
               <span>${item.qty}x</span>
               <span>${(item.price * item.qty).toLocaleString('en-US')}</span>
             </div>

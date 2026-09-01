@@ -445,14 +445,13 @@
     <section class="pos-sim-section" id="terminal-sim">
       <div class="container">
         <div class="section-head-center">
-          <div class="pill-badge"
-            style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8;">
+          <div class="pill-badge pill-badge-cyan">
             <span>TEST LIVE COUNTER BILLING</span>
           </div>
-          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #FFFFFF; margin-top: 10px;">
+          <h2 class="pos-sim-heading">
             Interactive Live POS Terminal Simulator
           </h2>
-          <p style="color: #94A3B8; font-size: 1.05rem; max-width: 680px; margin: 10px auto 0;">
+          <p class="pos-sim-sub">
             Click on items or use search below to simulate real counter billing. Test sub-second ring-ups, Pakistani
             payment splits, and live 80mm thermal receipt generation.
           </p>
@@ -505,9 +504,9 @@
             <!-- Right: Active Cart & Total -->
             <div class="pos-cart-side">
               <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                  <span style="font-weight: 800; font-size: 0.95rem; color: #F8FAFC;">Active Order Cart</span>
-                  <span style="font-size: 0.78rem; color: #94A3B8;" id="pos-item-count">0 items</span>
+                <div class="pos-cart-head-wrap">
+                  <span class="pos-cart-head-title">Active Order Cart</span>
+                  <span class="pos-cart-head-count" id="pos-item-count">0 items</span>
                 </div>
 
                 <div class="pos-cart-table-wrap">
@@ -530,7 +529,7 @@
 
               <!-- Payment Split Buttons -->
               <div>
-                <div style="font-size: 0.78rem; color: #94A3B8; margin-bottom: 6px; font-weight: 700;">
+                <div class="pos-pay-label">
                   SELECT PAYMENT METHOD:
                 </div>
                 <div class="pos-payment-methods">
@@ -547,7 +546,7 @@
                   </div>
                   <div class="pos-summary-row">
                     <span>Trade Discount (F2):</span>
-                    <span style="color: #38BDF8;" id="pos-discount">- PKR 0</span>
+                    <span class="pos-discount-val" id="pos-discount">- PKR 0</span>
                   </div>
                   <div class="pos-summary-total">
                     <span>Grand Total:</span>
@@ -577,10 +576,10 @@
           <div class="pill-badge">
             <span>ENGINEERED FOR COUNTER VELOCITY</span>
           </div>
-          <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+          <h2 class="section-title">
             The 6 Pillars of KhataPro Counter Architecture
           </h2>
-          <p style="color: #64748B; font-size: 1.05rem; max-width: 680px; margin: 10px auto 0;">
+          <p class="section-subtitle">
             Why Pakistan's fastest retail marts, wholesale depots, and mobile dealerships replace traditional cloud POS
             with KhataPro.
           </p>
@@ -687,10 +686,10 @@
           <div class="pill-badge">
             <span>PLUG & PLAY COMPATIBILITY</span>
           </div>
-          <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+          <h2 class="section-title">
             Works with All Standard Pakistani POS Hardware
           </h2>
-          <p style="color: #64748B; font-size: 1rem; max-width: 600px; margin: 8px auto 0;">
+          <p class="section-subtitle">
             No expensive proprietary hardware needed. KhataPro connects instantly to existing equipment.
           </p>
         </div>
@@ -728,13 +727,13 @@
     </section>
 
     <!-- REAL CASE STUDIES SECTION -->
-    <section class="usecase-stories-section" style="background: #F8FAFC;">
+    <section class="usecase-stories-section">
       <div class="container">
         <div class="section-head-center">
           <div class="pill-badge">
             <span>REAL RESULTS FROM REAL COUNTERS</span>
           </div>
-          <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 900; color: #0F172A; margin-top: 10px;">
+          <h2 class="section-title">
             Trusted by Pakistan's Busy Retail Counters
           </h2>
         </div>
@@ -805,22 +804,20 @@
     </section>
 
     <!-- HIGH-CONVERTING CLOSING CTA SECTION -->
-    <section class="cta-banner-section" style="padding: 90px 0;">
+    <section class="cta-banner-section cta-section">
       <div class="container">
-        <div class="cta-glass-card"
-          style="text-align: center; margin: 0 auto; padding: 50px 30px; border-radius: 28px; background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; position: relative; border: 1.5px solid rgba(56, 189, 248, 0.4); box-shadow: 0 25px 60px rgba(0,0,0,0.3);">
-          <span class="pill-badge"
-            style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38BDF8; margin-bottom: 16px;">
+        <div class="cta-glass-card cta-glass-banner">
+          <span class="pill-badge pill-badge-cta">
             READY TO UPGRADE YOUR COUNTER?
           </span>
-          <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px;">
+          <h2 class="cta-headline-lg">
             Modernize Your Billing Counter in Less Than 15 Minutes.
           </h2>
-          <p style="font-size: 1.1rem; color: #CBD5E1; max-width: 640px; margin: 0 auto 32px;">
+          <p class="cta-subtitle-lg">
             Join over 1,200+ Pakistani showroom and retail business owners who stopped cash leakages and achieved
             lightning counter velocity with KhataPro.
           </p>
-          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <div class="cta-actions-wrap">
             <a href="index-en.html#pricing-section" class="btn-hero-primary">
               <span>View Lifetime & Monthly License Plans</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -950,17 +947,16 @@
   <!-- 80MM THERMAL RECEIPT MODAL PREVIEW -->
   <div class="receipt-modal-overlay" id="receipt-modal">
     <div class="thermal-paper">
-      <button type="button" id="btn-close-receipt"
-        style="position: absolute; top: 8px; right: 10px; background: none; border: none; font-size: 18px; font-weight: 800; cursor: pointer;">&times;</button>
+      <button type="button" id="btn-close-receipt" class="receipt-close-btn">&times;</button>
       <div class="thermal-header">
         <div class="thermal-shop-name">AL-MADINA MEGA STORE</div>
         <div>Main Boulevard, Gulberg III, Lahore</div>
         <div>Phone: 0300-1234567 • NTN: 8940219-4</div>
-        <div style="margin-top: 4px; font-size: 10px;" id="receipt-datetime">Date: 01-Sep-2026 10:45 AM</div>
-        <div style="font-size: 10px;">Cashier: M. Ali (Terminal #01)</div>
+        <div class="receipt-date" id="receipt-datetime">Date: 01-Sep-2026 10:45 AM</div>
+        <div class="receipt-cashier">Cashier: M. Ali (Terminal #01)</div>
       </div>
 
-      <div class="thermal-row" style="font-weight: 800; border-bottom: 1px dashed #000; padding-bottom: 4px;">
+      <div class="thermal-row receipt-table-header">
         <span>ITEM</span>
         <span>QTY</span>
         <span>PRICE</span>
@@ -980,19 +976,19 @@
         <span>DISCOUNT:</span>
         <span id="receipt-discount">PKR 0</span>
       </div>
-      <div class="thermal-row" style="font-size: 14px; font-weight: 900;">
+      <div class="thermal-row receipt-grand-total">
         <span>TOTAL:</span>
         <span id="receipt-grand-total">PKR 0</span>
       </div>
       <div class="thermal-row">
         <span>PAID VIA:</span>
-        <span id="receipt-pay-method" style="text-transform: uppercase;">CASH</span>
+        <span id="receipt-pay-method" class="receipt-pay-method-val">CASH</span>
       </div>
 
       <div class="thermal-footer">
         <div>*** THANK YOU FOR SHOPPING! ***</div>
         <div>Return Policy: 3 Days with original receipt</div>
-        <div style="font-size: 9px; margin-top: 4px;">Powered by KhataPro Offline POS</div>
+        <div class="receipt-watermark">Powered by KhataPro Offline POS</div>
         <div class="thermal-qr">
           <svg viewBox="0 0 100 100" width="100%" height="100%">
             <rect x="0" y="0" width="30" height="30" fill="#000" />
@@ -1011,7 +1007,7 @@
             <rect x="45" y="70" width="10" height="20" fill="#000" />
           </svg>
         </div>
-        <div style="font-size: 8px; letter-spacing: 0.5px;">VERIFY: KP-INV-94028</div>
+        <div class="receipt-verify-code">VERIFY: KP-INV-94028</div>
       </div>
     </div>
   </div>
@@ -1040,7 +1036,7 @@
         </div>
         <div class="form-group">
           <label>Business Type</label>
-          <select style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid #CBD5E1;">
+          <select class="form-select-custom">
             <option>Retail Superstore & Mart</option>
             <option>Mobile & Electronics Showroom</option>
             <option>Auto Parts & Bike Dealership</option>
@@ -1049,7 +1045,7 @@
             <option>Jewelry / Other</option>
           </select>
         </div>
-        <button type="submit" class="btn-hero-primary" style="width:100%; justify-content:center; margin-top:10px;">
+        <button type="submit" class="btn-hero-primary btn-modal-submit">
           <span>Confirm Showroom Demo</span>
         </button>
       </form>
@@ -1117,7 +1113,7 @@
       if (cart.length === 0) {
         cartBodyEl.innerHTML = `
           <tr>
-            <td colspan="5" style="text-align: center; color: #64748B; padding: 30px 0;">
+            <td colspan="5" class="pos-cart-empty-message">
               🛒 Cart is empty. Click a product on the left or search above to scan.
             </td>
           </tr>
@@ -1126,20 +1122,20 @@
         cartBodyEl.innerHTML = cart.map((item, idx) => `
           <tr class="pos-cart-row">
             <td>
-              <strong style="color: #F8FAFC; display:block;">${item.name}</strong>
-              <span style="color: #64748B; font-size: 0.72rem;">${item.barcode}</span>
+              <strong class="pos-cart-item-title">${item.name}</strong>
+              <span class="pos-cart-item-barcode">${item.barcode}</span>
             </td>
             <td>
               <div class="pos-cart-qty-ctrl">
                 <button class="pos-qty-btn" onclick="updateQty(${idx}, -1)">-</button>
-                <span style="font-weight: 700; color: #F8FAFC;">${item.qty}</span>
+                <span class="pos-cart-item-qty-num">${item.qty}</span>
                 <button class="pos-qty-btn" onclick="updateQty(${idx}, 1)">+</button>
               </div>
             </td>
-            <td style="color: #94A3B8;">PKR ${item.price.toLocaleString('en-US')}</td>
-            <td style="color: #38BDF8; font-weight: 800;">PKR ${(item.price * item.qty).toLocaleString('en-US')}</td>
+            <td class="pos-cart-item-price">PKR ${item.price.toLocaleString('en-US')}</td>
+            <td class="pos-cart-item-total">PKR ${(item.price * item.qty).toLocaleString('en-US')}</td>
             <td>
-              <button onclick="removeFromCart(${idx})" style="background:none; border:none; color: #EF4444; font-weight: 800; cursor:pointer;">&times;</button>
+              <button class="pos-cart-item-del" onclick="removeFromCart(${idx})">&times;</button>
             </td>
           </tr>
         `).join('');
@@ -1223,8 +1219,8 @@
         const itemsContainer = document.getElementById('receipt-items-list');
         if (itemsContainer) {
           itemsContainer.innerHTML = cart.map(item => `
-            <div class="thermal-row" style="font-size: 11px;">
-              <span style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.name}</span>
+            <div class="thermal-row receipt-item-row">
+              <span class="receipt-item-label">${item.name}</span>
               <span>${item.qty}x</span>
               <span>${(item.price * item.qty).toLocaleString('en-US')}</span>
             </div>
