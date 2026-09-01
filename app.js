@@ -873,4 +873,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Industry filter pill active indicator switcher on Use Cases page
+  const industryPills = document.querySelectorAll('.industry-nav-pill');
+  if (industryPills.length > 0) {
+    industryPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        industryPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+      });
+    });
+  }
 });
