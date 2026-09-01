@@ -117,25 +117,34 @@ body {
 }
 
 /* --- UNIFIED TYPOGRAPHY & HEADING HIERARCHY --- */
-h1, .hero-title, .pos-hero-title, .usecases-hero-title {
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-  font-weight: 900;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: var(--text-heading, #0F172A);
-  margin-bottom: 20px;
+h1,
+.hero-title,
+.pos-hero-title,
+.usecases-hero-title {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 80px;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
 }
 
-h2, .section-title, .section-head-center h2 {
-  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+h2,
+.section-title,
+.section-head-center h2 {
+  font-size: 42px;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 50px;
   letter-spacing: -0.02em;
   color: var(--text-heading, #0F172A);
   margin-bottom: 12px;
 }
 
-h3, .card-title, .pillar-card h3, .usecase-card-title, .sec-pillar-card h3, .studio-bottom-card h3 {
+h3,
+.card-title,
+.pillar-card h3,
+.usecase-card-title,
+.sec-pillar-card h3,
+.studio-bottom-card h3 {
   font-size: 1.35rem;
   font-weight: 800;
   line-height: 1.3;
@@ -143,7 +152,13 @@ h3, .card-title, .pillar-card h3, .usecase-card-title, .sec-pillar-card h3, .stu
   margin-bottom: 10px;
 }
 
-h4, .subcard-title, .mfc-title, .hardware-title, .tri-card h4, .ind-card h4, .footer-col h4 {
+h4,
+.subcard-title,
+.mfc-title,
+.hardware-title,
+.tri-card h4,
+.ind-card h4,
+.footer-col h4 {
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 1.4;
@@ -151,19 +166,27 @@ h4, .subcard-title, .mfc-title, .hardware-title, .tri-card h4, .ind-card h4, .fo
   margin-bottom: 8px;
 }
 
-h5, h6 {
+h5,
+h6 {
   font-size: 0.95rem;
   font-weight: 700;
 }
 
 /* Paragraphs & Subtitles Scale */
-p, .card-desc, .pillar-card p, .hardware-desc, .story-quote, .section-desc {
+p,
+.card-desc,
+.pillar-card p,
+.hardware-desc,
+.story-quote,
+.section-desc {
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-body, #475569);
 }
 
-.hero-subtitle, .pos-hero-subtitle, .usecases-hero-subtitle {
+.hero-subtitle,
+.pos-hero-subtitle,
+.usecases-hero-subtitle {
   font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   line-height: 1.65;
   color: var(--text-body, #475569);
@@ -177,7 +200,8 @@ p, .card-desc, .pillar-card p, .hardware-desc, .story-quote, .section-desc {
   text-align: center;
 }
 
-.section-head-center p, .section-subtitle {
+.section-head-center p,
+.section-subtitle {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #64748B;
@@ -186,7 +210,8 @@ p, .card-desc, .pillar-card p, .hardware-desc, .story-quote, .section-desc {
 }
 
 /* Unified Buttons Scale */
-.btn-hero-primary, .btn-primary {
+.btn-hero-primary,
+.btn-primary {
   font-size: 1rem;
   font-weight: 700;
   padding: 14px 28px;
@@ -200,7 +225,8 @@ p, .card-desc, .pillar-card p, .hardware-desc, .story-quote, .section-desc {
   transition: all 0.2s ease;
 }
 
-.btn-hero-secondary, .btn-secondary {
+.btn-hero-secondary,
+.btn-secondary {
   font-size: 1rem;
   font-weight: 700;
   padding: 14px 28px;
@@ -214,7 +240,8 @@ p, .card-desc, .pillar-card p, .hardware-desc, .story-quote, .section-desc {
   transition: all 0.2s ease;
 }
 
-.btn-nav-primary, .btn-nav-secondary {
+.btn-nav-primary,
+.btn-nav-secondary {
   font-size: 0.88rem;
   font-weight: 700;
   padding: 8px 18px;
@@ -1480,14 +1507,15 @@ html[dir="rtl"] .mobile-mega-head {
   border: 1px solid var(--accent-amber-border);
 }
 
+/* 
 .section-title {
   font-family: var(--font-urdu-display);
-  font-size: clamp(2rem, 3.8vw, 3rem);
-  font-weight: 700;
-  line-height: 1.45;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 50px;
   color: var(--text-main);
   margin-bottom: 16px;
-}
+} */
 
 .sub-heading-accent {
   font-family: var(--font-urdu-body);
@@ -1516,17 +1544,6 @@ html[dir="rtl"] .mobile-mega-head {
   align-items: center;
   text-align: center;
   padding-top: 50px;
-}
-
-.hero-title {
-  font-family: var(--font-urdu-display);
-  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
-  font-weight: 700;
-  line-height: 1.4;
-  color: var(--text-main);
-  margin-bottom: 20px;
-  max-width: 1200px;
-
 }
 
 .hero-title-line-1,
@@ -3545,9 +3562,9 @@ html[dir="rtl"] .mobile-mega-head {
 }
 
 .khata-card-header .section-title {
-  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  font-size: 42px;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 50px;
   margin: 12px 0 10px;
   color: var(--text-main);
 }
@@ -5495,9 +5512,9 @@ input:checked+.slider:before {
 
 .cta-headline {
   font-family: var(--font-urdu-display);
-  font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+  font-size: 42px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 50px;
   margin-bottom: 16px;
   letter-spacing: -0.02em;
   color: #FFFFFF;
@@ -7146,15 +7163,6 @@ html[dir="rtl"] .promo-country-tag {
   box-shadow: 0 4px 14px rgba(56, 189, 248, 0.12);
 }
 
-.usecases-title {
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  font-weight: 900;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  color: #0F172A;
-  margin-bottom: 20px;
-}
-
 .usecases-title span {
   background: linear-gradient(135deg, #0284C7 0%, #6366F1 50%, #D946EF 100%);
   -webkit-background-clip: text;
@@ -7347,7 +7355,6 @@ html[dir="rtl"] .usecase-block.reverse .usecase-visual {
 
 .usecase-heading {
   font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  font-weight: 900;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: #0F172A;
@@ -7807,14 +7814,6 @@ html[dir="rtl"] .usecase-block.reverse .usecase-visual {
   margin: 0 auto;
 }
 
-.pos-hero-title {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 900;
-  line-height: 1.15;
-  color: var(--text-heading, #0F172A);
-  margin-bottom: 20px;
-  letter-spacing: -0.025em;
-}
 
 .pos-hero-title span {
   background: linear-gradient(135deg, #0D99FF 0%, #0284C7 100%);
@@ -8522,9 +8521,10 @@ html[dir="rtl"] .pos-cart-table th {
 
 /* Simulator Section & Dark Components */
 .pos-sim-heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  font-size: 42px;
   font-weight: 800;
-  color: #FFFFFF;
+  line-height: 50px;
+  color: #FFFFFF !important;
   margin-top: 10px;
 }
 
@@ -8781,11 +8781,13 @@ html[dir="rtl"] .receipt-close-btn {
 }
 
 .cta-headline-lg {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: 42px;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 50px;
   margin-bottom: 16px;
+  letter-spacing: -0.02em;
   color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .cta-subtitle-lg {
@@ -8804,8 +8806,22 @@ html[dir="rtl"] .receipt-close-btn {
 }
 
 /* Progress Bar Widths */
-.progress-w-40 { width: 40%; }
-.progress-w-45 { width: 45%; }
-.progress-w-60 { width: 60%; }
-.progress-w-70 { width: 70%; }
-.progress-w-100 { width: 100%; }
+.progress-w-40 {
+  width: 40%;
+}
+
+.progress-w-45 {
+  width: 45%;
+}
+
+.progress-w-60 {
+  width: 60%;
+}
+
+.progress-w-70 {
+  width: 70%;
+}
+
+.progress-w-100 {
+  width: 100%;
+}
