@@ -92,10 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 1B. MOBILE MENU DRAWER CONTROLLER
+  // 1B. MOBILE MEGA MENU DRAWER & ACCORDION CONTROLLER
   const btnMobileToggle = document.getElementById('btn-mobile-toggle');
   const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');
-  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link, .btn-mobile-demo, .btn-mobile-signin');
+  const mobileAccordionHeads = document.querySelectorAll('.mobile-mega-head');
+  const mobileMenuCloseLinks = document.querySelectorAll('.mobile-mega-item, .mobile-featured-card, .mobile-direct-link, .btn-mobile-demo, .btn-mobile-signin, .mobile-lang-btn');
 
   if (btnMobileToggle && mobileMenuDrawer) {
     btnMobileToggle.addEventListener('click', (e) => {
@@ -105,8 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
       btnMobileToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
     });
 
+    // Accordion toggle handler
+    mobileAccordionHeads.forEach(head => {
+      head.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const accId = head.getAttribute('data-acc');
+        const parentAcc = document.getElementById(accId) || head.closest('.mobile-mega-accordion');
+        if (parentAcc) {
+          parentAcc.classList.toggle('open');
+        }
+      });
+    });
+
     // Close when clicking any menu link
-    mobileMenuLinks.forEach(link => {
+    mobileMenuCloseLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenuDrawer.classList.remove('active');
         btnMobileToggle.classList.remove('active');

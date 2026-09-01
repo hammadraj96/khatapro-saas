@@ -295,38 +295,118 @@
       </div>
     </nav>
 
-    <!-- Mobile Drawer Menu Dropdown -->
+    <!-- MOBILE MEGA MENU DRAWER (Luxury Responsive Experience) -->
     <div class="mobile-menu-drawer" id="mobile-menu-drawer">
-      <div class="mobile-menu-links">
-        <a href="#digital-studio" class="mobile-menu-link">
-          <span>Features & Studio</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-        <a href="#customers-section" class="mobile-menu-link">
-          <span>Customers (360° Hub)</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </a>
-        <a href="#installments-section" class="mobile-menu-link">
+      
+      <!-- Accordion 1: Platform & Features -->
+      <div class="mobile-mega-accordion open" id="mob-acc-platform">
+        <button type="button" class="mobile-mega-head" data-acc="mob-acc-platform">
+          <div class="mobile-mega-head-left">
+            <span class="mobile-mega-icon">⚡</span>
+            <span>Platform & Products</span>
+          </div>
+          <svg class="mobile-mega-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-mega-body">
+          <!-- Featured mini card -->
+          <a href="#digital-studio" class="mobile-featured-card">
+            <div class="mfc-mob-head">
+              <span class="mfc-mob-badge">FEATURED</span>
+              <span>→</span>
+            </div>
+            <div class="mfc-mob-title">Smart Khata 360°</div>
+            <p class="mfc-mob-desc">Ledger, WhatsApp recovery & legal judicial agreements.</p>
+          </a>
+          <div class="mobile-mega-items">
+            <a href="#installments-section" class="mobile-mega-item">
+              <span class="mmi-title">WhatsApp Recovery Bot</span>
+              <span class="mmi-desc">AI installment reminders with voice & slips</span>
+            </a>
+            <a href="#pos-section" class="mobile-mega-item">
+              <span class="mmi-title">POS & 80mm Counter</span>
+              <span class="mmi-desc">Thermal receipt print with instant QR check</span>
+            </a>
+            <a href="#digital-khata" class="mobile-mega-item">
+              <span class="mmi-title">Legal Stamp Contract Studio</span>
+              <span class="mmi-desc">1-Click judicial stamp deed agreement generation</span>
+            </a>
+            <a href="#security-section" class="mobile-mega-item">
+              <span class="mmi-title">Offline SQLite Vault</span>
+              <span class="mmi-desc">100% offline desktop speed & bank-grade encryption</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion 2: Use Cases & Showrooms -->
+      <div class="mobile-mega-accordion" id="mob-acc-usecases">
+        <button type="button" class="mobile-mega-head" data-acc="mob-acc-usecases">
+          <div class="mobile-mega-head-left">
+            <span class="mobile-mega-icon">🏢</span>
+            <span>Use Cases & Industries</span>
+          </div>
+          <svg class="mobile-mega-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-mega-body">
+          <div class="mobile-mega-items">
+            <a href="#customers-section" class="mobile-mega-item">
+              <span class="mmi-title">Mobile & Electronics Stores</span>
+              <span class="mmi-desc">IMEI tracking, installment recovery & cash billing</span>
+            </a>
+            <a href="#customers-section" class="mobile-mega-item">
+              <span class="mmi-title">Bike & Auto Showrooms</span>
+              <span class="mmi-desc">Engine & chassis numbers, guarantor stamp contracts</span>
+            </a>
+            <a href="#finance-section" class="mobile-mega-item">
+              <span class="mmi-title">Wholesale & Distribution</span>
+              <span class="mmi-desc">High-volume ledger & supplier balances</span>
+            </a>
+            <a href="#pos-section" class="mobile-mega-item">
+              <span class="mmi-title">Superstores & Retail POS</span>
+              <span class="mmi-desc">Fast barcode billing & thermal slips</span>
+            </a>
+            <a href="#digital-khata" class="mobile-mega-item">
+              <span class="mmi-title">Jewelry & High-Ticket Retail</span>
+              <span class="mmi-desc">Customer CNIC vault & custom contracts</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Navigation Links -->
+      <div class="mobile-direct-links">
+        <a href="#installments-section" class="mobile-direct-link">
           <span>Installments & Recovery</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
-        <a href="#finance-section" class="mobile-menu-link">
-          <span>Finance & Profit/Loss</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <a href="#finance-section" class="mobile-direct-link">
+          <span>Finance & P&L</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
-        <a href="#pricing-section" class="mobile-menu-link">
+        <a href="#pricing-section" class="mobile-direct-link">
           <span>Pricing & Plans</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
-        <a href="#faq-section" class="mobile-menu-link">
+        <a href="#faq-section" class="mobile-direct-link">
           <span>FAQ</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </a>
       </div>
+
+      <!-- Action Buttons & Language Switch -->
       <div class="mobile-menu-actions">
-        <a href="#demo-modal" class="btn-mobile-demo" id="btn-mobile-open-demo">Book Free Demo</a>
-        <a href="#pricing-section" class="btn-mobile-signin">Sign In &rarr;</a>
+        <a href="../index.html" class="mobile-lang-btn" title="Switch to Urdu">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Switch to Urdu (اردو)</span>
+        </a>
+        <a href="#demo-modal" class="btn-mobile-demo" id="btn-mobile-open-demo">Book a demo</a>
+        <a href="#pricing-section" class="btn-mobile-signin">Sign in &rarr;</a>
       </div>
+
     </div>
   </header>
 
